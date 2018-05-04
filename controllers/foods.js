@@ -1,7 +1,7 @@
-const Wine = require('../models/food');
+const Food = require('../models/food');
 
 function foodsIndex(req, res, next){
-  Wine
+  Food
     .find()
     .exec()
     .then(foods => res.json(foods))
@@ -9,7 +9,7 @@ function foodsIndex(req, res, next){
 }
 
 function foodsShow(req, res, next){
-  Wine
+  Food
     .findById(req.params.id)
     .exec()
     .then(food => {
@@ -21,14 +21,14 @@ function foodsShow(req, res, next){
 
 function foodsCreate(req, res, next){
   req.body.createdBy = req.currentUser;         // ! so we can check token and store on req
-  Wine
+  Food
     .create(req.body)
     .then(food => res.status(201).json(food))
     .catch(next);
 }
 
 function foodsUpdate(req, res, next){
-  Wine
+  Food
     .findById(req.params.id)
     .then(food => {
       if(!food) return res.sendStatus(404);
@@ -40,7 +40,7 @@ function foodsUpdate(req, res, next){
 }
 
 function foodsDelete(req, res, next){
-  Wine
+  Food
     .findById(req.params.id)
     .then(food => {
       if(!food) return res.sendStatus(404);
