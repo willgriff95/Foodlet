@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-image" style="background-image: url({{ winesShow.wine.image }})"></div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4">{{ winesShow.wine.brand }} - {{ winesShow.wine.vintage }}</p>
+        <p class="subtitle is-6">{{ winesShow.wine.region }} - {{ winesShow.wine.country }}</p>
+        <p>{{ winesShow.forecast.summary }} - {{ winesShow.forecast.temperature }}ºC</p>
+        <div class="map" g-map center="winesShow.wine.location">MAP HERE</div>
+      </div>
+    </div>
+    <a ui-sref="winesEdit({ id: winesShow.wine._id })" class="button is-primary">Edit</a>
+    <button ng-click="winesShow.handleDelete()" class="button">Delete</button>
+    <hr>
+    <p><small>{{ food.createdAtRelativeTime }}</small></p>
+  </div>
+</div>
