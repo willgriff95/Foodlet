@@ -24,7 +24,7 @@ mongoose.connect(dbURI, (err, db) => {
       title: 'Punnet of tomatoes',
       description: 'fresh',
       location: {
-        lat: 51.515,
+        lat: 51.515 ,
         lng: -0.078
       },
       image: 'http://via.placeholder.com/350x150',
