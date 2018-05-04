@@ -10,7 +10,6 @@ mongoose.connect(dbURI, (err, db) => {
 
   Food.create([
     {
-      user: 'Caroline',
       title: '26 crackers',
       description: 'delicious crackers',
       location: {
@@ -20,17 +19,15 @@ mongoose.connect(dbURI, (err, db) => {
       image: 'http://via.placeholder.com/350x150',
       active: true
     }, {
-      user: 'Hugo',
       title: 'Punnet of tomatoes',
       description: 'fresh',
       location: {
-        lat: 51.515,
+        lat: 51.515 ,
         lng: -0.078
       },
       image: 'http://via.placeholder.com/350x150',
       active: true
     }, {
-      user: 'Will',
       title: '6 doughnuts',
       description: 'tasty',
       location: {
