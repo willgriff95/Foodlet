@@ -3,7 +3,6 @@
 const Food = require('../../models/food');
 
 const foodData = {
-  user: 'Caroline',
   title: '26 crackers',
   description: 'delicious crackers',
   location: {
