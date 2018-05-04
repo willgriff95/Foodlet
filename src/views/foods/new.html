@@ -1,0 +1,20 @@
+<form name="foodsNew.form" ng-submit='foodsNew.handleCreate()'>
+  <div class="field">
+    <label for="title">Title</label>
+    <input class="input" placeholder="Title" name="title" ng-model='foodsNew.food.title' />
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    <input class="input" placeholder="Description" name="description" ng-model='foodsNew.food.description' />
+  </div>
+  <div class="field">
+    <label for="location">Location</label>
+    <input class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsNew.updateLocation(location)"/>
+  </div>
+  <div class="field">
+    <label for="image">Image</label>
+    <input class="input" placeholder="Image" name="image" ng-model='foodsNew.food.image' />
+  </div>
+
+  <button class="button is-primary">Submit</button>
+</form>
