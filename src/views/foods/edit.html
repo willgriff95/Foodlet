@@ -1,0 +1,18 @@
+<h1>Edit {{ foodsEdit.food.title }}</h1>
+
+<form ng-submit='foodsEdit.handleUpdate()'>
+  <div class="field">
+    <label for="title">Title</label>
+    <input class="input" ng-model="foodsEdit.food.title" name="title"/>
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    <input class="input" ng-model="foodsEdit.food.description" name="description"/>
+  </div>
+  <div class="field">
+    <label for="image">Image</label>
+    <input class="input" ng-model="foodsEdit.food.image" name="image"/>
+  </div>
+
+  <button class="button is-primary">Submit</button>
+</form>
