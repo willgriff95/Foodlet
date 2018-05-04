@@ -1,3 +1,4 @@
 node_modules
 public
 *.log
+.nyc_output
