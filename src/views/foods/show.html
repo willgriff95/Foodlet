@@ -1,17 +1,26 @@
-<div class="card">
-  <div class="card-image" style="background-image: url({{ winesShow.wine.image }})"></div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">{{ winesShow.wine.brand }} - {{ winesShow.wine.vintage }}</p>
-        <p class="subtitle is-6">{{ winesShow.wine.region }} - {{ winesShow.wine.country }}</p>
-        <p>{{ winesShow.forecast.summary }} - {{ winesShow.forecast.temperature }}ºC</p>
-        <div class="map" g-map center="winesShow.wine.location">MAP HERE</div>
+<h1>Wines Index</h1>
+
+<div class="columns is-multiline">
+  <div class="column is-half-tablet is-one-third-desktop">
+
+    <a ui-sref="foodsShow({ id: food._id })">
+      <div class="card">
+        <div class="card-image" style="background-image: url({{ food.image }})"></div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">{{ food.title }}</p>
+              <p class="subtitle is-6">{{ food.description }}</p>
+              <p class="subtitle is-6">{{ food.user }}</p>
+              <p><small>{{ food.createdAtRelative }}</small></p>
+              <!--- add location tag --->
+            </div>
+          </div>
+          <a ui-sref="foodsEdit({ id: foodsShow.food._id })" class="button is-primary">Edit</a>
+          <button ng-click="foodsShow.handleDelete()" class="button">Delete</button>
+        </div>
       </div>
-    </div>
-    <a ui-sref="winesEdit({ id: winesShow.wine._id })" class="button is-primary">Edit</a>
-    <button ng-click="winesShow.handleDelete()" class="button">Delete</button>
-    <hr>
-    <p><small>{{ food.createdAtRelativeTime }}</small></p>
+    </a>
+
   </div>
 </div>
