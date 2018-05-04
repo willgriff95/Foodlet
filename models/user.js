@@ -5,8 +5,13 @@ mongoose.Promise = require('bluebird');
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, unique: true },
+<<<<<<< HEAD
   password: { type: String },
   picture: { type: String }
+=======
+  password: { type: String }
+  // githubId: { type: Number, unique: true }
+>>>>>>> 604dbb78823f26f436eec9bbab460dd07b963324
 });
 
 userSchema.plugin(require('mongoose-unique-validator'));
