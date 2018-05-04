@@ -19,25 +19,25 @@ function Router($stateProvider, $urlRouterProvider){
     .state('foodsIndex', {
       url: '/foods',
       templateUrl: 'views/foods/index.html',
-      controller: 'FilmsIndexCtrl as foodsIndex',
+      controller: 'FoodsIndexCtrl as foodsIndex',
       resolve: { secureState }
     })
     .state('foodsNew', {
       url: '/foods/new',
       templateUrl: 'views/foods/new.html',
-      controller: 'FilmsNewCtrl as foodsNew',
+      controller: 'FoodsNewCtrl as foodsNew',
       resolve: { secureState }
     })
     .state('foodsShow', {
       url: '/foods/:id',
       templateUrl: 'views/foods/show.html',
-      controller: 'FilmsShowCtrl as foodsShow',
+      controller: 'FoodsShowCtrl as foodsShow',
       resolve: { secureState }
     })
     .state('foodsEdit', {
       url: '/foods/:id/edit',
       templateUrl: 'views/foods/edit.html',
-      controller: 'FilmsEditCtrl as foodsEdit',
+      controller: 'FoodsEditCtrl as foodsEdit',
       resolve: { secureState }
 
     })
