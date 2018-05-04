@@ -12,11 +12,13 @@ router.route('/foods/:id')
   .put(secureRoute, foods.update)
   .delete(secureRoute, foods.delete);
 
+//  change 2
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
 
 
 //This is a change.
+
 
 module.exports = router;
