@@ -1044,6 +1044,10 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
+bulma@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.1.tgz#73c2e3b2930c90cc272029cbd19918b493fca486"
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -3799,13 +3803,10 @@ mocha@^5.0.4:
     mkdirp "0.5.1"
     supports-color "4.4.0"
 
-<<<<<<< HEAD
 moment@^2.22.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
-=======
->>>>>>> development
 mongodb-core@3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/mongodb-core/-/mongodb-core-3.0.7.tgz#a9941f14883a75768d554cef5fd67756a9cc0f25"
@@ -3889,11 +3890,7 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-<<<<<<< HEAD
-nan@^2.10.0, nan@^2.9.2:
-=======
 nan@2.10.0, nan@^2.10.0, nan@^2.9.2:
->>>>>>> development
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
 
@@ -3990,11 +3987,7 @@ node-libs-browser@^2.0.0:
     util "^0.10.3"
     vm-browserify "0.0.4"
 
-<<<<<<< HEAD
-node-pre-gyp@^0.9.0:
-=======
 node-pre-gyp@0.9.1, node-pre-gyp@^0.9.0:
->>>>>>> development
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.9.1.tgz#f11c07516dd92f87199dbc7e1838eab7cd56c9e0"
   dependencies:
@@ -5199,13 +5192,10 @@ sass-loader@^6.0.6:
     neo-async "^2.5.0"
     pify "^3.0.0"
 
-<<<<<<< HEAD
-=======
 satellizer@^0.15.5:
   version "0.15.5"
   resolved "https://registry.yarnpkg.com/satellizer/-/satellizer-0.15.5.tgz#43c93d2d361c4b6b6cf9d06d23b8881302b557a4"
 
->>>>>>> development
 sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
