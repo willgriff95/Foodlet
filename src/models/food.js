@@ -1,24 +1,24 @@
-Film.$inject = ['$http'];
+Food.$inject = ['$http'];
 
-function Film($http){
+function Food($http){
   function find(){
-    return $http.get('/api/films');
+    return $http.get('/api/foods');
   }
 
   function findById(id){
-    return $http.get(`/api/films/${id}`);
+    return $http.get(`/api/foods/${id}`);
   }
 
   function removeById(id){
-    return $http.delete(`/api/films/${id}`);
+    return $http.delete(`/api/foods/${id}`);
   }
 
   function create(data){
-    return $http.post('/api/films', data);
+    return $http.post('/api/foods', data);
   }
 
   function updateById(id, data){
-    return $http.put(`/api/films/${id}`, data);
+    return $http.put(`/api/foods/${id}`, data);
   }
 
 
@@ -29,4 +29,4 @@ function Film($http){
   this.updateById = updateById;
 }
 
-export default Film;
+export default Food;
