@@ -1,0 +1,24 @@
+<h1>Wines Index</h1>
+
+<div class="columns is-multiline">
+  <div ng-repeat="food in winesIndex.all" class="column is-half-tablet is-one-third-desktop">
+
+    <a ui-sref="winesShow({ id: food._id })">
+      <div class="card">
+        <div class="card-image" style="background-image: url({{ food.image }})"></div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">{{ food.title }}</p>
+              <p class="subtitle is-6">{{ food.description }}</p>
+              <p class="subtitle is-6">{{ food.user }}</p>
+              <p><small>{{ food.createdAtRelative }}</small></p>
+              <!--- add location tag --->
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</div>
