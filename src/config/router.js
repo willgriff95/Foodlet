@@ -1,7 +1,13 @@
-secureState.$inject = ['$q', '$auth', '$state'];
-function secureState($q, $auth, $state){
+secureState.$inject = ['$q', '$auth', '$state', '$rootScope'];
+function secureState($q, $auth, $state, $rootScope){
   return new $q((resolve) =>{
     if($auth.isAuthenticated()) return resolve();
+
+    $rootScope.$broadcast('flashMessage', {
+      type: 'danger',
+      content: 'You must be logged in to view this page.'
+    });
+
     $state.go('login');
   });
 }

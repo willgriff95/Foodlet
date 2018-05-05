@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html ng-app='foodlet'>
+
   <head>
+    <meta charset="utf-8">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnUcFJmb7zTEF4gPr_D1FplePOYk2n5mw&libraries=places"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>foodlet</title>
   </head>
+
   <body ng-controller="MainCtrl as main">
+
+<!-- navbar-brand -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
-      <!-- navbar-brand -->
       <div class="navbar-brand">
         <a class="navbar-item" ui-sref="home">
           <img src="./assets/foodlet_logo.png">
@@ -19,8 +23,9 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <!-- end navbar-brand -->
-      <!-- navbar-menu -->
+<!-- end navbar-brand -->
+
+<!-- navbar-menu -->
       <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
         <div class="navbar-end">
           <!-- navbar items -->
@@ -34,12 +39,21 @@
       </div>
     </nav>
 <!-- end navbar-menu -->
-    <ui-view ng-if="main.isHome"></ui-view>
 
+
+<!--- flash message --->
+    <div ng-if="main.flashMessage.content" class="notification is-{{ main.flashMessage.type }}">
+      {{ main.flashMessage.content }}
+    </div>
+
+
+<!-- main-section -->
+    <ui-view ng-if="main.isHome"></ui-view>
     <section class="section" ng-if="!main.isHome">
       <div class="container">
         <ui-view></ui-view>
       </div>
     </section>
-    </body>
+
+  </body>
 </html>
