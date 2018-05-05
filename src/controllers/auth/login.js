@@ -4,6 +4,8 @@ function LoginCtrl($auth, $state){
   this.data = {};
 
   function handleLogin(){
+    if(this.form.$invalid) return false;
+
     $auth.login(this.data)
       .then(()=> $state.go('foodsIndex'));
   }

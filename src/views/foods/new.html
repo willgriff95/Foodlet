@@ -1,22 +1,39 @@
 <div class="content">
-  <form name="foodsNew.form" ng-submit='foodsNew.handleCreate()'>
+  <form name="foodsNew.form" ng-submit='foodsNew.handleCreate()' novalidate>
+
     <div class="field">
       <label for="title">Title</label>
       <input class="input" placeholder="Title" name="title" ng-model='foodsNew.food.title' />
+      <div ng-messages="foodsNew.form.title.$error" ng-if="foodsNew.form.title.$dirty || foodsNew.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
+
     <div class="field">
       <label for="description">Description</label>
       <input class="input" placeholder="Description" name="description" ng-model='foodsNew.food.description' />
+      <div ng-messages="foodsNew.form.decription.$error" ng-if="foodsNew.form.decription.$dirty || foodsNew.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
+
     <div class="field">
       <label for="location">Location</label>
       <input class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsNew.updateLocation(location)"/>
+      <div ng-messages="foodsNew.form.location.$error" ng-if="foodsNew.form.location.$dirty || foodsNew.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
+
     <div class="field">
       <label for="image">Image</label>
       <input class="input" placeholder="Image" name="image" ng-model='foodsNew.food.image' />
+      <div ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
 
     <button class="button is-primary">Submit</button>
+
   </form>
 </div>
