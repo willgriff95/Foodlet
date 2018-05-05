@@ -1,6 +1,14 @@
 const User = require('../models/user');
 
-function showRoute(req, res) {
+function indexRoute(req, res, next){
+  User
+    .find()
+    .exec()
+    .then(users => res.json(users))
+    .catch(next);
+}
+
+function showRoute(req, res, next) {
   User
     .findById(req.params.id)
     .exec()
@@ -8,13 +16,11 @@ function showRoute(req, res) {
       if(!user) return res.sendStatus(404);
       return res.render('users/show', { user });
     })
-    .catch(err => {
-      console.log(err);
-      return res.sendStatus(500);
-    });
+    .catch(next);
 }
 
 
 module.exports = {
-  show: showRoute
+  show: showRoute,
+  index: indexRoute
 };

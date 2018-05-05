@@ -14,7 +14,7 @@ function LoginCtrl($auth, $state, $http){
           .get('/api/users')
           .then(res => {
             res.forEach(function(user){
-              if(user.username === vm.username){
+              if(user.email === vm.email){
                 this.currentUser = user;
               }
             });
