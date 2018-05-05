@@ -14,7 +14,17 @@
 // our css
 
 
+.map{
+  height: 300px;
+}
+
+.card-image{
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 .navbar-item img {
-    max-height: 2.75rem;
+  max-height: 2.75rem;
 }
