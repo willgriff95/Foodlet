@@ -92,7 +92,15 @@ body{
     width: 100%;
     // border-radius: 10px;
 }
-
+.navbar-burger {
+    cursor: pointer;
+    display: block;
+    height: 3.25rem;
+    position: relative;
+    width: 3.25rem;
+    height: 70px;
+    margin-left: auto;
+}
 .button.is-primary:hover, .button.is-primary.is-hovered {
     background-color: #D9E021;
     border-color: transparent;
