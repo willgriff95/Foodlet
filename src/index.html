@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>WDI32 Group Project</title>
-</head>
-<body>
+<html ng-app='foodlet'>
+  <head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnUcFJmb7zTEF4gPr_D1FplePOYk2n5mw&libraries=places"></script>
+    <meta charset="utf-8">
+    <title>foodlet</title>
+  </head>
+  <body ng-controller="MainCtrl as main">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <!-- navbar-brand -->
+      <div class="navbar-brand">
+        <a class="navbar-item" ui-sref="home">
+          <img src="./assets/foodlet_logo.png">
+        </a>
 
-  <h1>WDI32 Group Project</h1>
+        <a role="button" class="navbar-burger" ng-click="main.toggleNav()" ng-class="{ 'is-active': main.navBarIsOpen }">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- end navbar-brand -->
+      <!-- navbar-menu -->
+      <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
+        <div class="navbar-end">
+          <!-- navbar items -->
+          <a class="navbar-item" ui-sref="home">Home</a>
+          <a class="navbar-item" ui-sref="foodsIndex">All the foods</a>
+          <a class="navbar-item" ui-sref="foodsNew" ng-if="main.isAuthenticated()">Add a food</a>
+          <a class="navbar-item" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
+          <a class="navbar-item" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a>
+          <a class="navbar-item" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
+        </div>
+      </div>
+    </nav>
+<!-- end navbar-menu -->
+    <ui-view ng-if="main.isHome"></ui-view>
 
-</body>
+    <section class="section" ng-if="!main.isHome">
+      <div class="container">
+        <ui-view></ui-view>
+      </div>
+    </section>
+    </body>
 </html>

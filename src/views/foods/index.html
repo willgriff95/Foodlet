@@ -1,9 +1,9 @@
 <h1>Foods Index</h1>
 
 <div class="columns is-multiline">
-  <div ng-repeat="food in winesIndex.all" class="column is-half-tablet is-one-third-desktop">
+  <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
 
-    <a ui-sref="winesShow({ id: food._id })">
+    <a ui-sref="foodsShow({ id: food._id })">
       <div class="card">
         <div class="card-image" style="background-image: url({{ food.image }})"></div>
         <div class="card-content">
