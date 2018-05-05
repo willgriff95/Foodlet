@@ -30,7 +30,7 @@ import gMap from './directives/gMap';
 import gAutocomplete from './directives/gAutocomplete';
 
 
-angular.module('foodlet', ['ui.router', 'satellizer', 'angular-messages'])
+angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages'])
   .config(Router)
   .config(Auth)
   .controller('MainCtrl', MainCtrl)
