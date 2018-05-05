@@ -1,6 +1,7 @@
 <div class="content">
 
   <h1>Foods Index</h1>
+  <!-- <p>Here {{currentUser | json}}</p> -->
 
   <a href="" ng-click="list=false" class="icon">
     <i class=“far fa-map”>map</i>
@@ -31,9 +32,6 @@
 
     </div>
   </div>
-
-    <div ng-controller="LoginCtrl as login">
-      <div ng-show="map" ng-hide="list" class="map" g-map center="login.currentUser.location">MAP HERE</div>
-    </div>
+      <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location">MAP HERE</div>
   </div>
 </div>

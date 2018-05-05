@@ -1,9 +1,8 @@
-LoginCtrl.$inject = ['$auth', '$state', '$http'];
+LoginCtrl.$inject = ['$auth', '$state', '$http', '$rootScope'];
 //$auth refers to a package called satellizer.
-function LoginCtrl($auth, $state, $http){
+function LoginCtrl($auth, $state, $http, $rootScope){
   this.data = {};
-  const _this = this;
-  this.currentUser = {};
+  // let currentUser;
 
   function handleLogin(){
     if(this.form.$invalid) return false;
@@ -17,8 +16,7 @@ function LoginCtrl($auth, $state, $http){
             // console.log(res.data, vm.email);
             res.data.forEach(function(user){
               if(user.email === vm.email){
-                _this.currentUser = user;
-                // console.log($scope.currentUser.location);
+                $rootScope.currentUser = user;
               }
             });
           });
@@ -33,7 +31,6 @@ function LoginCtrl($auth, $state, $http){
 
   this.handleLogin = handleLogin;
   this.authenticate = authenticate;
-  console.log('this.currentUser:', this.currentUser);
 }
 
 export default LoginCtrl;
