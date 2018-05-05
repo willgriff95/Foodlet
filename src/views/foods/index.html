@@ -31,7 +31,9 @@
 
     </div>
   </div>
-    {{showUser()}}
-    <div ng-show="map" ng-hide="list" class="map" g-map center="usersShow.user.location">MAP HERE</div>
+    <!-- {{foodsIndex.showUser()}} -->
+    <div ng-controller="LoginCtrl as login">
+      <div ng-show="map" ng-hide="list" class="map" g-map center="login.currentUser.location">MAP HERE</div>
+    </div>
   </div>
 </div>
