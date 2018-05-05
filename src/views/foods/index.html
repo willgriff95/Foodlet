@@ -1,14 +1,16 @@
-<div class="content">
-
-  <h1>Foods Index</h1>
-  <!-- <p>Here {{currentUser | json}}</p> -->
-
+<div class="toggleMapList">
   <a ng-click="list=false" class="icon">
     <i class="fa fa-map-marker"></i>
   </a>
   <a ng-click="list=true" class="icon">
     <i class="fas fa-list"></i>
   </a>
+</div>
+<div class="content">
+
+  <h1>Foods Index</h1>
+  <!-- <p>Here {{currentUser | json}}</p> -->
+
   <div class="columns is-multiline ng-hide" ng-show="list">
     <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
 
