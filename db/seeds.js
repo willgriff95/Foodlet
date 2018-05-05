@@ -47,21 +47,33 @@ mongoose.connect(dbURI, (err, db) => {
       email: 'caroline.roden94@gmail.com',
       password: 'a',
       passwordConfirmation: 'a',
-      picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDJbvH4et6WSbhspzaU4rsrwyGjZLBSe4d-Hi-duuaELxFAQaG'
+      picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDJbvH4et6WSbhspzaU4rsrwyGjZLBSe4d-Hi-duuaELxFAQaG',
+      location: {
+        lat: 51.5,
+        lng: -0.07
+      }
     },
     {
       username: 'Hugo',
       email: 'hugocowan915@gmail.com',
       password: 'a',
       passwordConfirmation: 'a',
-      picture: 'https://thesocietypages.org/socimages/files/2009/05/vimeo.jpg'
+      picture: 'https://thesocietypages.org/socimages/files/2009/05/vimeo.jpg',
+      location: {
+        lat: 51.6,
+        lng: -0.09
+      }
     },
     {
       username: 'Will',
       email: 'will.a.griffiths@gmail.com',
       password: 'a',
       passwordConfirmation: 'a',
-      picture: 'https://i.imgur.com/3embnlD.jpg'
+      picture: 'https://i.imgur.com/3embnlD.jpg',
+      location: {
+        lat: 51.4,
+        lng: -0.06
+      }
     }
   ])
 
