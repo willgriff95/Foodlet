@@ -16,6 +16,7 @@ import FoodsIndexCtrl from './controllers/foods/index';
 import FoodsNewCtrl from './controllers/foods/new';
 import FoodsShowCtrl from './controllers/foods/show';
 import FoodsEditCtrl from './controllers/foods/edit';
+import UsersShowCtrl from './controllers/users/show';
 import MainCtrl from './controllers/main';
 
 import LoginCtrl from './controllers/auth/login';
@@ -37,6 +38,7 @@ angular.module('foodlet', ['ui.router', 'satellizer'])//syntax has to be looked 
   .controller('FoodsNewCtrl', FoodsNewCtrl)
   .controller('FoodsShowCtrl', FoodsShowCtrl)
   .controller('FoodsEditCtrl', FoodsEditCtrl)
+  .controller('UsersShowCtrl', UsersShowCtrl)
   .controller('LoginCtrl', LoginCtrl)
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
