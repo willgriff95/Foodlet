@@ -6,7 +6,11 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, unique: true },
   password: { type: String },
-  picture: { type: String }
+  picture: { type: String },
+  location: {
+    lat: { type: Number, required: true },
+    lng: { type: Number, required: true }
+  }
 });
 
 userSchema.plugin(require('mongoose-unique-validator'));

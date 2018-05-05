@@ -6,6 +6,7 @@ import './scss/style.scss';
 //3rd-party dependencies:
 import '@uirouter/angularjs';
 import 'satellizer';
+import 'angular-messages';
 
 //our configs
 import Router from './config/router';
@@ -29,7 +30,7 @@ import gMap from './directives/gMap';
 import gAutocomplete from './directives/gAutocomplete';
 
 
-angular.module('foodlet', ['ui.router', 'satellizer'])//syntax has to be looked up for each 3rd party module. Can't guess it.
+angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages'])
   .config(Router)
   .config(Auth)
   .controller('MainCtrl', MainCtrl)
