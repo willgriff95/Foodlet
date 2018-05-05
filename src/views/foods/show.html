@@ -1,19 +1,21 @@
-<h1>Foods Show</h1>
+<div class="content">
+  <h1>Foods Show</h1>
 
-<div class="card">
-  <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4">{{ foodsShow.food.title }}</p>
-        <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-        <p class="subtitle is-6">{{ foodsShow.food.user }}</p>
-        <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
-        <!--- add location tag --->
-        <div class="map" g-map center="foodsShow.food.location">MAP HERE</div>
+  <div class="card">
+    <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4">{{ foodsShow.food.title }}</p>
+          <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
+          <p class="subtitle is-6">{{ foodsShow.food.user }}</p>
+          <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
+          <!--- add location tag --->
+          <div class="map" g-map center="foodsShow.food.location">MAP HERE</div>
+        </div>
       </div>
+      <a ui-sref="foodsEdit({ id: foodsShow.food._id })" class="button is-primary">Edit</a>
+      <button ng-click="foodsShow.handleDelete()" class="button">Delete</button>
     </div>
-    <a ui-sref="foodsEdit({ id: foodsShow.food._id })" class="button is-primary">Edit</a>
-    <button ng-click="foodsShow.handleDelete()" class="button">Delete</button>
   </div>
 </div>

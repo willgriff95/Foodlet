@@ -1,33 +1,36 @@
-<h1>Foods Index</h1>
+<div class="content">
 
-<a href="" ng-click="list=false" class="icon">
-  <i class=“far fa-map”>map</i>
-</a>
-<a href="" ng-click="list=true" class="icon">
-  <i class=“fas fa-list”>list</i>
-</a>
+  <h1>Foods Index</h1>
 
-<div class="columns is-multiline ng-hide" ng-show="list">
-  <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
+  <a href="" ng-click="list=false" class="icon">
+    <i class=“far fa-map”>map</i>
+  </a>
+  <a href="" ng-click="list=true" class="icon">
+    <i class=“fas fa-list”>list</i>
+  </a>
 
-    <a ui-sref="foodsShow({ id: food._id })">
-      <div class="card">
-        <div class="card-image" style="background-image: url({{ food.image }})"></div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">{{ food.title }}</p>
-              <p class="subtitle is-6">{{ food.description }}</p>
-              <p class="subtitle is-6">{{ food.user }}</p>
-              <p><small>{{ food.createdAtRelative }}</small></p>
-              <!--- add location tag --->
+  <div class="columns is-multiline ng-hide" ng-show="list">
+    <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
+
+      <a ui-sref="foodsShow({ id: food._id })">
+        <div class="card">
+          <div class="card-image" style="background-image: url({{ food.image }})"></div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{ food.title }}</p>
+                <p class="subtitle is-6">{{ food.description }}</p>
+                <p class="subtitle is-6">{{ food.user }}</p>
+                <p><small>{{ food.createdAtRelative }}</small></p>
+                <!--- add location tag --->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
 
+    </div>
   </div>
-</div>
 
-<div ng-show="map" ng-hide="list" class="map" g-map>MAP HERE</div>
+  <div ng-show="map" ng-hide="list" class="map" g-map>MAP HERE</div>
+</div>
