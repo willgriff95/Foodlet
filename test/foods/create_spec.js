@@ -56,7 +56,7 @@ describe('POST /foods', () => {
         done();
       });
   });
-  it('should return a valid wine object', done => {
+  it('should return a valid food object', done => {
     api
       .post('/api/foods')
       .set('Authorization', `Bearer ${token}`)
