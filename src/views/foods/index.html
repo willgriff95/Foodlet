@@ -32,8 +32,9 @@
     </div>
   </div>
 
-    <div ng-controller="LoginCtrl as login">
-      <div ng-show="map" ng-hide="list" class="map" g-map center="login.currentUser.location">MAP HERE</div>
+    <div ng-controller="LoginCtrl">
+      <p>Hi {{$scope.currentUser}}</p>
+      <div ng-show="map" ng-hide="list" class="map" g-map center="$scope.currentUser.location">MAP HERE</div>
     </div>
   </div>
 </div>
