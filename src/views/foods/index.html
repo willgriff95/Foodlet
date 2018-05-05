@@ -1,13 +1,13 @@
 <h1>Foods Index</h1>
 
-<a href="" ng-click="map=true; list=false" class="icon">
+<a href="" ng-click="list=false" class="icon">
   <i class=“far fa-map”>map</i>
 </a>
-<a href="" ng-click="list=true; map=false" class="icon">
+<a href="" ng-click="list=true" class="icon">
   <i class=“fas fa-list”>list</i>
 </a>
 
-<div class="columns is-multiline" ng-show="list" ng-hide="map">
+<div class="columns is-multiline ng-hide" ng-show="list">
   <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
 
     <a ui-sref="foodsShow({ id: food._id })">
@@ -30,4 +30,4 @@
   </div>
 </div>
 
-<div ng-show="map" ng-hide="list" class="map" g-map center="foodsShow.food.location">MAP HERE</div>
+<div ng-hide="list" class="map" g-map center="foodsShow.food.location">MAP HERE</div>
