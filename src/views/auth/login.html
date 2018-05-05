@@ -6,17 +6,20 @@
           <label for="email">Email</label>
           <input class="input" placeholder="Email" name="email" ng-model="login.data.email"  required/>
           <div ng-messages="login.form.email.$error" ng-if="login.form.email.$dirty || login.form.$submitted">
-            <div ng-message="required">Please fill in this field</div>
+            <div class="requiredField" ng-message="required">Please enter a valid email address</div>
           </div>
         </div>
         <div class="field">
           <label for="password">Password</label>
           <input class="input" type="password" placeholder="Password" name="password" ng-model="login.data.password" required/>
           <div ng-messages="login.form.password.$error" ng-if="login.form.password.$dirty || login.form.$submitted">
-            <div ng-message="required">Please fill in this field</div>
+            <div class="requiredField" ng-message="required">Your password must contain between 4 and 60 characters</div>
           </div>
         </div>
-        <button class="button is-primary">Submit</button>Sign up now!<a href="register">Sign up</a>
+        <button class="button is-primary">Submit</button>
+        <div class="register">
+          New to foodlet?<a ui-sref="register">Sign up now</a>
+        </div>
       </form>
     </div>
   </div>

@@ -25,6 +25,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.backgroundImageRegisterPage {
+    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .map.mapmain{
   height: 600px;
@@ -51,7 +57,7 @@ body{
 }
 .loginPageContent {
     height: 100%;
-    background-color: white;
+    background-color: rgba(244, 244, 244, 0.95);
     width: 50%;
     margin: 0 auto;
     padding: 50px;
@@ -61,18 +67,49 @@ body{
     top: 70px;
     position: relative;
 }
+.registerPageContent {
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    height: 70vh;
+    border-radius: 20px;
+    top: 25px;
+    position: relative;
+}
 .content {
     margin: 0 auto;
     top: 120px;
     width: 80%;
     position: relative;
 }
+
+.button.is-primary {
+    background-color:  #99CC33;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    // border-radius: 10px;
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+    background-color: #D9E021;
+    border-color: transparent;
+    color: #fff;
+}
+
 .card-image{
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.register {
+  padding-top: 15px;
+}
+
 
 .navbar-item img {
   max-height: 2.75rem;
@@ -86,7 +123,17 @@ body{
       padding: 0.5rem 0;
   }
 }
+.field:not(:last-child) {
+    margin-bottom: 1.4rem;
+}
 
+
+.requiredField{
+  font-size: 12px;
+  margin-top: 3px;
+  color: red;
+  position: absolute;
+}
 .navbar {
     background-color: white;
     min-height: 3.25rem;
