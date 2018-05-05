@@ -13,10 +13,19 @@
 
 // our css
 
+.backgroundImageHP {
+    background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .map{
   height: 300px;
 }
+
+
+
 
 .content {
     margin: 0 auto;
