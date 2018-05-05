@@ -28,3 +28,69 @@
 .navbar-item img {
   max-height: 2.75rem;
 }
+
+.navbar {
+    background-color: white;
+    min-height: 3.25rem;
+    /* position: relative; */
+    width: 80%;
+    margin: 0 auto;
+    z-index: 30;
+    top: 4%;
+    position: absolute;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.navbarItem:hover {
+    background-color: none;
+    color: darkGrey;
+    position: relative;
+
+}
+
+a {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.login {
+    border: 1px solid #99CC33;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 6px;
+}
+
+.logOut {
+    border: 1px solid #99CC33;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 6px;
+}
+
+.addFood {
+    margin: 15px;
+    padding-top: 6px;
+}
+
+.allFood {
+    margin: 15px;
+    padding-top: 6px;
+}
+
+//
+// a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+//     background-color: none;
+// }
+
+nav.navbar{
+
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}

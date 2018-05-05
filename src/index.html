@@ -24,12 +24,12 @@
       <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
         <div class="navbar-end">
           <!-- navbar items -->
-          <a class="navbar-item" ui-sref="home">Home</a>
-          <a class="navbar-item" ui-sref="foodsIndex">All the foods</a>
-          <a class="navbar-item" ui-sref="foodsNew" ng-if="main.isAuthenticated()">Add a food</a>
-          <a class="navbar-item" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
-          <a class="navbar-item" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a>
-          <a class="navbar-item" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
+          <!-- <a class="navbarItem" ui-sref="home">Home</a> -->
+          <a class="navbarItem allFood" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">Browse</a>
+          <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add a food</a>
+          <a class="navbarItem logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
+          <!-- <a class="navbarItem" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a> -->
+          <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
         </div>
       </div>
     </nav>
