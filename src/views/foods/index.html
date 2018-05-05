@@ -3,13 +3,12 @@
   <h1>Foods Index</h1>
   <!-- <p>Here {{currentUser | json}}</p> -->
 
-  <a href="" ng-click="list=false" class="icon">
-    <i class=“far fa-map”></i>
-  </a>
-  <a href="" ng-click="list=true" class="icon">
-    <i class=“fas fa-list”></i>
-  </a>
-
+  <span ng-click="list=false" class="icon">
+    <i class="fa fa-map-marker"></i>
+  </span>
+  <span ng-click="list=true" class="icon">
+    <i class="fas fa-list"></i>
+  </span>
   <div class="columns is-multiline ng-hide" ng-show="list">
     <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
 
