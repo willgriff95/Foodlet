@@ -75,6 +75,7 @@ body{
     padding: 50px;
     height: 70vh;
     border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 25px;
     position: relative;
 }
@@ -93,8 +94,7 @@ body{
     // border-radius: 10px;
 }
 .navbar-burger {
-    cursor: pointer;
-    display: block;
+
     height: 3.25rem;
     position: relative;
     width: 3.25rem;
@@ -102,7 +102,7 @@ body{
     margin-left: auto;
 }
 .button.is-primary:hover, .button.is-primary.is-hovered {
-    background-color: #D9E021;
+    background-color: #9DDD48;
     border-color: transparent;
     color: #fff;
 }
