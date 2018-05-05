@@ -6,7 +6,7 @@
 
     <div class="field">
       <label for="title">Title</label>
-      <input class="input" ng-model="foodsEdit.food.title" name="title"/>
+      <input class="input" ng-model="foodsEdit.food.title" name="title" required/>
       <div ng-messages="foodsEdit.form.title.$error" ng-if="foodsEdit.form.title.$dirty || foodsEdit.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
@@ -14,7 +14,7 @@
 
     <div class="field">
       <label for="description">Description</label>
-      <input class="input" ng-model="foodsEdit.food.description" name="description"/>
+      <input class="input" ng-model="foodsEdit.food.description" name="description" required/>
       <div ng-messages="foodsEdit.form.description.$error" ng-if="foodsEdit.form.description.$dirty || foodsEdit.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
@@ -22,7 +22,7 @@
 
     <div class="field">
       <label for="image">Image</label>
-      <input class="input" ng-model="foodsEdit.food.image" name="image"/>
+      <input class="input" ng-model="foodsEdit.food.image" name="image" required/>
       <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>

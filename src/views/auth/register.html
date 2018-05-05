@@ -4,7 +4,7 @@
 
     <div class="field">
       <label for="username">Username</label>
-      <input class="input" placeholder="Username" name="username" ng-model="register.data.username" />
+      <input class="input" placeholder="Username" name="username" ng-model="register.data.username" required/>
       <div ng-messages="register.form.username.$error" ng-if="register.form.username.$dirty || register.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
@@ -12,7 +12,7 @@
 
     <div class="field">
       <label for="email">Email</label>
-      <input class="input" placeholder="Email" name="email" ng-model="register.data.email" />
+      <input class="input" placeholder="Email" name="email" ng-model="register.data.email" required/>
       <div ng-messages="register.form.email.$error" ng-if="register.form.email.$dirty || register.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
@@ -20,7 +20,7 @@
 
     <div class="field">
       <label for="password">Password</label>
-      <input class="input" type="password" placeholder="Password" name="password" ng-model="register.data.password" />
+      <input class="input" type="password" placeholder="Password" name="password" ng-model="register.data.password" required/>
       <div ng-messages="register.form.password.$error" ng-if="register.form.password.$dirty || register.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
@@ -28,7 +28,7 @@
 
     <div class="field">
       <label for="passwordConfirmation">Password Confirmation</label>
-      <input class="input" type="password" placeholder="Password Confirmation" name="passwordConfirmation" ng-model="register.data.passwordConfirmation" />
+      <input class="input" type="password" placeholder="Password Confirmation" name="passwordConfirmation" ng-model="register.data.passwordConfirmation" required/>
       <div ng-messages="register.form.passwordConfirmation.$error" ng-if="register.form.passwordConfirmation.$dirty || register.form.$submitted">
         <div ng-message="required">Please fill in this field</div>
       </div>
