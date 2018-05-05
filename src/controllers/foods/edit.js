@@ -8,7 +8,7 @@ function FoodsEditCtrl(Food, $state){
 
   function handleUpdate(){
     Food.updateById($state.params.id, this.food)
-      .then(() => $state.go('FoodsShow', $state.params));
+      .then(() => $state.go('foodsShow', $state.params));
   }
   this.handleUpdate = handleUpdate;
 }
