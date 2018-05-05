@@ -48,7 +48,7 @@
 
 <!-- main-section -->
     <ui-view ng-if="main.isHome"></ui-view>
-    <section class="section" ng-if="!main.isHome">
+    <section ng-if="!main.isHome">
       <div class="container">
         <ui-view></ui-view>
       </div>
