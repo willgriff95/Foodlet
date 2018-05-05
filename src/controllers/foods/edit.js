@@ -7,6 +7,9 @@ function FoodsEditCtrl(Food, $state){
     .then(res => this.food = res.data);
 
   function handleUpdate(){
+
+    if(this.form.$invalid) return false;
+
     Food.updateById($state.params.id, this.food)
       .then(() => $state.go('foodsShow', $state.params));
   }

@@ -1,15 +1,23 @@
-
 <div class="content">
-  <form ng-submit="login.handleLogin()">
+  <form name="login.form" ng-submit="login.handleLogin()" novalidate>
+
     <div class="field">
       <label for="email">Email</label>
-      <input class="input" placeholder="Email" name="email" ng-model="login.data.email" />
+      <input class="input" placeholder="Email" name="email" ng-model="login.data.email"  required/>
+      <div ng-messages="login.form.email.$error" ng-if="login.form.email.$dirty || login.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
+
     <div class="field">
       <label for="password">Password</label>
-      <input class="input" type="password" placeholder="Password" name="password" ng-model="login.data.password"/>
+      <input class="input" type="password" placeholder="Password" name="password" ng-model="login.data.password" required/>
+      <div ng-messages="login.form.password.$error" ng-if="login.form.password.$dirty || login.form.$submitted">
+        <div ng-message="required">Please fill in this field</div>
+      </div>
     </div>
 
     <button class="button is-primary">Submit</button>
+
   </form>
 </div>
