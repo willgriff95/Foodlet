@@ -1,4 +1,4 @@
-FoodsIndexCtrl.$inject = ['Food'];
+FoodsIndexCtrl.$inject = ['Food', '$http'];
 
 function FoodsIndexCtrl(Food){
   this.all = [];

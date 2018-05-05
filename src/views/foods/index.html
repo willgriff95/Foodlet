@@ -1,12 +1,13 @@
 <div class="content">
 
   <h1>Foods Index</h1>
+  <!-- <p>Here {{currentUser | json}}</p> -->
 
   <a href="" ng-click="list=false" class="icon">
-    <i class=“far fa-map”>map</i>
+    <i class=“far fa-map”></i>
   </a>
   <a href="" ng-click="list=true" class="icon">
-    <i class=“fas fa-list”>list</i>
+    <i class=“fas fa-list”></i>
   </a>
 
   <div class="columns is-multiline ng-hide" ng-show="list">
@@ -31,6 +32,6 @@
 
     </div>
   </div>
-
-  <div ng-show="map" ng-hide="list" class="map" g-map>MAP HERE</div>
+      <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location">MAP HERE</div>
+  </div>
 </div>
