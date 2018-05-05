@@ -26,6 +26,8 @@ import Food from './models/food';
 
 //directives
 import gMap from './directives/gMap';
+import gAutocomplete from './directives/gAutocomplete';
+
 
 angular.module('foodlet', ['ui.router', 'satellizer'])//syntax has to be looked up for each 3rd party module. Can't guess it.
   .config(Router)
@@ -38,4 +40,5 @@ angular.module('foodlet', ['ui.router', 'satellizer'])//syntax has to be looked 
   .controller('LoginCtrl', LoginCtrl)
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
-  .directive('gMap', gMap);//gMap === g-map in HTML!!!!!
+  .directive('gMap', gMap)
+  .directive('gAutocomplete', gAutocomplete);
