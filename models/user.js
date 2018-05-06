@@ -10,7 +10,9 @@ const userSchema = new mongoose.Schema({
   location: {
     lat: { type: Number, required: true },
     lng: { type: Number, required: true }
-  }
+  },
+  twitterId: { type: Number }
+
 });
 
 userSchema.plugin(require('mongoose-unique-validator'));
@@ -34,7 +36,7 @@ userSchema
   });
 
 userSchema.pre('validate', function checkPassword(next){
-  if(!this.password) {
+  if(!this.password && !this.twitterId) {
     this.invalidate('password', 'password is required');
   }
   if(this.isModified('password') && this._passwordConfirmation !== this.password){
