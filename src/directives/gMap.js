@@ -21,6 +21,9 @@ function gMap(){
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
+
+      //I want this to refresh maps on page refresh.
+      //Refresh must be true if the event page reload is triggered.
       $scope.control = {
         refresh: true
       };
