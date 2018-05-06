@@ -12,11 +12,7 @@
   "dependencies": {
     "@uirouter/angularjs": "^1.0.16",
     "angular": "^1.6.0",
-<<<<<<< HEAD
     "angular-filepicker": "^1.1.4",
-=======
-    "angular-file-picker": "^2.2.0-discontinued",
->>>>>>> 57eab6ec1d99608988ee7df784d6d047c8d04d1a
     "angular-messages": "^1.6.10",
     "bcrypt": "^2.0.1",
     "bluebird": "^3.5.1",
