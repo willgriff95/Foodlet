@@ -7,9 +7,12 @@ import './scss/style.scss';
 import '@uirouter/angularjs';
 import 'satellizer';
 import 'angular-messages';
+import 'filepicker-js';
+import 'angular-filepicker/dist/angular_filepicker';
 
 //our configs
 import Router from './config/router';
+import Upload from './config/filepicker';
 import Auth from './config/auth';
 
 //our controllers
@@ -29,11 +32,14 @@ import Food from './models/food';
 //directives
 import gMap from './directives/gMap';
 import gAutocomplete from './directives/gAutocomplete';
+import uploadImage from './directives/upload-image';
 
 
-angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages'])
+
+angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages', 'angular-filepicker'])
   .config(Router)
   .config(Auth)
+  .config(Upload)
   .controller('MainCtrl', MainCtrl)
   .controller('FoodsIndexCtrl', FoodsIndexCtrl)
   .controller('FoodsNewCtrl', FoodsNewCtrl)
@@ -44,4 +50,5 @@ angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages'])
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
   .directive('gMap', gMap)
-  .directive('gAutocomplete', gAutocomplete);
+  .directive('gAutocomplete', gAutocomplete)
+  .directive('uploadImage', uploadImage);
