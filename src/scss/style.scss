@@ -74,7 +74,7 @@ body{
 .homePageContent {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     height: 75vh;
     border-radius: 20px;
@@ -180,7 +180,7 @@ body{
 @media only screen and (max-width: 1087px) {
   .navbar-menu {
       background-color: white;
-      border-radius: 0px 10px 10px 10px;
+      border-radius: 10px 10px 10px 10px;
       box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
       padding: 0.5rem 0;
   }
@@ -231,15 +231,16 @@ body{
     cursor: pointer;
     text-decoration: none;
     position: relative;
+    float: right;
 }
-.logout {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
+// .logout {
+//     color: #99CC33;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//     cursor: pointer;
+//     text-decoration: none;
+//     position: relative;
+// }
 .login {
     color: #99CC33;
     padding-left: 30px;
@@ -274,6 +275,7 @@ a {
     border: 1px solid #99CC33;
     border-radius: 15px;
     margin: 15px;
+    float: right;
     width: 100px;
     text-align: center;
     padding-top: 6px;
@@ -283,13 +285,25 @@ a {
   padding-left: 90px;
   padding-right: 90px;
 }
+
+
+@media only screen and (max-width: 1087px){
+
+  .navbar-menu.is-active {
+      display: block;
+      height: 100%;
+  }
+
+}
+
+
 .addFoodButton {
     width: 50px;
     height: 50px;
     border-radius: 50px;
     position: absolute;
     background-color: #99CC33;
-    right: 11vw;
+    right: 8vw;
     top: 80vh;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
@@ -298,13 +312,14 @@ a {
 .addFood {
     margin: 15px;
     padding-top: 6px;
+    float: right;
 }
 
 .allFood {
     margin: 15px;
+    float: right;
     padding-top: 6px;
 }
-
 //
 // a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
 //     background-color: none;
