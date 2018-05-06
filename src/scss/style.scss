@@ -200,7 +200,7 @@ body{
 
 }
 
-a {
+.allfood {
     color: #99CC33;
     padding-left: 30px;
     padding-right: 30px;
@@ -208,7 +208,45 @@ a {
     text-decoration: none;
     position: relative;
 }
+.addfood {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.logout {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.login {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.plusbutton {
+    color: white;
+    cursor: pointer;
+    top: -10px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    font-size: 50px;
+    font-weight: 200;
+}
 
+a {
+  color: #99CC33;
+
+}
 .login {
     border: 1px solid #99CC33;
     border-radius: 15px;
@@ -220,9 +258,24 @@ a {
     border: 1px solid #99CC33;
     border-radius: 15px;
     margin: 15px;
+    width: 100px;
+    text-align: center;
     padding-top: 6px;
 }
 
+
+.addFoodButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: #99CC33;
+  right: 10px;
+  top: 80vh;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+  text-align: center;
+}
 .addFood {
     margin: 15px;
     padding-top: 6px;

@@ -16,7 +16,7 @@ function gMap(){
           'elementType': 'geometry',
           'stylers': [
             {
-              'color': '#e9e9e9'
+              'color': '#dcf2ff'
             },
             {
               'lightness': 17
@@ -103,7 +103,7 @@ function gMap(){
           'elementType': 'geometry',
           'stylers': [
             {
-              'color': '#dedede'
+              'color': '#e1ffc5'//#99CC33'//#9DDD48
             },
             {
               'lightness': 21
