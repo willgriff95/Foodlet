@@ -21,6 +21,9 @@ function gMap(){
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
+      $scope.control = {
+        refresh: true
+      };
     }
   };
 }
