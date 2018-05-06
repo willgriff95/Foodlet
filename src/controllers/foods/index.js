@@ -1,21 +1,17 @@
-/*global google*/
-FoodsIndexCtrl.$inject = ['Food', '$http', '$rootScope'];
+FoodsIndexCtrl.$inject = ['Food'];
 
-function FoodsIndexCtrl(Food, $rootScope){
+function FoodsIndexCtrl(Food){
   this.all = [];
+  this.location = [];
 
-  Food.find()
-    .then(() => $rootScope.location = [])
-    .then(res => res.data.forEach(food => {
-      this.location.push(food.location);
-    }))
-    //Trying to add map markers for each food location.
-    .then(() => this.location.forEach(location => {
-      return new google.maps.Marker({
-        position: new google.maps.LatLng(location.lat, location.lng)
+  Food
+    .find()
+    .then(res => {
+      this.all = res.data;
+      res.data.forEach(food => {
+        this.location.push(food.location);
       });
-    }))
-    .then(res => this.all = res.data);
+    });
 }
 
 export default FoodsIndexCtrl;
