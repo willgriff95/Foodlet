@@ -10,9 +10,9 @@
 <div class="addFoodButton">
 <a class="plusbutton" ui-sref="foodsNew">+</a>
 </div>
-<div class="content">
+<div class="content foodsIndexcontent">
 
-  <h1>Foods Index</h1>
+  <!-- <h1>Foods Index</h1> -->
   <!-- <p>Here {{currentUser | json}}</p> -->
 
   <div class="columns is-multiline ng-hide" ng-show="list">
@@ -36,7 +36,8 @@
       </a>
 
     </div>
-  </div>
-      <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location">MAP HERE</div>
-  </div>
+
+</div>
+</div>
+    <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location">MAP HERE</div>
 </div>

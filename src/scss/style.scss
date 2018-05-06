@@ -41,10 +41,9 @@
 .map {
     height: 100vh;
     width: 100vw;
-    margin-top: -175px;
-    margin-left: -180px;
+    margin-top: -25px;
+    margin-left: 0px;
 }
-
 body{
   font-family: 'circe rounded', 'helvetica';
   // font-size: 10px;
@@ -56,11 +55,11 @@ body{
     border-radius: 15px;
     position: absolute;
     top: 200px;
-    left: 5.5%;
+    margin: 0 auto;
+    left: 11%;
     z-index: 100;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
-
 .icon {
     /* align-items: center; */
     /* display: inline-flex; */
@@ -74,8 +73,9 @@ body{
 
 .homePageContent {
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
+    margin: 0 auto;
     height: 75vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -120,16 +120,23 @@ body{
 .content {
     margin: 0 auto;
     top: 120px;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
     width: 80%;
     position: relative;
 }
-
 .button.is-primary {
     background-color:  #99CC33;
     border-color: transparent;
     color: #fff;
     width: 100%;
     // border-radius: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
 }
 .navbar-burger {
 
@@ -152,6 +159,15 @@ body{
   background-size: contain;
 }
 
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+    border-radius: 20px;
+}
+
 .register {
   padding-top: 15px;
 }
@@ -164,7 +180,7 @@ body{
 @media only screen and (max-width: 1087px) {
   .navbar-menu {
       background-color: white;
-      border-radius: 0px 10px 10px 10px;
+      border-radius: 10px 10px 10px 10px;
       box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
       padding: 0.5rem 0;
   }
@@ -215,15 +231,16 @@ body{
     cursor: pointer;
     text-decoration: none;
     position: relative;
+    float: right;
 }
-.logout {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
+// .logout {
+//     color: #99CC33;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//     cursor: pointer;
+//     text-decoration: none;
+//     position: relative;
+// }
 .login {
     color: #99CC33;
     padding-left: 30px;
@@ -258,34 +275,51 @@ a {
     border: 1px solid #99CC33;
     border-radius: 15px;
     margin: 15px;
+    float: right;
     width: 100px;
     text-align: center;
     padding-top: 6px;
 }
 
+.foodsIndexcontent{
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+
+@media only screen and (max-width: 1087px){
+
+  .navbar-menu.is-active {
+      display: block;
+      height: 100%;
+  }
+
+}
+
 
 .addFoodButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  position: absolute;
-  background-color: #99CC33;
-  right: 5.5%;
-  top: 80vh;
-  z-index: 1000;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-  text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #99CC33;
+    right: 8vw;
+    top: 80vh;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    text-align: center;
 }
 .addFood {
     margin: 15px;
     padding-top: 6px;
+    float: right;
 }
 
 .allFood {
     margin: 15px;
+    float: right;
     padding-top: 6px;
 }
-
 //
 // a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
 //     background-color: none;
