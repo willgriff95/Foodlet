@@ -1,5 +1,6 @@
 /*global google*/
-function gMap(){
+gMap.$inject = ['$rootScope', 'Food'];
+function gMap($rootScope, Food){
   return {
     restrict: 'A',
     scope: {
@@ -10,7 +11,7 @@ function gMap(){
       const map = new google.maps.Map($element[0], {
         center: { lat: 51.515, lng: -0.078 },
         zoom: 14,
-        scrollwheel: false,
+        scrollwheel: true,
         disableDefaultUI: true,
         styles: [{
           'featureType': 'water',
@@ -158,6 +159,26 @@ function gMap(){
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
+
+      $scope.markers = [];
+      const createMarker = function(){
+        this.foods = [];
+        Food
+          .find()
+          .then(res => this.foods = res.data)
+          .then(() => {
+            this.foods.forEach(food => {
+              const foodMarker = new google.maps.Marker({
+                position: new google.maps.LatLng(food.location.lat, food.location.lng),
+                map: map,
+                title: food.title
+              });
+              $scope.markers.push(foodMarker);
+            });
+          })
+          .then(() => $scope.markers.setPosition());
+      };
+      createMarker();
     }
   };
 }

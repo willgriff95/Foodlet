@@ -14,10 +14,10 @@
 
   <!-- <h1>Foods Index</h1> -->
   <!-- <p>Here {{currentUser | json}}</p> -->
-  <p>{{foodsIndex.location}}</p>
+  <!-- <p>{{allFoods | json}}</p> -->
 
   <div class="columns is-multiline ng-hide" ng-show="list">
-    <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
+    <div ng-repeat="food in allFoods" class="column is-half-tablet is-one-third-desktop">
 
       <a ui-sref="foodsShow({ id: food._id })">
         <div class="card">
@@ -42,7 +42,10 @@
 </div>
 <div class="map_canvas">
   <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location" marker=>MAP HERE</div>
+  <div ng-repeat="food in foodsIndex.all">
+    {{createMarker(food)}}
+    <!-- <ui-gmap-marker g-map coords="food.location" options="marker.options" events="marker.events" idkey="food.name">
+    </ui-gmap-marker> -->
+  </div>
 
-  <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
-  </ui-gmap-marker>
 </div>
