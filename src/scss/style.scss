@@ -42,7 +42,7 @@
     height: 100vh;
     width: 100vw;
     margin-top: -25px;
-    margin-left: -65px;
+    margin-left: 0px;
 }
 body{
   font-family: 'circe rounded', 'helvetica';
@@ -53,9 +53,10 @@ body{
     height: 80px;
     background-color: white;
     border-radius: 15px;
-    position: static;
+    position: absolute;
     top: 200px;
-    left: 65px;
+    margin: 0 auto;
+    left: 11%;
     z-index: 100;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
@@ -72,8 +73,9 @@ body{
 
 .homePageContent {
     height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 85%;
+    margin: 0 auto;
     height: 75vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -118,8 +120,8 @@ body{
 .content {
     margin: 0 auto;
     top: 120px;
-    padding-left: 3%;
-    padding-right: 3%;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
     width: 80%;
     position: relative;
 }
@@ -129,6 +131,12 @@ body{
     color: #fff;
     width: 100%;
     // border-radius: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
 }
 .navbar-burger {
 
@@ -271,18 +279,21 @@ a {
     padding-top: 6px;
 }
 
-
+.foodsIndexcontent{
+  padding-left: 90px;
+  padding-right: 90px;
+}
 .addFoodButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  position: absolute;
-  background-color: #99CC33;
-  right: 5.5%;
-  top: 80vh;
-  z-index: 1000;
-  box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-  text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: #99CC33;
+    right: 11vw;
+    top: 80vh;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    text-align: center;
 }
 .addFood {
     margin: 15px;
