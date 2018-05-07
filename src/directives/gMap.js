@@ -149,11 +149,22 @@ function gMap(Food){
           ]
         }]
       });
+      var contentString =
+      '<div id="siteNotice" >'+ '{{ foodsIndex.food.title }}' + '</div>';
+
+      const infowindow = new google.maps.InfoWindow({
+        content: contentString
+      });
+
       const marker = new google.maps.Marker({
         map: map,
         animation: google.maps.Animation.DROP,
         position: map.getCenter(),
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
+      });
+
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
       });
 
       $scope.$watch('center', () => {
