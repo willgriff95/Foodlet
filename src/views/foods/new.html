@@ -6,7 +6,7 @@
           <label for="title">Title</label>
           <input class="input" placeholder="Title" name="title" ng-model='foodsNew.food.title' required/>
           <div ng-messages="foodsNew.form.title.$error" ng-if="foodsNew.form.title.$dirty || foodsNew.form.$submitted">
-            <div class="requiredField" ng-message="required">Please enter a title</div>
+            <div class="requiredField" ng-message="required">Please fill in this field</div>
           </div>
         </div>
         <div class="field">

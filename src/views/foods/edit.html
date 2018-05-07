@@ -16,7 +16,7 @@
       <label for="description">Description</label>
       <input class="input" ng-model="foodsEdit.food.description" name="description" required/>
       <div ng-messages="foodsEdit.form.description.$error" ng-if="foodsEdit.form.description.$dirty || foodsEdit.form.$submitted">
-        <div ng-message="required">Please fill in this field</div>
+        <div ng-message="required">Please enter a description</div>
       </div>
     </div>
 
@@ -24,7 +24,7 @@
       <label for="image">Image</label>
       <input class="input" ng-model="foodsEdit.food.image" name="image" required/>
       <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
-        <div ng-message="required">Please fill in this field</div>
+        <div ng-message="required">Please upload an image</div>
       </div>
     </div>
 

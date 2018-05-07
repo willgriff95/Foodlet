@@ -1,5 +1,4 @@
 LoginCtrl.$inject = ['$auth', '$state', '$http', '$rootScope'];
-//$auth refers to a package called satellizer.
 function LoginCtrl($auth, $state, $http, $rootScope){
   this.data = {};
   // let currentUser;
