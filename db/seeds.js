@@ -16,7 +16,7 @@ mongoose.connect(dbURI, (err, db) => {
         lat: 51.52,
         lng: -0.07
       },
-      image: 'http://via.placeholder.com/350x150',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjeNMBiwuIT37jax08VvK2Kow6KiuLsJ9kdUdNgA1Wvpbl05Q',
       active: true
     }, {
       title: 'Punnet of tomatoes',
@@ -25,7 +25,7 @@ mongoose.connect(dbURI, (err, db) => {
         lat: 51.515 ,
         lng: -0.078
       },
-      image: 'http://via.placeholder.com/350x150',
+      image: 'https://1.bp.blogspot.com/-67b5IA_NG8c/VwnRgMQpKJI/AAAAAAAAQu8/F-ZQvf5i3QIcTAa_8UXC5tqyEXpZtg-Iw/s1600/tomatoes%2B-%2B1.jpg',
       active: true
     }, {
       title: '6 doughnuts',
@@ -34,7 +34,7 @@ mongoose.connect(dbURI, (err, db) => {
         lat: 51.54,
         lng: -0.06
       },
-      image: 'http://via.placeholder.com/350x150',
+      image: 'http://www.dinnerwithjulie.com/wp-content/uploads/2017/05/Cereal-doughnuts-1.jpg',
       active: true
     }
 
