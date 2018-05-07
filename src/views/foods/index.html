@@ -7,36 +7,33 @@
   </a>
 </div>
 
-<!-- <div class="addFoodButton">
-<a class="plusbutton" ui-sref="foodsNew">+</a>
-</div> -->
+
 <div class="content foodsIndexcontent">
-
-  <!-- <h1>Foods Index</h1> -->
+  <div class="foodsShowPageContent">
   <!-- <p>Here {{currentUser | json}}</p> -->
+    <div class="columns is-multiline ng-hide" ng-show="list">
+      <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
 
-  <div class="columns is-multiline ng-hide" ng-show="list">
-    <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
-
-      <a ui-sref="foodsShow({ id: food._id })">
-        <div class="card">
-          <div class="card-image" style="background-image: url({{ food.image }})"></div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-4">{{ food.title }}</p>
-                <p class="subtitle is-6">{{ food.description }}</p>
-                <p class="subtitle is-6">{{ food.user }}</p>
-                <p><small>{{ food.createdAtRelative }}</small></p>
-                <!--- add location tag --->
+        <a ui-sref="foodsShow({ id: food._id })">
+          <div class="card">
+            <div class="card-image" style="background-image: url({{ food.image }})"></div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{{ food.title }}</p>
+                  <p class="subtitle is-6">{{ food.description }}</p>
+                  <p class="subtitle is-6">{{ food.user }}</p>
+                  <p><small>{{ food.createdAtRelative }}</small></p>
+                  <!--- add location tag --->
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+
+      </div>
 
     </div>
-
-</div>
+  </div>
 </div>
 <div ng-show="map" ng-hide="list" class="map" g-map-index center="currentUser.location" marker=>MAP HERE</div>
