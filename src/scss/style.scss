@@ -16,27 +16,28 @@
 // our css
 
 .backgroundImageHomePage {
+  width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .backgroundImageLoginPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
+    width: 100vw;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .backgroundImageRegisterPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
+  width: 100vw;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.map.mapmain{
-  height: 600px;
-}
+
 
 .map {
     height: 100vh;
