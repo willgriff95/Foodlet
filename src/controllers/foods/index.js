@@ -1,11 +1,11 @@
-FoodsIndexCtrl.$inject = ['Food', '$rootScope'];
+FoodsIndexCtrl.$inject = ['Food'];
 
-function FoodsIndexCtrl(Food, $rootScope){
-  this.location = [];
+function FoodsIndexCtrl(Food){
+  this.all = [];
 
   Food
     .find()
-    .then(res => $rootScope.allFoods = res.data);
+    .then(res => this.all = res.data);
 }
 
 export default FoodsIndexCtrl;
