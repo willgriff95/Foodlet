@@ -31,6 +31,7 @@ import Food from './models/food';
 
 //directives
 import gMap from './directives/gMap';
+import gMapIndex from './directives/gMapIndex';
 import gAutocomplete from './directives/gAutocomplete';
 import imageUpload from './directives/imageUpload';
 
@@ -50,5 +51,6 @@ angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages', 'angular-fil
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
   .directive('gMap', gMap)
+  .directive('gMapIndex', gMapIndex)
   .directive('gAutocomplete', gAutocomplete)
   .directive('imageUpload', imageUpload);

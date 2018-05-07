@@ -1,6 +1,5 @@
 /*global google*/
-gMap.$inject = ['Food'];
-function gMap(Food){
+function gMap(){
   return {
     restrict: 'A',
     scope: {
@@ -171,20 +170,6 @@ function gMap(Food){
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
-
-      Food
-        .find()
-        .then(res => {
-          res.data.forEach(food => {
-            return new google.maps.Marker({
-              position: new google.maps.LatLng(food.location.lat, food.location.lng),
-              map: map,
-              animation: google.maps.Animation.DROP,
-              title: food.title,
-              icon: 'https://i.imgur.com/aVQgzGW.png?1'
-            });
-          });
-        });
     }
   };
 }

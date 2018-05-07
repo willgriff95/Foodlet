@@ -1,7 +1,7 @@
 /*global google*/
-gMap.$inject = ['Food'];
+gMapIndex.$inject = ['Food'];
 
-function gMap(Food){
+function gMapIndex(Food){
   return {
     restrict: 'A',
     scope: {
@@ -179,4 +179,4 @@ function gMap(Food){
     }
   };
 }
-export default gMap;
+export default gMapIndex;
