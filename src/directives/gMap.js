@@ -149,10 +149,11 @@ function gMap(Food){
           ]
         }]
       });
-
       const marker = new google.maps.Marker({
         map: map,
-        position: map.getCenter()
+        animation: google.maps.Animation.DROP,
+        position: map.getCenter(),
+        icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
 
       $scope.$watch('center', () => {
@@ -167,7 +168,9 @@ function gMap(Food){
             return new google.maps.Marker({
               position: new google.maps.LatLng(food.location.lat, food.location.lng),
               map: map,
-              title: food.title
+              animation: google.maps.Animation.DROP,
+              title: food.title,
+              icon: 'https://i.imgur.com/aVQgzGW.png?1'
             });
           });
         });
