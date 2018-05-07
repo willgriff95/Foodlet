@@ -167,6 +167,11 @@ function gMapIndex(Food){
         .find()
         .then(res => {
           res.data.forEach(food => {
+            const title = food.title;
+            const description = food.description;
+            const infowindow = new google.maps.InfoWindow({
+              content: `<div id="siteNotice" ><p>${title}</p><p>${description}</p>'</div>'`
+            });
             return new google.maps.Marker({
               position: new google.maps.LatLng(food.location.lat, food.location.lng),
               map: map,
@@ -176,6 +181,9 @@ function gMapIndex(Food){
             });
           });
         });
+      marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
     }
   };
 }
