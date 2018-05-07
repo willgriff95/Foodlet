@@ -1,9 +1,10 @@
-FoodsIndexCtrl.$inject = ['Food', '$http'];
+FoodsIndexCtrl.$inject = ['Food'];
 
 function FoodsIndexCtrl(Food){
   this.all = [];
 
-  Food.find()
+  Food
+    .find()
     .then(res => this.all = res.data);
 }
 

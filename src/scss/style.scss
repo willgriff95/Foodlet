@@ -16,27 +16,28 @@
 // our css
 
 .backgroundImageHomePage {
+  width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .backgroundImageLoginPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
+    width: 100vw;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .backgroundImageRegisterPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
+  width: 100vw;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.map.mapmain{
-  height: 600px;
-}
+
 
 .map {
     height: 100vh;
@@ -59,6 +60,10 @@ body{
     left: 11%;
     z-index: 100;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+.card-content {
+    background-color: none;
+    padding: 1rem;
 }
 .icon {
     /* align-items: center; */
@@ -152,20 +157,20 @@ body{
     color: #fff;
 }
 
-.card-image{
-  height: 250px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.card-image {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .card {
     background-color: white;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     color: #4a4a4a;
     max-width: 100%;
+    height: 350px;
     position: relative;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .register {

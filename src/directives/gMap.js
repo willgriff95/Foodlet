@@ -1,5 +1,6 @@
 /*global google*/
-function gMap(){
+gMap.$inject = ['Food'];
+function gMap(Food){
   return {
     restrict: 'A',
     scope: {
@@ -10,7 +11,7 @@ function gMap(){
       const map = new google.maps.Map($element[0], {
         center: { lat: 51.515, lng: -0.078 },
         zoom: 14,
-        scrollwheel: false,
+        scrollwheel: true,
         disableDefaultUI: true,
         styles: [{
           'featureType': 'water',
@@ -148,61 +149,32 @@ function gMap(){
           ]
         }]
       });
-
       const marker = new google.maps.Marker({
         map: map,
-        position: map.getCenter()
+        animation: google.maps.Animation.DROP,
+        position: map.getCenter(),
+        icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
 
       $scope.$watch('center', () => {
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
+
+      Food
+        .find()
+        .then(res => {
+          res.data.forEach(food => {
+            return new google.maps.Marker({
+              position: new google.maps.LatLng(food.location.lat, food.location.lng),
+              map: map,
+              animation: google.maps.Animation.DROP,
+              title: food.title,
+              icon: 'https://i.imgur.com/aVQgzGW.png?1'
+            });
+          });
+        });
     }
   };
 }
 export default gMap;
-
-
-
-
-
-// },
-// {
-// 'featureType': 'transit',
-// 'elementType': 'geometry',
-// 'stylers': [
-//   {
-//     'color': '#f2f2f2'
-//   },
-//   {
-//     'lightness': 19
-//   }
-// ]
-// },
-// {
-// 'featureType': 'administrative',
-// 'elementType': 'geometry.fill',
-// 'stylers': [
-//   {
-//     'color': '#fefefe'
-//   },
-//   {
-//     'lightness': 20
-//   }
-// ]
-// },
-// {
-// 'featureType': 'administrative',
-// 'elementType': 'geometry.stroke',
-// 'stylers': [
-//   {
-//     'color': '#fefefe'
-//   },
-//   {
-//     'lightness': 17
-//   },
-//   {
-//     'weight': 1.2
-//   }
-// ]
