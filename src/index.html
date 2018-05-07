@@ -12,6 +12,7 @@
 
   <body ng-controller="MainCtrl as main">
       <nav class="navbar" role="navigation" aria-label="main navigation">
+
         <!-- navbar-brand -->
         <div class="navbar-brand">
           <a class="navbar-item" ui-sref="home">
@@ -25,10 +26,12 @@
           </a>
         </div>
         <!-- end navbar-brand -->
+
         <!-- navbar-menu -->
         <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
           <div class="navbar-end">
             <!-- navbar items -->
+            
             <!-- <a class="navbarItem" ui-sref="home">Home</a> -->
             <a class="navbarItem allFood" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">Browse</a>
             <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add a food</a>

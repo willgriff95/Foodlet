@@ -5,7 +5,7 @@ function foodsIndex(req, res, next){
     .find()
     .exec()
     .then(foods => res.json(foods))
-    .catch(next);           // catch gets error as argument
+    .catch(next);           
 }
 
 function foodsShow(req, res, next){
@@ -20,7 +20,7 @@ function foodsShow(req, res, next){
 }
 
 function foodsCreate(req, res, next){
-  req.body.createdBy = req.currentUser;         // ! so we can check token and store on req
+  req.body.createdBy = req.currentUser;
   Food
     .create(req.body)
     .then(food => res.status(201).json(food))

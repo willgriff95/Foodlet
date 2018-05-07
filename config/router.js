@@ -22,7 +22,7 @@ router.route('/users/:id')
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
-// router.post('/twitter', oauth.twitter);
+router.post('/twitter', oauth.twitter);
 
 
 module.exports = router;
