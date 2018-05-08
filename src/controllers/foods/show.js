@@ -16,7 +16,7 @@ function FoodsShowCtrl(Food, $state){
 
 
   function handleRequestCreate(){
-    Food.requestCreate($state.params.id, this.data)
+    Food.requestCreate($state.params.id)
       .then(res => this.food = res.data);
   }
 
