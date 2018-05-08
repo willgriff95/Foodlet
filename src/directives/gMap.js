@@ -3,10 +3,12 @@ function gMap(){
   return {
     restrict: 'A',
     scope: {
-      center: '='
+      foods: '=?',
+      center: '=?'
     },
-    link($scope, $element){
 
+    link($scope, $element){
+      console.log($element);
       const map = new google.maps.Map($element[0], {
         center: { lat: 51.515, lng: -0.078 },
         zoom: 14,
@@ -148,27 +150,42 @@ function gMap(){
           ]
         }]
       });
-      var contentString =
-      '<div id="siteNotice" >'+ '{{ foodsIndex.food.title }}' + '</div>';
-
-      const infowindow = new google.maps.InfoWindow({
-        content: contentString
-      });
-
       const marker = new google.maps.Marker({
         map: map,
-        animation: google.maps.Animation.DROP,
         position: map.getCenter(),
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
-
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
+      const infoWindow = new google.maps.InfoWindow();
+      let foodMarkers = [];
 
       $scope.$watch('center', () => {
+        if(!$scope.center) return false;
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
+      });
+
+      $scope.$watch('foods', () => {
+        if(!$scope.foods) return false;
+        foodMarkers.forEach(marker => marker.setMap(null));
+        foodMarkers = $scope.foods.map(food => {
+          const marker = new google.maps.Marker({
+            position: food.location,
+            map,
+            icon: 'https://i.imgur.com/aVQgzGW.png?1',
+            animation: google.maps.Animation.DROP
+          });
+
+          marker.addListener('click', () => {
+            infoWindow.setContent(`
+              <div id="siteNotice" >
+                <p>${food.title}</p>
+                <p>${food.description}</p>
+              </div>
+            `);
+            infoWindow.open(map, marker);
+          });
+          return marker;
+        });
       });
     }
   };
