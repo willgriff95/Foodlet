@@ -9,6 +9,10 @@ const foodSchema = new mongoose.Schema({
     lat: { type: Number, required: true },
     lng: { type: Number, required: true }
   },
+  // requests: [{
+  //   user: { type: ObjectId, ref: 'User'},
+  //   status: { type: String, default: 'pending' }
+  // }],
   image: { type: String, required: true },
   active: { type: Boolean, default: true }
 
