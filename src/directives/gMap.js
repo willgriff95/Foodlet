@@ -244,11 +244,9 @@ function gMap(){
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
       }
-<<<<<<< HEAD
 
       //GeoLocation Error Handler
-=======
->>>>>>> development
+
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
