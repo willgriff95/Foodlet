@@ -29,7 +29,8 @@
             <label for="image">Image</label>
             <!-- <div class="file"> -->
               <label class="label" >
-                <input  type="file" placeholder="Image" name="image" ng-model='foodsNew.food.image' imageUpload required/>
+                <input  type="file" placeholder="Image" name="image" ng-model='foodsNew.data.imageUrl' image-upload required/>
+                {{ foodsNew.data.imageUrl }}
                 <!-- <span type="file" class="file-cta">
                   <!- <span class="file-icon"> -->
                     <!-- <i class="far fa-image"></i> -->

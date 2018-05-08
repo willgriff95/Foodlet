@@ -4,7 +4,9 @@ function gMap(){
     restrict: 'A',
     scope: {
       foods: '=?',
-      center: '=?'
+      center: '=?',
+      food: '=?',
+      distance: '=?'
     },
 
     link($scope, $element){
@@ -156,7 +158,13 @@ function gMap(){
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
       const infoWindow = new google.maps.InfoWindow();
+      let foodMarker = [];
       let foodMarkers = [];
+      let currentLocation = {};
+
+      const directionsDisplay = new google.maps.DirectionsRenderer();
+      directionsDisplay.setMap(map);
+      const directionsService = new google.maps.DirectionsService();
 
       $scope.$watch('center', () => {
         if(!$scope.center) return false;
@@ -174,7 +182,6 @@ function gMap(){
             icon: 'https://i.imgur.com/aVQgzGW.png?1',
             animation: google.maps.Animation.DROP
           });
-
           marker.addListener('click', () => {
             infoWindow.setContent(`
                 <img src="${food.image}" style="width: 100px; position:relative; " ></img>
@@ -188,6 +195,17 @@ function gMap(){
         });
       });
 
+      $scope.$watch('food', () => {
+        if(!$scope.food) return false;
+        marker.setMap(null);
+        foodMarker = new google.maps.Marker({
+          position: $scope.food.location,
+          map,
+          icon: 'https://i.imgur.com/aVQgzGW.png?1',
+          animation: google.maps.Animation.DROP
+        });
+      });
+
       //GeoLocation
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -195,6 +213,11 @@ function gMap(){
             lat: position.coords.latitude,
             lng: position.coords.longitude
           };
+          const userCurrentLat = position.coords.latitude;
+          const userCurrentLng = position.coords.longitude;
+
+          currentLocation = { lat: userCurrentLat, lng: userCurrentLng };
+
           const marker = new google.maps.Marker({
             map: map,
             position: pos,
@@ -212,17 +235,39 @@ function gMap(){
           // infoWindow.setContent('Your Current Location.');
           // infoWindow.open(map);
           map.setCenter(pos);
+          displayRoute();
+          $scope.$apply();
+        }, function() {
+          handleLocationError(true, infoWindow, map.getCenter());
         });
       } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
       }
+
+      //GeoLocation Error Handler
+
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
           'Error: The Geolocation service failed.' :
           'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
+      }
+
+      //Directions
+      function displayRoute(){
+        if(!currentLocation || !$scope.food.location) return false;
+        directionsService.route({
+          origin: currentLocation,
+          destination: $scope.food.location,
+          travelMode: 'WALKING'
+        }, (response) => {
+          console.log(response.routes[0].legs[0].distance.text);
+          $scope.distance = response.routes[0].legs[0].distance.text;
+          $scope.$apply();
+          directionsDisplay.setDirections(response);
+        });
       }
     }
   };
