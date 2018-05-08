@@ -1,5 +1,5 @@
-uploadImage.$inject = ['filepickerService'];
-function uploadImage(filepickerService) {
+imageUpload.$inject = ['filepickerService'];
+function imageUpload(filepickerService) {
   return {
     restrict: 'A',
     require: 'ngModel',
@@ -21,4 +21,4 @@ function uploadImage(filepickerService) {
   };
 }
 
-export default uploadImage;
+export default imageUpload;
