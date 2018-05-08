@@ -3,6 +3,7 @@ FoodsShowCtrl.$inject = ['Food', '$state'];
 
 function FoodsShowCtrl(Food, $state){
   this.food = {};
+  this.distance = null;
 
   Food
     .findById($state.params.id)

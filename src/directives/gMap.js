@@ -5,7 +5,8 @@ function gMap(){
     scope: {
       foods: '=?',
       center: '=?',
-      food: '=?'
+      food: '=?',
+      distance: '=?'
     },
 
     link($scope, $element){
@@ -157,14 +158,13 @@ function gMap(){
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
       const infoWindow = new google.maps.InfoWindow();
+      let foodMarker = [];
       let foodMarkers = [];
-      let foodMarker = {};
       let currentLocation = {};
 
       const directionsDisplay = new google.maps.DirectionsRenderer();
+      directionsDisplay.setMap(map);
       const directionsService = new google.maps.DirectionsService();
-      const directions = document.getElementById('directions');
-      let destination;
 
       $scope.$watch('center', () => {
         if(!$scope.center) return false;
@@ -197,14 +197,13 @@ function gMap(){
 
       $scope.$watch('food', () => {
         if(!$scope.food) return false;
-        foodMarker.forEach(marker => marker.setMap(null));
+        marker.setMap(null);
         foodMarker = new google.maps.Marker({
           position: $scope.food.location,
           map,
           icon: 'https://i.imgur.com/aVQgzGW.png?1',
           animation: google.maps.Animation.DROP
         });
-        destination = foodMarker.position;
       });
 
       //GeoLocation
@@ -257,16 +256,18 @@ function gMap(){
 
       //Directions
       function displayRoute(){
-
+        if(!currentLocation || !$scope.food.location) return false;
         directionsService.route({
           origin: currentLocation,
-          destination: destination,
+          destination: $scope.food.location,
           travelMode: 'WALKING'
         }, (response) => {
+          console.log(response.routes[0].legs[0].distance.text);
+          $scope.distance = response.routes[0].legs[0].distance.text;
+          $scope.$apply();
           directionsDisplay.setDirections(response);
         });
       }
-      directionsDisplay.setPanel(directions);
     }
   };
 }
