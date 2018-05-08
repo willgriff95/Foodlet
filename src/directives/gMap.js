@@ -177,13 +177,13 @@ function gMap(){
 
           marker.addListener('click', () => {
             infoWindow.setContent(`
-              <div id="siteNotice" >
+                <img src="${food.image}" style="width: 100px; position:relative; " ></img>
                 <p>${food.title}</p>
                 <p>${food.description}</p>
-              </div>
             `);
             infoWindow.open(map, marker);
           });
+
           return marker;
         });
       });
@@ -217,7 +217,6 @@ function gMap(){
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
       }
-
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
