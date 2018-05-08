@@ -333,6 +333,18 @@ a {
     padding-top: 6px;
 }
 
+.imageUpload{
+  float: left;
+  position: absolute;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0em; 
+}
+.right {
+  float: right;
+  position: relative;
+}
 .foodsIndexcontent{
   padding-left: 90px;
   padding-right: 90px;
