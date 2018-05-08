@@ -1,16 +1,17 @@
-<div class="content">
+<div class="backgroundImageLoginPage">
+  <div class="content">
+    <div class="loginPageContent">
+      <!-- <h1>Edit {{ foodsEdit.food.title }}</h1> -->
 
-  <h1>Edit {{ foodsEdit.food.title }}</h1>
+      <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
 
-  <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
-
-    <div class="field">
-      <label for="title">Title</label>
-      <input class="input" ng-model="foodsEdit.food.title" name="title" required/>
-      <div ng-messages="foodsEdit.form.title.$error" ng-if="foodsEdit.form.title.$dirty || foodsEdit.form.$submitted">
-        <div ng-message="required">Please fill in this field</div>
-      </div>
-    </div>
+        <div class="field">
+          <label for="title">Title</label>
+          <input class="input" ng-model="foodsEdit.food.title" name="title" required/>
+          <div ng-messages="foodsEdit.form.title.$error" ng-if="foodsEdit.form.title.$dirty || foodsEdit.form.$submitted">
+            <div ng-message="required">Please fill in this field</div>
+          </div>
+        </div>
 
     <div class="field">
       <label for="description">Description</label>
@@ -28,8 +29,8 @@
       </div>
     </div>
 
-    <!--- add location change field --->
-
-    <button class="button is-primary">Submit</button>
-  </form>
+        <button class="button is-primary">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
