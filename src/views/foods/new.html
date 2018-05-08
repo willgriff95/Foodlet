@@ -2,85 +2,49 @@
   <div class="content">
     <div class="addFoodPageContent">
       <form name="foodsNew.form" ng-submit='foodsNew.handleCreate()' novalidate>
-
-        <div class="field">
-          <label for="title">Title</label>
-          <input class="input" placeholder="Title" name="title" ng-model='foodsNew.food.title' required/>
-          <div ng-messages="foodsNew.form.title.$error" ng-if="foodsNew.form.title.$dirty || foodsNew.form.$submitted">
-            <div class="requiredField" ng-message="required">Please fill in this field</div>
+          <div class="field">
+            <label for="title">Title</label>
+            <input class="input" placeholder="Title" name="title" ng-model='foodsNew.food.title' required/>
+            <div ng-messages="foodsNew.form.title.$error" ng-if="foodsNew.form.title.$dirty || foodsNew.form.$submitted">
+              <div class="requiredField" ng-message="required">Please fill in this field</div>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label for="description">Description</label>
-          <input class="input" placeholder="Description" name="description" ng-model='foodsNew.food.description' required/>
-          <div ng-messages="foodsNew.form.description.$error" ng-if="foodsNew.form.description.$dirty || foodsNew.form.$submitted">
-            <div class="requiredField" ng-message="required">Please enter a description</div>
+          <div class="field">
+            <label for="description">Description</label>
+            <input class="input" placeholder="Description" name="description" ng-model='foodsNew.food.description' required/>
+            <div ng-messages="foodsNew.form.description.$error" ng-if="foodsNew.form.description.$dirty || foodsNew.form.$submitted">
+              <div class="requiredField" ng-message="required">Please enter a description</div>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label for="location">Location</label>
-          <input class="input" placeholder="Location" name="location" ng-model='foodsNew.food.location' g-autocomplete handle-change="foodsNew.updateLocation(location)" required/>
-          <div ng-messages="foodsNew.form.location.$error" ng-if="foodsNew.form.location.$dirty || foodsNew.form.$submitted">
-            <div class="requiredField" ng-message="required">Please enter a location</div>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="image">Image</label>
-          <div class="file">
-            <label class="label" class="file-label">
-              <input class="file-input" type="file" placeholder="Image" name="image" ng-model='foodsNew.food.image' ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted" imageUpload required/>
+          <div class="field">
+            <label for="location">Location</label>
+            <input class="input" placeholder="Location" name="location" ng-model='foodsNew.food.location' g-autocomplete handle-change="foodsNew.updateLocation(location)" required/>
+            <div ng-messages="foodsNew.form.location.$error" ng-if="foodsNew.form.location.$dirty || foodsNew.form.$submitted">
               <div class="requiredField" ng-message="required">Please enter a location</div>
-              <span class="file-cta">
-                <span class="file-icon">
-                  <i class="fa fa-upload"></i>
-                </span>
-                <span class="file-label">
-                  Choose a file…
-                </span>
-              </span>
-            </label>
+            </div>
           </div>
-        </div>
-
-
-
-          <!-- <div ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted" >
-            <input class="file-input" type="file" ng-model="foodsNew.food.image" upload-image>
-            <span class="file-cta">
-              <span class="file-icon"><i class="fa fa-upload"></i></span>
-              <span class="file-label">
-                Choose a file…
-              </span>
-            </span>
-            <div class="requiredField" ng-message="required">Please upload an image</div>
+          <div class="field">
+            <label for="image">Image</label>
+            <!-- <div class="file"> -->
+              <label class="label" >
+                <input  type="file" placeholder="Image" name="image" ng-model='foodsNew.food.image' imageUpload required/>
+                <!-- <span type="file" class="file-cta">
+                  <!- <span class="file-icon"> -->
+                    <!-- <i class="far fa-image"></i> -->
+                  <!-- </span> -->
+                  <!-- <span class="file-label">
+                    Choose a file…
+                  </span> -->
+                <!-- </span>  -->
+              </label>
+            <!-- </div> -->
+            <div ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
+              <div class="requiredField" ng-message="required">Please upload an image</div>
+            </div>
           </div>
-        </div>
-
-
-        <div class="field">
-          <label class="label align-center" class="label">Image</label>
-              <div class="file">
-                <label class="label" class="file-label">
-                  <input class="file-input" type="file" ng-model="foodsNew.food.image" upload-image>
-                  <span class="file-cta">
-                    <span class="file-icon">
-                      <i class="fa fa-upload"></i>
-                    </span>
-                    <span class="file-label">
-                      Choose a file…
-                    </span>
-                  </span>
-                </label>
-              </div>
-
-        </div> -->
-
-
-        <button class="submitButton button is-primary">Submit</button>
-
+          <button class="submitButton button is-primary">Submit</button>
       </form>
     </div>
   </div>

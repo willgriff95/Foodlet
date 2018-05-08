@@ -219,9 +219,22 @@ function gMap(){
 
           currentLocation = { lat: userCurrentLat, lng: userCurrentLng };
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Your Current Location.');
-          infoWindow.open(map);
+          const marker = new google.maps.Marker({
+            map: map,
+            position: pos,
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: '#3399FF',
+              fillOpacity: 1,
+              scale: 7,
+              strokeColor: 'white',
+              strokeWeight: 3
+            }
+          });
+
+          marker.setPosition(pos);
+          // infoWindow.setContent('Your Current Location.');
+          // infoWindow.open(map);
           map.setCenter(pos);
           displayRoute();
           $scope.$apply();
