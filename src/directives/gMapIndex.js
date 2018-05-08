@@ -155,12 +155,13 @@ function gMapIndex(Food){
         position: map.getCenter(),
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
+      const infowindows = [];
+      const foodMarkers = [];
 
       $scope.$watch('center', () => {
         map.setCenter($scope.center);
         marker.setPosition($scope.center);
       });
-
 
       // shows all food markers
       Food
@@ -169,21 +170,29 @@ function gMapIndex(Food){
           res.data.forEach(food => {
             const title = food.title;
             const description = food.description;
-            const infowindow = new google.maps.InfoWindow({
-              content: `<div id="siteNotice" ><p>${title}</p><p>${description}</p>'</div>'`
-            });
-            return new google.maps.Marker({
+            infowindows.push(new google.maps.InfoWindow({
+              content: `<div id="siteNotice" ><p>${title}</p><p>${description}</p></div>`
+            }));
+            foodMarkers.push(new google.maps.Marker({
               position: new google.maps.LatLng(food.location.lat, food.location.lng),
               map: map,
               animation: google.maps.Animation.DROP,
               title: food.title,
               icon: 'https://i.imgur.com/aVQgzGW.png?1'
+            }));
+          });
+        })
+        .then(() => {
+          console.log(infowindows);
+          console.log(foodMarkers);
+          foodMarkers.forEach(foodMarker => {
+            infowindows.forEach(infowindow => {
+              foodMarker.addListener('click', function() {
+                infowindow.open(map, marker);
+              });
             });
           });
         });
-      marker.addListener('click', function() {
-        infowindow.open(map, marker);
-      });
     }
   };
 }
