@@ -29,16 +29,16 @@
             <label for="image">Image</label>
             <!-- <div class="file"> -->
               <label class="label" >
-                <input  type="file" placeholder="Image" name="image" ng-model='foodsNew.data.imageUrl' image-upload required/>
-                {{ foodsNew.data.imageUrl }}
+                <input  type="file" placeholder="Image" name="image" ng-model='foodsNew.food.image' image-upload required/>
+                <!-- {{ foodsNew.food.image }} -->
                 <!-- <span type="file" class="file-cta">
-                  <!- <span class="file-icon"> -->
-                    <!-- <i class="far fa-image"></i> -->
-                  <!-- </span> -->
-                  <!-- <span class="file-label">
+                   <span class="file-icon">
+                    <i class="far fa-image"></i>
+                  </span>
+                  <span class="file-label">
                     Choose a file…
-                  </span> -->
-                <!-- </span>  -->
+                  </span>
+                </span>  -->
               </label>
             <!-- </div> -->
             <div ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
