@@ -18,7 +18,7 @@
         </div>
         <div class="field">
           <label for="location">Location</label>
-          <input class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsNew.updateLocation(location)"required/>
+          <input class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsNew.updateLocation(location)" required/>
           <div ng-messages="foodsNew.form.location.$error" ng-if="foodsNew.form.location.$dirty || foodsNew.form.$submitted">
             <div class="requiredField" ng-message="required">Please enter a location</div>
           </div>
@@ -30,7 +30,7 @@
             <div class="requiredField" ng-message="required">Please upload an image</div>
           </div>
         </div>
-        <button class="button is-primary">Submit</button>
+        <button class="submitButton button is-primary">Submit</button>
       </form>
     </div>
   </div>
