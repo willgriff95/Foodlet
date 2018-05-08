@@ -75,7 +75,7 @@
 }
 
 .submitButton{
-  top: 10px;
+  // top: 10px;
 }
 
 .userLoggedIn{
@@ -174,13 +174,12 @@ hr {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 70vh;
+    height: 77vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 25px;
     position: relative;
 }
-
 .addFoodPageContent {
     height: 100%;
     background-color: rgba(244, 244, 244, 0.95);
@@ -198,6 +197,15 @@ hr {
 .content {
     margin: 0 auto;
     top: 120px;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
+    width: 80%;
+    position: relative;
+}
+
+.content3 {
+    margin: 0 auto;
+    top: 90px;
     /* padding-left: 0; */
     /* padding-right: 3%; */
     width: 80%;
@@ -271,7 +279,7 @@ a:hover{
   }
 }
 .field:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .requiredField{

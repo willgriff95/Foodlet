@@ -1,5 +1,5 @@
 <div class="backgroundImageRegisterPage">
-  <div class="content">
+  <div class="content3">
     <div class="registerPageContent">
       <form name="register.form" ng-submit="register.handleRegister()" novalidate>
 
@@ -32,6 +32,17 @@
           <input class="input" type="password" placeholder="Password Confirmation" name="passwordConfirmation" ng-model="register.data.passwordConfirmation" required/>
           <div ng-messages="register.form.passwordConfirmation.$error" ng-if="register.form.passwordConfirmation.$dirty || register.form.$submitted">
             <div class="requiredField" ng-message="required">Please confirm your password</div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="picture">Profile Picture</label>
+          <!-- <div class="file"> -->
+            <label class="label" >
+              <input  type="file" placeholder="Image" name="picture" ng-model='register.data.picture' picture-upload />
+            </label>
+          <!-- </div> -->
+          <div ng-messages="register.form.picture.$error" ng-if="register.data.picture.$dirty || register.form.$submitted">
+            <div class="requiredField" ng-message="required">Please upload an picture</div>
           </div>
         </div>
 
