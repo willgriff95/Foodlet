@@ -1,7 +1,8 @@
 FoodsNewCtrl.$inject = ['Food', '$state'];
 
 function FoodsNewCtrl(Food, $state){
-  this.food = {};
+
+  console.log(this.food = {});
 
   function handleCreate(){
     console.log(this.form);

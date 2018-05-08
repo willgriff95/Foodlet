@@ -7,9 +7,10 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
+            {{ foodsShow.user }}
             <p class="title is-4">{{ foodsShow.food.title }}</p>
             <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-            <p class="subtitle is-6">{{ foodsShow.food.user.username }}</p>
+            <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
             <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
             <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
           </div>

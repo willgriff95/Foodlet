@@ -13,7 +13,8 @@ function imageUpload(filepickerService) {
             maxFiles: 1,
             transformations: { crop: { force: true, aspectRatio: 4/4  } }
           }, (data) => {
-            // data.filesUploaded[0].url;
+            console.log(data)
+            data.url;
             model.$setViewValue(data.url);
           });
       });
