@@ -48,6 +48,10 @@
     // position: absolute;
 }
 
+.submitButton{
+  top: 10px;
+}
+
 body{
   font-family: 'circe rounded', 'helvetica';
   // font-size: 10px;
@@ -60,7 +64,7 @@ body{
     position: absolute;
     top: 200px;
     margin: 0 auto;
-    left: 11%;
+    right: 10%;
     z-index: 100;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
@@ -125,7 +129,9 @@ body{
     background-color: rgba(244, 244, 244, 0.95);
     width: 50%;
     margin: 0 auto;
-    padding: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
     height: 70vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -206,13 +212,12 @@ body{
   }
 }
 .field:not(:last-child) {
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.5rem;
 }
-
 
 .requiredField{
   font-size: 12px;
-  margin-top: 3px;
+  margin-top: 6px;
   color: red;
   position: absolute;
 }
