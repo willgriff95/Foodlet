@@ -5,7 +5,7 @@ function foodsIndex(req, res, next){
     .find()
     .exec()
     .then(foods => res.json(foods))
-    .catch(next);           
+    .catch(next);
 }
 
 function foodsShow(req, res, next){
@@ -50,10 +50,25 @@ function foodsDelete(req, res, next){
     .catch(next);
 }
 
+function foodsRequestCreate(req, res, next){
+  req.body.createdBy = req.currentUser;
+  Food
+    .findById(req.params.id)
+    .exec()
+    .then(food => {
+      food.requests.push(req.body);
+      return food.save();
+    })
+    .then(food => res.json(food))
+    .catch(next);
+}
+
+
 module.exports = {
   index: foodsIndex,
   show: foodsShow,
   create: foodsCreate,
   update: foodsUpdate,
-  delete: foodsDelete
+  delete: foodsDelete,
+  requestCreate: foodsRequestCreate
 };

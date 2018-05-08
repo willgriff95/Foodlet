@@ -14,7 +14,15 @@ function FoodsShowCtrl(Food, $state){
       .then(() => $state.go('foodsIndex'));
   }
 
+
+  function handleRequestCreate(){
+    Food.requestCreate($state.params.id, this.data)
+      .then(res => this.food = res.data);
+  }
+
+
   this.handleDelete = handleDelete;
+  this.handleRequestCreate = handleRequestCreate;
 
 }
 

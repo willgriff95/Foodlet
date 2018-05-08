@@ -14,6 +14,9 @@ router.route('/foods/:id')
   .put(secureRoute, foods.update)
   .delete(secureRoute, foods.delete);
 
+router.route('/foods/:id/requests')
+  .post(secureRoute, foods.requestCreate);
+
 router.route('/users')
   .get(secureRoute, users.index);
 

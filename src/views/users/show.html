@@ -1,0 +1,12 @@
+<div class="requests">
+  <div class="media" ng-repeat="request in foodsShow.food.requests">
+    <div class="media-content">
+      <p class="subtitle is-4">{{ request.createdBy.user }}</p>
+      <p class="subtitle is-6">{{ request.createdAtRelative }}</p>
+    </div>
+  </div>
+</div>
+
+<form ng-submit="foodsShow.handleRequestCreate()">
+  <button class="button" ng-model="foodsShow.data.request"></button>
+</form>
