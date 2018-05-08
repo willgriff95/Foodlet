@@ -11,10 +11,16 @@ function indexRoute(req, res, next){
 function showRoute(req, res, next) {
   User
     .findById(req.params.id)
+    .populate({
+      path: 'foods',
+      populate: {
+        path: 'requests.user'
+      }
+    })
     .exec()
     .then(user => {
       if(!user) return res.sendStatus(404);
-      return res.render('users/show', { user });
+      return res.json(user);
     })
     .catch(next);
 }

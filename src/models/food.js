@@ -21,12 +21,18 @@ function Food($http){
     return $http.put(`/api/foods/${id}`, data);
   }
 
+  function requestCreate(foodId, data){
+    return $http.post(`api/foods/${foodId}/request`, data);
+  }
+
+
 
   this.find = find;
   this.findById = findById;
   this.removeById = removeById;
   this.create = create;
   this.updateById = updateById;
+  this.requestCreate = requestCreate;
 }
 
 export default Food;

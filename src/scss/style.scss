@@ -16,6 +16,12 @@
 
 // our css
 
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
 .backgroundImageHomePage {
   // width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
@@ -339,7 +345,7 @@ a {
 }
 
 .label:not(:last-child) {
-    margin-bottom: 0em; 
+    margin-bottom: 0em;
 }
 .right {
   float: right;

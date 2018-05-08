@@ -8,39 +8,6 @@ const User = require('../models/user');
 mongoose.connect(dbURI, (err, db) => {
   db.dropDatabase();
 
-  Food.create([
-    {
-      title: '26 crackers',
-      description: 'delicious crackers',
-      location: {
-        lat: 51.52,
-        lng: -0.07
-      },
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjeNMBiwuIT37jax08VvK2Kow6KiuLsJ9kdUdNgA1Wvpbl05Q',
-      active: true
-    }, {
-      title: 'Punnet of tomatoes',
-      description: 'fresh',
-      location: {
-        lat: 51.515 ,
-        lng: -0.078
-      },
-      image: 'https://1.bp.blogspot.com/-67b5IA_NG8c/VwnRgMQpKJI/AAAAAAAAQu8/F-ZQvf5i3QIcTAa_8UXC5tqyEXpZtg-Iw/s1600/tomatoes%2B-%2B1.jpg',
-      active: true
-    }, {
-      title: '6 doughnuts',
-      description: 'tasty',
-      location: {
-        lat: 51.54,
-        lng: -0.06
-      },
-      image: 'http://www.dinnerwithjulie.com/wp-content/uploads/2017/05/Cereal-doughnuts-1.jpg',
-      active: true
-    }
-
-  ]);
-
-
   User.create([
     {
       username: 'Caroline',
@@ -76,9 +43,44 @@ mongoose.connect(dbURI, (err, db) => {
       }
     }
   ])
+    .then(users => {
+      console.log(`${users.length} users were added to the DB.`);
+      return Food.create([
+        {
+          title: '26 crackers',
+          description: 'delicious crackers',
+          location: {
+            lat: 51.52,
+            lng: -0.07
+          },
+          image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjeNMBiwuIT37jax08VvK2Kow6KiuLsJ9kdUdNgA1Wvpbl05Q',
+          active: true,
+          user: users[0]
+        }, {
+          title: 'Punnet of tomatoes',
+          description: 'fresh',
+          location: {
+            lat: 51.515 ,
+            lng: -0.078
+          },
+          image: 'https://1.bp.blogspot.com/-67b5IA_NG8c/VwnRgMQpKJI/AAAAAAAAQu8/F-ZQvf5i3QIcTAa_8UXC5tqyEXpZtg-Iw/s1600/tomatoes%2B-%2B1.jpg',
+          active: true,
+          user: users[1]
+        }, {
+          title: '6 doughnuts',
+          description: 'tasty',
+          location: {
+            lat: 51.54,
+            lng: -0.06
+          },
+          image: 'http://www.dinnerwithjulie.com/wp-content/uploads/2017/05/Cereal-doughnuts-1.jpg',
+          active: true,
+          user: users[2]
+        }
 
+      ]);
+    })
     .then(foods => console.log(`${foods.length} foods created!`))
-    .then(users => console.log(`${users.length} users were added to the DB.`))
     .catch(err => console.log(err))
     .finally(() => mongoose.connection.close());
 });
