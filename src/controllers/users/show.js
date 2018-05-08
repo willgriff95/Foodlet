@@ -1,10 +1,10 @@
-UsersShowCtrl.$inject = ['$http', '$state'];
+UsersShowCtrl.$inject = ['$http', '$auth'];
 
-function UsersShowCtrl($http, $state){
+function UsersShowCtrl($http, $auth){
   this.user = {};
 
   $http
-    .get(`/api/users/${$state.params.id}`)
+    .get(`/api/users/${$auth.getPayload().sub}`)
     .then(res => this.user = res.data);
 }
 export default UsersShowCtrl;

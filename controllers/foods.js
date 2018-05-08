@@ -3,6 +3,7 @@ const Food = require('../models/food');
 function foodsIndex(req, res, next){
   Food
     .find()
+    .populate('user')
     .exec()
     .then(foods => res.json(foods))
     .catch(next);
@@ -11,6 +12,7 @@ function foodsIndex(req, res, next){
 function foodsShow(req, res, next){
   Food
     .findById(req.params.id)
+    .populate('user')
     .exec()
     .then(food => {
       if(!food) return res.sendStatus(404);
@@ -51,12 +53,27 @@ function foodsDelete(req, res, next){
 }
 
 function foodsRequestCreate(req, res, next){
-  req.body.createdBy = req.currentUser;
+  req.body.user = req.currentUser;
   Food
     .findById(req.params.id)
     .exec()
     .then(food => {
       food.requests.push(req.body);
+      return food.save();
+    })
+    .then(food => res.json(food))
+    .catch(next);
+}
+
+function foodsRequestAccept(req, res, next) {
+  Food
+    .findById(req.params.id)
+    .exec()
+    .then(food => {
+      food.requests = food.requests.map(request => {
+        request.status = request.user.equals(req.body.user) ? 'accepted' : 'rejected';
+        return request;
+      });
       return food.save();
     })
     .then(food => res.json(food))
@@ -70,5 +87,6 @@ module.exports = {
   create: foodsCreate,
   update: foodsUpdate,
   delete: foodsDelete,
-  requestCreate: foodsRequestCreate
+  requestCreate: foodsRequestCreate,
+  requestAccept: foodsRequestAccept
 };
