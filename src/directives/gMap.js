@@ -195,13 +195,23 @@ function gMap(){
             lat: position.coords.latitude,
             lng: position.coords.longitude
           };
+          const marker = new google.maps.Marker({
+            map: map,
+            position: pos,
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: '#3399FF',
+              fillOpacity: 1,
+              scale: 7,
+              strokeColor: 'white',
+              strokeWeight: 3
+            }
+          });
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Your Current Location.');
-          infoWindow.open(map);
+          marker.setPosition(pos);
+          // infoWindow.setContent('Your Current Location.');
+          // infoWindow.open(map);
           map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
         });
       } else {
         // Browser doesn't support Geolocation
