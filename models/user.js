@@ -8,8 +8,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String },
   picture: { type: String },
   location: {
-    lat: { type: Number, required: true },
-    lng: { type: Number, required: true }
+    lat: { type: Number },
+    lng: { type: Number }
   },
   twitterId: { type: Number }
 
