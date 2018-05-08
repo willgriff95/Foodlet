@@ -9,7 +9,7 @@
           <div class="media-content">
             <p class="title is-4">{{ foodsShow.food.title }}</p>
             <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-            <p class="subtitle is-6">{{ foodsShow.food.user }}</p>
+            <p class="subtitle is-6">{{ foodsShow.food.user.username }}</p>
             <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
             <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
             <!--- add location tag --->
@@ -21,7 +21,7 @@
         <div class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
         <a  class="far fa-edit"></a>
         </div>
-        <div class="addFoodButton" ui-sref="foodsShow.handleRequestCreate()">
+        <div class="addFoodButton" ng-click="foodsShow.handleRequestCreate()">
         <a class="far fa-comments"></a>
         </div>
       </div>

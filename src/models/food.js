@@ -21,8 +21,8 @@ function Food($http){
     return $http.put(`/api/foods/${id}`, data);
   }
 
-  function requestCreate(foodId, data){
-    return $http.post(`api/foods/${foodId}/request`, data);
+  function requestCreate(foodId){
+    return $http.post(`api/foods/${foodId}/requests`);
   }
 
 
