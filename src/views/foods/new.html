@@ -32,6 +32,7 @@
           <div class="file">
             <label class="label" class="file-label">
               <input class="file-input" type="file" placeholder="Image" name="image" ng-model='foodsNew.food.image' ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted" imageUpload required/>
+              <div class="requiredField" ng-message="required">Please enter a location</div>
               <span class="file-cta">
                 <span class="file-icon">
                   <i class="fa fa-upload"></i>
