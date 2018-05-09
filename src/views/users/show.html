@@ -9,16 +9,16 @@
           <!-- {{ request }} -->
           <p class="subtitle is-4">{{ food.title }}</p>
           <div class="contain">
-            <img class="requestedUserPP" src="{{ request.user.picture }}" alt="">
+            <img class="requestedUserPP" src="{{ request.user.picture }}">
             <div class="left">{{ request.user.username }}</div>
-            <div class="left">{{ request.user }}</div>
-            <!-- <div class=""  ng-controller="food in FoodsShowCtrl">
-              <p class="subtitle is-6">Distance: {{ food.distance }}</p>
+            <!-- <div class="left">{{ request.user }}</div> -->
+            <!-- <div ng-controller="FoodsShowCtrl as foodsShow">
+              <p class="subtitle is-6">Distance: {{ foodsShow.food.distance }}</p>
             </div> -->
+            <p>{{ request.status }}</p>
           </div>
-          <!-- <p>{{ request.status }}</p> -->
-          <div ng-controller="foodsShowCtrl as foodsShow" ng-click="foodsShow.handleRequestAccept()">
-            <a class=" login">Accept Request</a>
+          <div ng-click="usersShow.handleRequestAccept(food.id, request.id)">
+            <a class="login">Accept Request</a>
           </div>
       </div>
     </div>

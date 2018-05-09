@@ -36,6 +36,7 @@ function FoodsShowCtrl(Food, $state, $auth){
   //     });
   // }
 
+
   function closeModal() {
     this.modalOpen = false;
   }
