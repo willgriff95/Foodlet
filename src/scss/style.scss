@@ -532,12 +532,13 @@ nav.navbar{
 }
 
 
-.subtitle.is-6 {
+.description-card {
   font-style: italic;
 }
 
 
 .upload-icon{
   font-size: 4em;
-  margin: 15px 100px;
+  max-width: 100%;
+  margin: 0 auto;
 }

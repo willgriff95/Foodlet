@@ -43,7 +43,7 @@
               <div ng-controller="UsersShowCtrl as usersShow">
                 <div class="is-active dropdown-menu"  id="dropdown-menu4" role="menu">
                   <div class=" dropdown-content">
-                      <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">Requests</a>
+                      <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">My items</a>
                       <hr>
                       <a class="userLoggedIn logOut" ui-sref="usersEdit({ id: usersShow.user._id })" ng-if="main.isAuthenticated()">Account</a>
                       <hr>
