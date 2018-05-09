@@ -24,9 +24,8 @@
           <label for="picture">Profile Picture</label>
           <!-- <div class="file"> -->
             <label class="label" >
-              <input  type="file" name="picture" ng-model='usersEdit.user.picture' picture-upload />
+              <input  type="file" name="picture" ng-model="usersEdit.user.picture" image-upload />
             </label>
-            {{usersEdit.user.picture}}
           <!-- </div> -->
           <div ng-messages="usersEdit.form.picture.$error" ng-if="usersEdit.form.picture.$dirty || usersEdit.form.$submitted">
             <div class="requiredField" ng-message="required">Please upload an picture</div>
