@@ -5,6 +5,7 @@
       <div class="card3" ng-repeat="food in usersShow.user.foods">
         <a ui-sref="foodsShow({ id: food._id })">
           <div class="card-image" style="background-image: url({{ food.image }})"></div>
+        </a>
           <div class="card-content">
             <div class="requests">
               <div class="media" >
@@ -21,7 +22,6 @@
               </div>
             </div>
           </div>
-        </a>
       </div>
     </div>
   </div>
