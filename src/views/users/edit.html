@@ -1,0 +1,21 @@
+<form name="userEdit.form" ng-submit="userEdit.handleUpdate()" novalidate>
+
+  <div class="field">
+    <label for="username">Username</label>
+    <input class="input" placeholder="Username" name="username" ng-model="userEdit.data.username" required/>
+    <div ng-messages="userEdit.form.username.$error" ng-if="userEdit.form.username.$dirty || userEdit.form.$submitted">
+      <div class="requiredField" ng-message="required">Please enter a username</div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="email">Email</label>
+    <input class="input" placeholder="Email" name="email" ng-model="userEdit.data.email" required/>
+    <div ng-messages="userEdit.form.email.$error" ng-if="userEdit.form.email.$dirty || userEdit.form.$submitted">
+      <div class="requiredField" ng-message="required">Please enter a valid email address</div>
+    </div>
+  </div>
+
+  <button class="submitButton button is-primary">Submit</button>
+
+</form>

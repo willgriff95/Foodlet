@@ -52,6 +52,12 @@ function Router($stateProvider, $urlRouterProvider){
       controller: 'UsersShowCtrl as usersShow',
       resolve: { secureState }
     })
+    .state('usersEdit', {
+      url: '/users/:id/edit',
+      templateUrl: 'views/users/edit.html',
+      controller: 'UsersEditCtrl as usersEdit',
+      resolve: { secureState }
+    })
     .state('login', {
       url: '/login',
       templateUrl: 'views/auth/login.html',
