@@ -196,16 +196,31 @@ hr {
 }
 
 
-.infoWindow{
-  background-color: red;
-  width: 200px;
+.infoWindow {
+    // background-color: red;
+    width: 100px;
+    border-radius: 20px;
+    top: -5px;
+    left: -40px;
+    position: absolute;
+    height: 100px;
+    margin: 0 auto;
+}
+// .infoWindow img{
+// border-radius: 20px;
+// width:100px;
+// height: 100px;
+// background-size: cover;
+// }
+.gm-style-iw{
+  display: contents;
+  background-color: pink;
+  text-align: center;
+  position: relative;
+  border-radius: 2px 2px 0 0;
+
 }
 
-.gm-style-iw{
-  background-color: pink;
-  width: 100px;
-  height: 220px;
-}
 .icon {
     /* align-items: center; */
     /* display: inline-flex; */
