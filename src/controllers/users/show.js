@@ -22,7 +22,7 @@ function UsersShowCtrl(Food, $http, $auth){
       })
       .then(res => {
         Food
-          .requestAccept(id, requestId, res);
+          .requestAccept(id, res);
       });
   }
   this.handleRequestAccept = handleRequestAccept;

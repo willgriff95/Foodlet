@@ -74,7 +74,7 @@ function foodsRequestAccept(req, res, next) {
     .findById(req.params.id)
     .exec()
     .then(food => {
-      console.log('request.user --->', 'req.body.user--->', req);
+      console.log('req.body.user--->', req.body);
       food.requests = food.requests.forEach(request => {
         request.status = request.user.equals(req.body.user) ? 'accepted' : 'rejected';
         return request;
