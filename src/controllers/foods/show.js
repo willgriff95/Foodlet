@@ -48,13 +48,10 @@ function FoodsShowCtrl(Food, $state, $auth){
 
   this.handleDelete = handleDelete;
   this.handleRequestCreate = handleRequestCreate;
-<<<<<<< HEAD
   // this.handleRequestAccept = handleRequestAccept;
-=======
-  this.handleRequestAccept = handleRequestAccept;
   this.closeModal = closeModal;
   this.foodHasBeenRequested = foodHasBeenRequested;
->>>>>>> 82f88ea206c6e86209c1dc392ce8af9e36613921
+
 
 }
 
