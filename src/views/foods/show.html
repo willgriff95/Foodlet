@@ -4,7 +4,11 @@
     <div class="columns">
 
       <div class="column">
-        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
+        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance" uiSref="<a ui-sref="foodsShow({ id: {{food._id}} })">
+                            <img src="{{food.image}}" style="width: 100px; position:relative; " ></img>
+                            <p>{{food.title}}</p>
+                            <p>{{food.description}}</p>
+                          </a>">MAP HERE</div>
         <div class="directions"></div>
       </div>
 
@@ -34,7 +38,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 /*global google*/
-gMap.$inject = ['$scope', '$compile'];
-function gMap($compile,){
+gMap.$inject = ['$compile'];
+function gMap($compile){
   return {
     restrict: 'A',
     scope: {
@@ -188,7 +188,8 @@ function gMap($compile,){
                               <p>${food.title}</p>
                               <p>${food.description}</p>
                             </a>`;
-          const compiledContent;
+          // const compiledContent = $compile(content)($scope);
+          // console.log(compiledContent);
           marker.addListener('click', () => {
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
