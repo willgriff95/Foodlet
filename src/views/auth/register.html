@@ -41,7 +41,7 @@
               <input  type="file" placeholder="Image" name="picture" ng-model='register.data.picture' picture-upload />
             </label>
           <!-- </div> -->
-          <div ng-messages="register.form.picture.$error" ng-if="register.data.picture.$dirty || register.form.$submitted">
+          <div ng-messages="register.form.picture.$error" ng-if="register.form.picture.$dirty || register.form.$submitted">
             <div class="requiredField" ng-message="required">Please upload an picture</div>
           </div>
         </div>
