@@ -29,9 +29,9 @@
 
         <div class="field">
           <label for="image">Image:</label>
-          <label class="label" >
+          <label class="label center" >
             <input class="file-input" type="file" ng-model='foodsNew.food.image' image-upload required/>
-              <i class="fas fa-cloud-upload-alt upload-icon"></i>
+            <i class="fas fa-cloud-upload-alt upload-icon"></i>
           </label>
           <div ng-messages="foodsNew.form.image.$error" ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
             <div class="requiredField" ng-message="required">Please upload an image</div>

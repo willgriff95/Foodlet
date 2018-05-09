@@ -1,26 +1,24 @@
-
-<div class="backgroundImageRegisterPage">
-  <div class="content foodsIndexcontent">
-    <div class="foodsShowPageContent">
-      <div class="card3" ng-repeat="food in usersShow.user.foods">
-        <a ui-sref="foodsShow({ id: food._id })">
-          <div class="card-image" style="background-image: url({{ food.image }})"></div>
-        </a>
-          <div class="card-content">
-            <div class="requests">
-              <div class="media" >
-                <div class="media-content">
-                  <p class="subtitle is-4">{{ food.title }}</p>
-                  <div ng-repeat="request in food.requests">
-                    <p>{{ request.user.username }}</p>
-                    <p>{{ request.status }}</p>
-                    <div ng-click="usersShow.handleRequestAccept(food._id, request._id)">
-                      <a class="">accept button</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div class="content foodsIndexcontent">
+  <div class="foodsShowPageContent">
+    <div class="card3" ng-repeat="food in usersShow.user.foods">
+      <div class="leftColumnUsersShow">
+        <div class="showcards" style="background-image: url({{ food.image }})"></div>
+      </div>
+      <div class="rightColumnUsersShow">
+        <div class="requests"  ng-repeat="request in food.requests">
+          <!-- {{ request }} -->
+          <p class="subtitle is-4">{{ food.title }}</p>
+          <div class="contain">
+            <img class="requestedUserPP" src="{{ request.user.picture }}" alt="">
+            <div class="left">{{ request.user.username }}</div>
+            <div class="left">{{ request.user }}</div>
+            <!-- <div class=""  ng-controller="food in FoodsShowCtrl">
+              <p class="subtitle is-6">Distance: {{ food.distance }}</p>
+            </div> -->
+          </div>
+          <!-- <p>{{ request.status }}</p> -->
+          <div ng-controller="foodsShowCtrl as foodsShow" ng-click="foodsShow.handleRequestAccept()">
+            <a class=" login">Accept Request</a>
           </div>
       </div>
     </div>
