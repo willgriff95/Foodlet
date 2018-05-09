@@ -75,9 +75,11 @@ function foodsRequestAccept(req, res, next) {
     .findById(req.params.id)
     .exec()
     .then(food => {
-      // console.log('req.body.user--->', req.body);
+      food.active = false;
+      console.log('req.params.requestId--->', req.params.requestId);
       food.requests = food.requests.map(request => {
-        request.status = request.user.equals(req.params.requestId) ? 'accepted' : 'rejected';
+        console.log('request._id--->', request._id);
+        request.status = request._id.equals(req.params.requestId) ? 'accepted' : 'rejected';
         return request;
       });
       return food.save();
