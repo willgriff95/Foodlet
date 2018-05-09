@@ -76,6 +76,36 @@ mongoose.connect(dbURI, (err, db) => {
           image: 'http://www.dinnerwithjulie.com/wp-content/uploads/2017/05/Cereal-doughnuts-1.jpg',
           active: true,
           user: users[2]
+        }, {
+          title: 'Pasta',
+          description: 'Unopened bag of wholewheat pasta',
+          location: {
+            lat: 51.5,
+            lng: -0.02
+          },
+          image: 'https://img.tesco.com/Groceries/pi/305/5000119532305/IDShot_540x540.jpg',
+          active: true,
+          user: users[2]
+        }, {
+          title: 'Apricots',
+          description: 'Fresh apricots from my garden, I\'ve grown too many!',
+          location: {
+            lat: 51.008,
+            lng: -0.03
+          },
+          image: 'http://www.slowburningpassion.com/wp-content/uploads/2016/07/Bowl-of-ripe-apricots.jpg',
+          active: true,
+          user: users[0]
+        }, {
+          title: 'Olives',
+          description: '1kg jar of Greek olives',
+          location: {
+            lat: 51.118,
+            lng: -0.06
+          },
+          image: 'https://cdn.shopify.com/s/files/1/0206/9470/products/60470_HFARM_9332683000024-1_500d4751-a5d0-458b-900c-3d7d83390fca_1024x1024.jpeg?v=1441108615',
+          active: true,
+          user: users[1]
         }
 
       ]);
