@@ -13,7 +13,7 @@ function UsersEditCtrl($http, $state){
 
   function handleUpdate(){
     $http.put(`/api/users/${$state.params.id}`, this.user)
-      .then(() => $state.go('usersShow', $state.params));
+      .then(() => $state.go('profile', $state.params));
   }
   this.handleUpdate = handleUpdate;
 }
