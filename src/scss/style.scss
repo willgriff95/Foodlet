@@ -19,7 +19,16 @@
 
 
 
+.profilePictureMain{
+  border-radius: 500px;
+  width: 200px;
+  height: 200px;
 
+}
+
+.center{
+  text-align: center;
+}
 
 .card3 {
     background-color: white;
@@ -31,7 +40,7 @@
     margin-top: -25px;
     height: 350px;
     position: relative;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 // our css
@@ -266,6 +275,8 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .card {
     background-color: white;
@@ -278,7 +289,7 @@ a:hover{
     // margin-right: -10%;
     height: 350px;
     position: relative;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px;
 }
 
 .register {
@@ -359,7 +370,7 @@ a:hover{
 .mapShowPage {
     height: 60vh;
     border-radius: 20px;
-    width: 40vw;
+    width: 100%;
     float: left;
     margin-top: -25px;
     margin-left: 0px;
@@ -371,12 +382,12 @@ a:hover{
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     color: #4a4a4a;
     /* max-width: 100%; */
-    width: 35vw;
+    width: 100%;
     float: right;
     margin-top: -25px;
-    height: 350px;
+    height: 60vh;
     position: relative;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px;
 }
 
 .plusbutton {
@@ -527,4 +538,16 @@ nav.navbar{
   margin: 0 auto;
   left: 0;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+
+.description-card {
+  font-style: italic;
+}
+
+
+.upload-icon{
+  font-size: 4em;
+  max-width: 100%;
+  margin: 0 auto;
 }

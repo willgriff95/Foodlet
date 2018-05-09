@@ -25,8 +25,8 @@ function Food($http){
     return $http.post(`/api/foods/${foodId}/requests`);
   }
 
-  function requestAccept(id, data){
-    return $http.put(`/api/foods/${id}/accept`, data);
+  function requestAccept(foodId, requestId){
+    return $http.put(`/api/foods/${foodId}/requests/${requestId}`);
   }
 
 

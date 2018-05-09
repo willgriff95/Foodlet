@@ -76,10 +76,8 @@ function foodsRequestAccept(req, res, next) {
     .exec()
     .then(food => {
       // console.log('req.body.user--->', req.body);
-      food.requests = food.requests.forEach(request => {
-        console.log('request status before: ', request.status);
-        request.status = (request.status === 'accepted' ? 'accepted' : 'rejected');
-        console.log('request after: ', request);
+      food.requests = food.requests.map(request => {
+        request.status = request.user.equals(req.params.requestId) ? 'accepted' : 'rejected';
         return request;
       });
       return food.save();

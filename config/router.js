@@ -17,7 +17,7 @@ router.route('/foods/:id')
 router.route('/foods/:id/requests')
   .post(secureRoute, foods.requestCreate);
 
-router.route('/foods/:id/accept')
+router.route('/foods/:id/requests/:requestId')
   .put(secureRoute, foods.requestAccept);
 
 router.route('/users')
