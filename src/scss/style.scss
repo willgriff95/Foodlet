@@ -22,18 +22,17 @@
     float: left;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20px;
-    /* border-top-left-radius: 20px; */
-    /* border-top-right-radius: 20px; */
+    /* border-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 
-
-.profilePictureMain{
-  border-radius: 500px;
-  width: 200px;
-  height: 200px;
-
+.profilePictureMain {
+    border-radius: 500px;
+    width: 150px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    height: 150px;
 }
 .requests{
   width: 100%;
@@ -48,10 +47,16 @@
   text-align: center;
 }
 
-.leftColumnUsersShow{
-  float: left;
-  width: 50%;
-  height: 100%;
+.imageicon {
+    position: relative;
+    top: 15px;
+}
+
+.leftColumnUsersShow {
+    float: left;
+    width: 50%;
+    // padding: 3%;
+    height: 100%;
 }
 .requestedUserPP{
   height: 80px;
@@ -63,6 +68,7 @@
   float: right;
   width: 50%;
   height: 100%;
+  padding: 3%;
   text-align: center;
 }
 
@@ -72,11 +78,12 @@
     color: #4a4a4a;
     /* max-width: 100%; */
     width: 100%;
+    margin-top: 20px;
     float: right;
-    margin-top: -25px;
+    margin-top: 25px;
     height: 250px;
     position: relative;
-    padding: 3%;
+    // padding: 3%;
     border-radius: 20px 20px 20px 20px;
 }
 
@@ -123,12 +130,15 @@
     background-size: cover;
 }
 .backgroundImageRegisterPage {
-  // width: 100vw;
     background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+// .field:not(:last-child) {
+//     margin-bottom: 0rem;
+// }
 
 
 .left{
@@ -170,7 +180,7 @@ body{
 }
 .card-content {
     background-color: none;
-    padding: 2.5em 2em 1em 2em;
+    padding: 1rem;
     margin: 0 auto;
 }
 hr {
@@ -187,15 +197,13 @@ hr {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     color: #4a4a4a;
     /* max-width: 100%; */
-    width: 35vw;
+    width: 100%;
     float: right;
     margin-top: -25px;
     height: 375px;
     position: relative;
     border-radius: 0px 0px 20px 20px;
 }
-
-
 .infoWindow {
     // background-color: red;
     width: 100px;
@@ -265,13 +273,14 @@ hr {
     background-color: rgba(244, 244, 244, 0.95);
     width: 50%;
     margin: 0 auto;
+    top: 20px;
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 77vh;
+    height: 70vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 25px;
+    top: 55px;
     position: relative;
 }
 .addFoodPageContent {
@@ -279,15 +288,67 @@ hr {
     background-color: rgba(244, 244, 244, 0.95);
     width: 50%;
     margin: 0 auto;
-    padding-top: 30px;
+    top: -10px;
+    padding-top: 20px;
     padding-right: 50px;
     padding-left: 50px;
-    height: 70vh;
+    padding-bottom: 20px;
+    height: 80vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 25px;
+    /* top: 25px; */
     position: relative;
 }
+.modal-content{
+  text-align: center;
+  color: #8CC63F;
+
+}
+
+.status {
+    /* width: 100%; */
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8CC63F;
+
+
+}
+.requestButton {
+    border: 1px solid #99CC33;
+    border-radius: 15px;
+    color: white;
+    /* margin: 15px; */
+    width: 100%;
+    margin-top: -15px;
+    position: relative;
+    padding: 10px;
+    /* padding-top: 6px; */
+    background-color: #99CC33;
+}
+.username {
+    /* width: 100%; */
+    float: left;
+    left: 20px;
+    position: relative;
+    font-size: 20px;
+}
+.time {
+    /* width: 100%; */
+    float: right;
+    font-size: 11px;
+}
+.modal-background {
+    background-color: rgba(10, 10, 10, 0.8);
+}
+
+.success{
+margin: 0;
+padding: 0;
+text-align: center;
+color: #8CC63F;
+}
+
 .content {
     margin: 0 auto;
     top: 120px;
@@ -340,23 +401,54 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    // border-top-left-radius: 20px;
+    // border-top-right-radius: 20px;
 }
 .card {
     background-color: white;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     color: #4a4a4a;
     /* max-width: 100%; */
-    width: 35vw;
+    width: 100%;
     float: right;
     margin-top: -25px;
     // margin-right: -10%;
-    height: 350px;
+    height: 60vh;
     position: relative;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.card5 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 50vh;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
 }
 
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
+    margin-bottom: 0.4em;
+}
+
+.subtitle.is-4 {
+    font-size: 2rem;
+}
+// .card {
+//     background-color: white;
+//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+//     color: #4a4a4a;
+//     /* max-width: 100%; */
+//     width: 100%;
+//     float: right;
+//     margin-top: -25px;
+//     height: 60vh;
+//     position: relative;
+//     border-radius: 20px;
+// }
 .register {
   padding-top: 15px;
 }
@@ -441,19 +533,17 @@ a:hover{
     margin-left: 0px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
-
-.card {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
+.mapShowPage2 {
     height: 60vh;
-    position: relative;
     border-radius: 20px;
+    width: 100%;
+    float: left;
+    margin-top: -25px;
+    margin-left: 0px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
+
+
 
 .plusbutton {
     color: white;
