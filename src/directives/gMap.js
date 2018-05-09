@@ -1,6 +1,6 @@
 /*global google*/
-gMap.$inject = ['$compile'];
-function gMap($compile){
+// gMap.$inject = ['$compile'];
+function gMap(){
   return {
     restrict: 'A',
     scope: {
@@ -159,7 +159,7 @@ function gMap($compile){
         icon: 'https://i.imgur.com/aVQgzGW.png?1'
       });
       const infoWindow = new google.maps.InfoWindow();
-      let foodMarker = [];
+      let foodMarker = [];// eslint-disable-line
       let foodMarkers = [];
       let currentLocation = {};
 
