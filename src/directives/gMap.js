@@ -184,9 +184,11 @@ function gMap(){
           });
           marker.addListener('click', () => {
             infoWindow.setContent(`
-                <img src="${food.image}" style="width: 100px; position:relative; " ></img>
-                <p>${food.title}</p>
-                <p>${food.description}</p>
+                <div class="infoWindow">
+                  <img src="${food.image}" style="width: 100px; position:relative; " ></img>
+                  <p>${food.title}</p>
+                  <p>${food.description}</p>
+                </div>
             `);
             infoWindow.open(map, marker);
           });
