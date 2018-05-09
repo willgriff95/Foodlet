@@ -7,16 +7,15 @@
         </div>
         </a>
       <div class="rightColumnUsersShow">
+        <p class="subtitle is-4">{{ food.title }}</p>
+        <!-- {{food.requests}} -->
+        <div ng-if="!food.requests">
+          <p>No requests yet!</p>
+        </div>
         <div class="requests" ng-repeat="request in food.requests">
-          <!-- {{ request }} -->
-          <p class="subtitle is-4">{{ food.title }}</p>
           <div class="contain">
             <img class="requestedUserPP" src="{{ request.user.picture }}">
             <div class="left">{{ request.user.username }}</div>
-            <!-- <div class="left">{{ request.user }}</div> -->
-            <!-- <div ng-controller="FoodsShowCtrl as foodsShow">
-              <p class="subtitle is-6">Distance: {{ foodsShow.food.distance }}</p>
-            </div> -->
             <p>{{ request.status }}</p>
           </div>
           <div ng-click="usersShow.handleRequestAccept(food.id, request.id)">
