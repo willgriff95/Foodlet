@@ -6,10 +6,12 @@
       </div>
       <div class="rightColumnUsersShow">
         <div class="requests"  ng-repeat="request in food.requests">
+          <!-- {{ request }} -->
           <p class="subtitle is-4">{{ food.title }}</p>
           <div class="contain">
             <img class="requestedUserPP" src="{{ request.user.picture }}" alt="">
             <div class="left">{{ request.user.username }}</div>
+            <div class="left">{{ request.user }}</div>
             <!-- <div class=""  ng-controller="food in FoodsShowCtrl">
               <p class="subtitle is-6">Distance: {{ food.distance }}</p>
             </div> -->
