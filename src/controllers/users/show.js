@@ -8,21 +8,23 @@ function UsersShowCtrl(Food, $http, $auth){
     .then(res => this.user = res.data);
 
   function handleRequestAccept(id, requestId){
-    // this.request = {status: 'accepted'};
-    //PRETTY SURE I NEED TO CHANGE THE FOOD'S BOOLEAN TOO.
+    // console.log(id);
+    this.food = [];
+
     Food
       .findById(id)
       .then(res => {
         res.data.active = false;
-        res = res.data.requests.map(request => {
+        const request = res.data.requests.map(request => {
           if(request._id === requestId) return request;
         });
-        res[0].status = 'accepted';
-        // console.log(res);
+        request[0].status = 'accepted';
+        res.data.request = request[0];
+        this.food = res.data;
       })
-      .then(res => {
+      .then(() => {
         Food
-          .requestAccept(id, res);
+          .requestAccept(id, this.food);
       });
   }
   this.handleRequestAccept = handleRequestAccept;

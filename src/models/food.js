@@ -22,11 +22,11 @@ function Food($http){
   }
 
   function requestCreate(foodId){
-    return $http.post(`api/foods/${foodId}/requests`);
+    return $http.post(`/api/foods/${foodId}/requests`);
   }
 
-  function requestAccept(foodId, data){
-    return $http.put(`api/foods/${foodId}/accept`, data);
+  function requestAccept(id, data){
+    return $http.put(`/api/foods/${id}/accept`, data);
   }
 
 

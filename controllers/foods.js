@@ -66,6 +66,7 @@ function foodsRequestCreate(req, res, next){
 }
 
 function foodsRequestAccept(req, res, next) {
+  // console.log('req.body: ', req.body);
   //if request.user === req.body.user, return 'accepted'. Else return 'rejected'.
 
   //This backend should check each request to see if it's accepted.
@@ -74,9 +75,11 @@ function foodsRequestAccept(req, res, next) {
     .findById(req.params.id)
     .exec()
     .then(food => {
-      console.log('req.body.user--->', req.body);
+      // console.log('req.body.user--->', req.body);
       food.requests = food.requests.forEach(request => {
-        request.status = request.user.equals(req.body.user) ? 'accepted' : 'rejected';
+        console.log('request status before: ', request.status);
+        request.status = (request.status === 'accepted' ? 'accepted' : 'rejected');
+        console.log('request after: ', request);
         return request;
       });
       return food.save();
