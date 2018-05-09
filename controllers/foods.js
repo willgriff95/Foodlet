@@ -71,6 +71,10 @@ function foodsRequestAccept(req, res, next) {
     .exec()
     .then(food => {
       food.requests = food.requests.map(request => {
+        //if request.user === req.body.user, return 'accepted'. Else return 'rejected'.
+
+        //This backend should check each request to see if it's accepted.
+        // If one is accepted, reject all others, and set the food's active property to false.
         request.status = request.user.equals(req.body.user) ? 'accepted' : 'rejected';
         return request;
       });

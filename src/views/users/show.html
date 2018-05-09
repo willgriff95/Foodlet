@@ -5,8 +5,10 @@
       <div ng-repeat="request in food.requests">
         <p>{{ request.user.username }}</p>
         <p>{{ request.status }}</p>
-        <div ng-controller="foodsShowCtrl as foodsShow" ng-click="foodsShow.handleRequestAccept()">
-        <a class="">accept button</a>
+        <p>Request id: {{ request._id }}</p>
+        <p>Food id: {{ food._id }}</p>
+        <div ng-click="usersShow.handleRequestAccept(food._id, request._id)">
+          <a class="">accept button</a>
         </div>
       </div>
     </div>
