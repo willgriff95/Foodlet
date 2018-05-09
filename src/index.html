@@ -12,7 +12,6 @@
 
   <body ng-controller="MainCtrl as main">
       <nav class="navbar" role="navigation" aria-label="main navigation">
-
         <!-- navbar-brand -->
         <div class="navbar-brand">
           <a class="navbar-item" ui-sref="home">
@@ -41,15 +40,19 @@
                   </span>
                 </div>
               </div>
-              <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
-                <div class="dropdown-content">
-                    <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
-                    <hr>
-                    <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Account</a>
+              <div ng-controller="UsersShowCtrl as usersShow">
+                <div class="is-active dropdown-menu"  id="dropdown-menu4" role="menu">
+                  <div class=" dropdown-content">
+                      <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">Requests</a>
+                      <hr>
+                      <a class="userLoggedIn logOut" ui-sref="usersEdit({ id: usersShow.user._id })" ng-if="main.isAuthenticated()">Account</a>
+                      <hr>
+                      <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
+                  </div>
                 </div>
               </div>
-            </div>
             <img class="profilePicture" src="{{ main.currentUser.picture }}" alt="">
+          </div>
 
             <!-- navbar items -->
 
@@ -62,6 +65,8 @@
 
 <!-- end navbar-menu -->
 
+
+<!-- {{ id: locals.user._id}} -->
 
 <!--- flash message --->
     <div ng-if="main.flashMessage.content" class="notification is-{{ main.flashMessage.type }}">

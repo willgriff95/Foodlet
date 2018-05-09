@@ -14,6 +14,26 @@
 @import '~bulma';
 
 
+
+
+
+
+
+
+
+.card3 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 350px;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+}
+
 // our css
 .account {
     padding-top: 24px;
@@ -22,7 +42,7 @@
     width: 100%;
 }
 .dropdown-content {
-    height: 65px;
+    height: 90px;
     border-radius: 20px;
     width: 100px;
     top: 10px;
