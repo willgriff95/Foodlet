@@ -1,5 +1,6 @@
 /*global google*/
-function gMap(){
+gMap.$inject = ['$scope', '$compile'];
+function gMap($compile,){
   return {
     restrict: 'A',
     scope: {
@@ -182,12 +183,14 @@ function gMap(){
             icon: 'https://i.imgur.com/aVQgzGW.png?1',
             animation: google.maps.Animation.DROP
           });
+          const content = `<a ui-sref="foodsShow({ id: ${food._id} })">
+                              <img src="${food.image}" style="width: 100px; position:relative; " ></img>
+                              <p>${food.title}</p>
+                              <p>${food.description}</p>
+                            </a>`;
+          const compiledContent;
           marker.addListener('click', () => {
-            infoWindow.setContent(`
-                <img src="${food.image}" style="width: 100px; position:relative; " ></img>
-                <p>${food.title}</p>
-                <p>${food.description}</p>
-            `);
+            infoWindow.setContent(content);
             infoWindow.open(map, marker);
           });
 
