@@ -24,7 +24,8 @@ router.route('/users')
   .get(secureRoute, users.index);
 
 router.route('/users/:id')
-  .get(secureRoute, users.show);
+  .get(secureRoute, users.show)
+  .put(secureRoute, users.update);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);

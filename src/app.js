@@ -21,6 +21,7 @@ import FoodsNewCtrl from './controllers/foods/new';
 import FoodsShowCtrl from './controllers/foods/show';
 import FoodsEditCtrl from './controllers/foods/edit';
 import UsersShowCtrl from './controllers/users/show';
+import UsersEditCtrl from './controllers/users/edit';
 import MainCtrl from './controllers/main';
 
 import LoginCtrl from './controllers/auth/login';
@@ -46,6 +47,7 @@ angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages', 'angular-fil
   .controller('FoodsShowCtrl', FoodsShowCtrl)
   .controller('FoodsEditCtrl', FoodsEditCtrl)
   .controller('UsersShowCtrl', UsersShowCtrl)
+  .controller('UsersEditCtrl', UsersEditCtrl)
   .controller('LoginCtrl', LoginCtrl)
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
