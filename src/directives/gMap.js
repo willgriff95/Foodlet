@@ -263,7 +263,7 @@ function gMap(){
           destination: $scope.food.location,
           travelMode: 'WALKING'
         }, (response) => {
-          console.log(response.routes[0].legs[0].distance.text);
+          // console.log(response.routes[0].legs[0].distance.text);
           $scope.distance = response.routes[0].legs[0].distance.text;
           $scope.$apply();
           directionsDisplay.setDirections(response);
