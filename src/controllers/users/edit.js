@@ -12,8 +12,11 @@ function UsersEditCtrl($http, $state){
     });
 
   function handleUpdate(){
-    $http.put(`/api/users/${$state.params.id}`, this.user)
-      .then(() => $state.go('usersShow', $state.params));
+    if(this.form.$invalid) return false;
+
+    $http
+      .put(`/api/users/${$state.params.id}`, this.user);
+    // .then(() => $state.go('usersShow', $state.params));
   }
   this.handleUpdate = handleUpdate;
 }
