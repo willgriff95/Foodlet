@@ -16,10 +16,10 @@
             <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
           </div>
         </div>
-        <div class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
+        <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
         <a class="far fa-trash-alt"></a>
         </div>
-        <div class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
+        <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
         <a  class="far fa-edit"></a>
         </div>
         <div class="addFoodButton" ng-click="foodsShow.handleRequestCreate()">
