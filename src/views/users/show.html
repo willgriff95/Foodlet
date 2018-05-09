@@ -2,10 +2,12 @@
   <div class="media" ng-repeat="food in usersShow.user.foods">
     <div class="media-content">
       <p class="subtitle is-4">{{ food.title }}</p>
-
       <div ng-repeat="request in food.requests">
         <p>{{ request.user.username }}</p>
         <p>{{ request.status }}</p>
+        <div ng-controller="foodsShowCtrl as foodsShow" ng-click="foodsShow.handleRequestAccept()">
+        <a class="">accept button</a>
+        </div>
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+<!-- {{foodsEdit.food.location}} -->
 <div class="content foodsShowcontent">
   <div class="foodsShowPageContent">
     <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
@@ -24,8 +25,20 @@
         </div>
 
         <div class="field">
-          <label for="image">Image</label>
-          <input class="input" ng-model="foodsEdit.food.image" name="image" required/>
+          <label for="location">Location</label>
+          <input ng-model='foodsEdit.food.location' class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsEdit.updateLocation(location)" required/>
+          <div ng-messages="foodsEdit.form.location.$error" ng-if="foodsEdit.form.location.$dirty || foodsEdit.form.$submitted">
+            <div class="requiredField" ng-message="required">Please enter a location</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="image">Profile Picture</label>
+          <!-- <div class="file"> -->
+            <label class="label" >
+              <input  type="file" placeholder="Image" name="image" ng-model='foodsEdit.food.image' image-upload />
+            </label>
+          <!-- </div> -->
           <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
             <div class="requiredField" ng-message="required">Please upload an image</div>
           </div>

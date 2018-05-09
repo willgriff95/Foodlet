@@ -25,6 +25,10 @@ function Food($http){
     return $http.post(`api/foods/${foodId}/requests`);
   }
 
+  function requestAccept(foodId, requestId, data){
+    return $http.put(`api/foods/${foodId}/requests/${requestId}/accept`, data);
+  }
+
 
 
   this.find = find;
@@ -33,6 +37,7 @@ function Food($http){
   this.create = create;
   this.updateById = updateById;
   this.requestCreate = requestCreate;
+  this.requestAccept = requestAccept;
 }
 
 export default Food;
