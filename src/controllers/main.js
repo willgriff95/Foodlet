@@ -3,10 +3,12 @@ MainCtrl.$inject = ['$rootScope','$timeout', '$transitions', '$auth', '$state'];
 function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
   this.navBarIsOpen = false;
   this.isHome = true;
+  // this.ModalIsOpen = false;
 
   this.isAuthenticated = $auth.isAuthenticated;
 
   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
 
   // flash messages
   this.flashMessage = null;
@@ -19,7 +21,9 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
     this.currentUser = data;
     localStorage.setItem('currentUser', JSON.stringify(data));
   });
-  // end flash messages
+
+
+  // navbar function
 
   $transitions.onSuccess({}, (transition) => {
     this.isHome = (transition.to().name === 'home');
@@ -31,12 +35,26 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
     this.navBarIsOpen = !this.navBarIsOpen;
   }
 
+
+  // logout function
+
   function logout(){
     $auth.logout();
     $state.go('home');
     this.currentUser = null;
     localStorage.removeItem('currentUser');
   }
+
+
+  // modal function
+
+  // $event.onClick({}, (event) => {
+  //   this.ModalIsOpen = false;
+  // });
+  //
+  // function toggleModalClass(){
+  //   this.ModalIsOpen = !this.ModalIsOpen;
+  // }
 
   this.toggleNav = toggleNav;
   this.logout = logout;
