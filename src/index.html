@@ -17,6 +17,8 @@
         <div class="navbar-brand">
           <a class="navbar-item" ui-sref="home">
             <img src="./assets/foodlet_logo.png">
+            <a class="navbarItem allFood" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">Browse</a>
+            <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add a food</a>
           </a>
 
           <a role="button" class="navbar-burger" ng-click="main.toggleNav()" ng-class="{ 'is-active': main.navBarIsOpen }">
@@ -30,12 +32,28 @@
         <!-- navbar-menu -->
         <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
           <div class="navbar-end">
+            <div ng-if="main.isAuthenticated()" class="dropdown is-hoverable">
+              <div class="account dropdown-trigger">
+                <div class="userLoggedIn" aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>{{ main.currentUser.username }}</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                    <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
+                    <hr>
+                    <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Account</a>
+                </div>
+              </div>
+            </div>
+            <img class="profilePicture" src="{{ main.currentUser.picture }}" alt="">
+
             <!-- navbar items -->
 
             <!-- <a class="navbarItem" ui-sref="home">Home</a> -->
-            <a class="navbarItem allFood" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">Browse</a>
-            <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add a food</a>
-            <a class="navbarItem logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
             <!-- <a class="navbarItem" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a> -->
             <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
           </div>

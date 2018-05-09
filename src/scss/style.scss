@@ -15,7 +15,27 @@
 
 
 // our css
-
+.account {
+    padding-top: 24px;
+    padding-right: 20px;
+    text-align: right;
+    width: 100%;
+}
+.dropdown-content {
+    height: 65px;
+    border-radius: 20px;
+    width: 100px;
+    top: 10px;
+    right: 20px;
+    position: relative;
+}
+.profilePicture {
+    width: 55px;
+    top: 8px;
+    position: relative;
+    height: 55px;
+    border-radius: 55px;
+}
 .gm-style-iw {
    width: 350px !important;
    top: 0 !important;
@@ -55,9 +75,15 @@
 }
 
 .submitButton{
-  top: 10px;
+  // top: 10px;
 }
 
+.userLoggedIn{
+  color: #363636;
+}
+.paddingtop{
+  padding-top: 50px;
+}
 body{
   font-family: 'circe rounded', 'helvetica';
   // font-size: 10px;
@@ -137,7 +163,7 @@ hr {
     height: 100%;
     width: 100%;
     margin: 0 auto;
-    top: 70px;
+    top: 40px;
     position: relative;
 }
 .registerPageContent {
@@ -148,13 +174,12 @@ hr {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    height: 70vh;
+    height: 77vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 25px;
     position: relative;
 }
-
 .addFoodPageContent {
     height: 100%;
     background-color: rgba(244, 244, 244, 0.95);
@@ -177,6 +202,15 @@ hr {
     width: 80%;
     position: relative;
 }
+
+.content3 {
+    margin: 0 auto;
+    top: 90px;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
+    width: 80%;
+    position: relative;
+}
 .button.is-primary {
     background-color:  #99CC33;
     border-color: transparent;
@@ -190,7 +224,9 @@ hr {
     position: relative;
     // width: 100vw;
 }
-
+a:hover{
+  color: #9DDD48;
+}
 .navbar-burger {
 
     height: 3.25rem;
@@ -243,7 +279,7 @@ hr {
   }
 }
 .field:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .requiredField{
@@ -289,14 +325,7 @@ hr {
     position: relative;
     float: right;
 }
-// .logout {
-//     color: #99CC33;
-//     padding-left: 30px;
-//     padding-right: 30px;
-//     cursor: pointer;
-//     text-decoration: none;
-//     position: relative;
-// }
+
 .login {
     color: #99CC33;
     padding-left: 30px;
@@ -351,17 +380,31 @@ a {
     margin: 15px;
     padding-top: 6px;
 }
-
-.logOut {
-    border: 1px solid #99CC33;
-    border-radius: 15px;
-    margin: 15px;
-    float: right;
-    width: 100px;
-    text-align: center;
-    padding-top: 6px;
+.navbar-end {
+    padding-right: 20px;
 }
 
+hr {
+    /* background-color: whitesmoke; */
+    border: 1px solid whitesmoke;
+    display: block;
+    height: 2px;
+    margin: 0;
+}
+
+.logOut {
+    /* border: 1px solid #99CC33; */
+    /* border-radius: 15px; */
+    margin: 0 auto;
+    float: right;
+    width: 100%;
+    position: relative;
+    /* width: 100px; */
+    text-align: center;
+}
+.is-active{
+  display: block;
+}
 .imageUpload{
   float: left;
   position: absolute;
@@ -444,14 +487,14 @@ a {
 }
 .addFood {
     margin: 15px;
-    padding-top: 6px;
+    padding-top: 10px;
     float: right;
 }
 
 .allFood {
     margin: 15px;
     float: right;
-    padding-top: 6px;
+    padding-top: 10px;
 }
 //
 // a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
