@@ -183,15 +183,23 @@ function gMap($compile){
             icon: 'https://i.imgur.com/aVQgzGW.png?1',
             animation: google.maps.Animation.DROP
           });
-          const content = `<a ui-sref="foodsShow({ id: ${food._id} })">
-                              <img src="${food.image}" style="width: 100px; position:relative; " ></img>
-                              <p>${food.title}</p>
-                              <p>${food.description}</p>
-                            </a>`;
+          //Commented code is an attempt to use ui-sref to go to foods show page.
+
+          // const content = `<a ui-sref="foodsShow({ id: ${food._id} })">
+          //                     <img src="${food.image}" style="width: 100px; position:relative; " ></img>
+          //                     <p>${food.title}</p>
+          //                     <p>${food.description}</p>
+          //                   </a>`;
           // const compiledContent = $compile(content)($scope);
           // console.log(compiledContent);
           marker.addListener('click', () => {
-            infoWindow.setContent(content);
+            infoWindow.setContent(`
+                <div class="infoWindow">
+                  <img src="${food.image}" style="width: 100px; position:relative; " ></img>
+                  <p>${food.title}</p>
+                  <p>${food.description}</p>
+                </div>
+            `);
             infoWindow.open(map, marker);
           });
 
