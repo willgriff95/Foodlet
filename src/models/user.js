@@ -1,32 +1,32 @@
-Food.$inject = ['$http'];
+User.$inject = ['$http'];
 
-function Food($http){
+function User($http){
   function find(){
-    return $http.get('/api/foods');
+    return $http.get('/api/users');
   }
 
   function findById(id){
-    return $http.get(`/api/foods/${id}`);
+    return $http.get(`/api/users/${id}`);
   }
 
   function removeById(id){
-    return $http.delete(`/api/foods/${id}`);
+    return $http.delete(`/api/users/${id}`);
   }
 
   function create(data){
-    return $http.post('/api/foods', data);
+    return $http.post('/api/users', data);
   }
 
   function updateById(id, data){
-    return $http.put(`/api/foods/${id}`, data);
+    return $http.put(`/api/users/${id}`, data);
   }
 
   function requestCreate(foodId){
-    return $http.post(`/api/foods/${foodId}/requests`);
+    return $http.post(`/api/users/${foodId}/requests`);
   }
 
   function requestAccept(foodId, requestId){
-    return $http.put(`/api/foods/${foodId}/requests/${requestId}`);
+    return $http.put(`/api/users/${foodId}/requests/${requestId}`);
   }
 
 
@@ -40,4 +40,4 @@ function Food($http){
   this.requestAccept = requestAccept;
 }
 
-export default Food;
+export default User;

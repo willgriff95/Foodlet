@@ -66,12 +66,20 @@ function foodsRequestCreate(req, res, next){
 }
 
 function foodsRequestAccept(req, res, next) {
+  // console.log('req.body: ', req.body);
+  //if request.user === req.body.user, return 'accepted'. Else return 'rejected'.
+
+  //This backend should check each request to see if it's accepted.
+  // If one is accepted, reject all others, and set the food's active property to false.
   Food
     .findById(req.params.id)
     .exec()
     .then(food => {
+      food.active = false;
+      console.log('req.params.requestId--->', req.params.requestId);
       food.requests = food.requests.map(request => {
-        request.status = request.user.equals(req.body.user) ? 'accepted' : 'rejected';
+        console.log('request._id--->', request._id);
+        request.status = request._id.equals(req.params.requestId) ? 'accepted' : 'rejected';
         return request;
       });
       return food.save();

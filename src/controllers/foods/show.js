@@ -23,18 +23,19 @@ function FoodsShowCtrl(Food, $state, $auth){
       .then(() => this.modalOpen = true);
   }
 
-  function handleRequestAccept(){
-    this.request = {status: 'accepted'};
-    Food
-      .findById($state.params.requestId)
-      .then(res => {
-        this.request = res.data;
-      })
-      .then(res => {
-        Food
-          .requestAccept($state.params.id, $state.params.requestId, res.data);
-      });
-  }
+  // function handleRequestAccept(id, requestId){
+  //   this.request = {status: 'accepted'};
+  //   Food
+  //     .findById(id)
+  //     .then(res => {
+  //       this.request = res.data;
+  //     })
+  //     .then(res => {
+  //       Food
+  //         .requestAccept(id, requestId, res.data);
+  //     });
+  // }
+
 
   function closeModal() {
     this.modalOpen = false;
@@ -48,9 +49,10 @@ function FoodsShowCtrl(Food, $state, $auth){
 
   this.handleDelete = handleDelete;
   this.handleRequestCreate = handleRequestCreate;
-  this.handleRequestAccept = handleRequestAccept;
+  // this.handleRequestAccept = handleRequestAccept;
   this.closeModal = closeModal;
   this.foodHasBeenRequested = foodHasBeenRequested;
+
 
 }
 

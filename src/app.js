@@ -29,6 +29,7 @@ import RegisterCtrl from './controllers/auth/register';
 
 //models
 import Food from './models/food';
+import User from './models/user';
 
 //directives
 import gMap from './directives/gMap';
@@ -51,6 +52,7 @@ angular.module('foodlet', ['ui.router', 'satellizer', 'ngMessages', 'angular-fil
   .controller('LoginCtrl', LoginCtrl)
   .controller('RegisterCtrl', RegisterCtrl)
   .service('Food', Food)
+  .service('User', User)
   .directive('gMap', gMap)
   .directive('gAutocomplete', gAutocomplete)
   .directive('imageUpload', imageUpload);

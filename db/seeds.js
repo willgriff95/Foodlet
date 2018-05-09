@@ -25,7 +25,7 @@ mongoose.connect(dbURI, (err, db) => {
       email: 'hugocowan915@gmail.com',
       password: 'a',
       passwordConfirmation: 'a',
-      picture: 'https://i.imgur.com/nNuTtsL.png',
+      picture: 'https://thesocietypages.org/socimages/files/2009/05/vimeo.jpg',
       location: {
         lat: 51.54,
         lng: -0.06
