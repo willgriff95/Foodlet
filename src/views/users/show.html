@@ -2,8 +2,10 @@
   <div class="foodsShowPageContent">
     <div class="card3" ng-repeat="food in usersShow.user.foods">
       <div class="leftColumnUsersShow">
-        <div class="showcards" style="background-image: url({{ food.image }})"></div>
-      </div>
+        <a ui-sref="foodsShow({ id: food.id })">
+          <div class="showcards" style="background-image: url({{ food.image }})"></div>
+        </div>
+        </a>
       <div class="rightColumnUsersShow">
         <div class="requests"  ng-repeat="request in food.requests">
           <!-- {{ request }} -->

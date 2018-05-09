@@ -1,10 +1,11 @@
-UsersEditCtrl.$inject = ['$http', '$state'];
+UsersEditCtrl.$inject = ['User', '$state'];
 
-function UsersEditCtrl($http, $state){
+function UsersEditCtrl(User, $state){
   this.user = {};
   console.log('user id: ',$state.params.id);
 
-  $http.get(`/api/users/${$state.params.id}`)
+  User
+    .findById($state.params.id)
     .then(res => {
       console.log(res.data);
       this.user = res.data;
@@ -12,7 +13,8 @@ function UsersEditCtrl($http, $state){
     });
 
   function handleUpdate(){
-    $http.put(`/api/users/${$state.params.id}`, this.user)
+    User
+      .updateById($state.params.id, this.user)
       .then(() => $state.go('profile', $state.params));
   }
   this.handleUpdate = handleUpdate;
