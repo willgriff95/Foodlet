@@ -3,6 +3,12 @@ FoodsEditCtrl.$inject = ['Food', '$state'];
 function FoodsEditCtrl(Food, $state){
   this.food = {};
 
+  function updateLocation(location){
+    console.log('updating location...');
+    this.food.location = location;
+  }
+
+
   Food.findById($state.params.id)
     .then(res => this.food = res.data);
 
@@ -14,6 +20,8 @@ function FoodsEditCtrl(Food, $state){
       .then(() => $state.go('foodsShow', $state.params));
   }
   this.handleUpdate = handleUpdate;
+  this.updateLocation = updateLocation;
+
 }
 
 export default FoodsEditCtrl;
