@@ -97,14 +97,15 @@ a:hover{
       width: 40px;
       height: 40px;
     }
-    .username.left{
+    .name.left{
       position: absolute;
-      bottom: 120%;
-      left: 5%;
+      bottom: 125%;
+      left: 8%;
+      display: block;
     }
     .status{
       position: absolute;
-      bottom: 145%;
+      bottom: 155%;
       right: 0;
     }
     .time{
