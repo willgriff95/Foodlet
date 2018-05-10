@@ -25,15 +25,15 @@ function FoodsShowCtrl(Food, $state, $auth){
       .then(() => this.modalOpen = true);
   }
 
-  function closeModal() {
-    this.modalOpen = false;
-  }
 
   function foodHasBeenRequested() {
     if(!this.food.requests) return false;
     return !!this.food.requests.find(request => request.user = $auth.getPayload().sub);
   }
 
+  function closeModal() {
+    this.modalOpen = false;
+  }
 
   this.handleDelete = handleDelete;
   this.handleRequestCreate = handleRequestCreate;
