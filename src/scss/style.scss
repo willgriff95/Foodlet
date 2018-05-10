@@ -45,6 +45,7 @@
     width: 150px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     height: 150px;
+    cursor: pointer;
 }
 
 .profilePictureMainOverlay{
@@ -53,7 +54,8 @@
   width: 150px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   height: 150px;
-}
+  cursor: pointer;
+}  
 
 .requestedUserPP{
   height: 80px;
@@ -473,6 +475,10 @@ a:hover{
     height: 50vh;
     position: relative;
     border-radius: 20px;
+    @media (min-width: 320px)  {
+      height: 100%;
+      margin-top: 20px;
+  }
 }
 
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
@@ -524,7 +530,11 @@ a:hover{
 .field:not(:last-child) {
     margin-bottom: 1.3rem;
 }
-
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+}
+}
 .requiredField{
   font-size: 12px;
   margin-top: 6px;
@@ -643,9 +653,7 @@ hr {
     /* width: 100px; */
     text-align: center;
 }
-.is-active{
-  display: block;
-}
+
 .imageUpload{
   float: left;
   position: absolute;
@@ -661,10 +669,15 @@ hr {
 .foodsIndexcontent{
   padding-left: 90px;
   padding-right: 90px;
+
+  @media (min-width: 320px)  {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 }
 
 
-@media only screen and (max-width: 1087px){
+@media only screen and (max-width: 800px){
 
   .navbar-menu.is-active {
       display: block;
@@ -746,10 +759,6 @@ width: 100%;
     float: right;
     padding-top: 10px;
 }
-//
-// a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-//     background-color: none;
-// }
 
 nav.navbar{
 
