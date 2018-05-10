@@ -13,17 +13,15 @@
           <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
           <div class="card-content2">
 
-                <!-- {{ foodsShow.user }} -->
-                <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
-                <p class="title is-4">{{ foodsShow.food.title }}</p>
-                <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-                <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
-                <div ng-if="!foodsShow.geoLocation">
-                  <p>{{foodsShow.geoLocation}}</p>
-                  <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
-                  <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
-                </div>
-                <!-- hide distance if geolocation turned off  -->
+            <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
+            <p class="title is-4">{{ foodsShow.food.title }}</p>
+            <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
+            <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
+            <div ng-if="!foodsShow.geoLocation">
+              <p>{{foodsShow.geoLocation}}</p>
+              <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
+              <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
+            </div>
 
             <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
               <a class="far fa-trash-alt"></a>
@@ -44,6 +42,7 @@
   </div>
 </div>
 
+<!-- modal -->
 
 <div class="modal" ng-class="{ 'is-active': foodsShow.modalOpen }">
   <div class="modal-background"></div>
