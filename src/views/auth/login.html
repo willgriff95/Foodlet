@@ -17,11 +17,12 @@
           </div>
         </div>
         <button class="submitButton button is-primary">Submit</button>
+        <p class="homepageOr">OR</p>
+        <button ng-click="login.authenticate('twitter')" class="submitButton button twitter"><i class="fab fa-twitter"></i>Sign in with Twitter</button>
         <div class="register">
-          New to foodlet?<a ui-sref="register">Sign up now</a>
+          New to foodlet? <a ui-sref="register">Sign up now</a>
         </div>
       </form>
-      <img class="twitter" ng-click="login.authenticate('twitter')" src="assets/twitter_signin.png" alt="twitter sign in"></img>
     </div>
   </div>
 </div>

@@ -389,6 +389,7 @@ color: #8CC63F;
     border-color: transparent;
     color: #fff;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -744,4 +745,29 @@ nav.navbar{
 }
 
 .twitter {
+  background-color: #00aced;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  border: 1px solid transparent;
+  height: 2.25em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.fa-twitter{
+  color: #fff;
+  position: absolute;
+  left: 20px;
+}
+
+.twitter.button:hover, .twiter.button.is-hovered {
+    background-color: #24c3ff;
+    border-color: transparent;
+    color: #fff;
+}
+
+.homepageOr{
+  color: darkGrey;
+  text-align: center;
 }
