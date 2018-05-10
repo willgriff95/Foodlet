@@ -279,9 +279,20 @@ hr {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 70px;
     position: relative;
-    @media (max-width: 320px){
+    @media (max-width: 630px){
       top: 20%;
+      padding: 5%;
+      height: 100%;
     }
+}
+.columns.is-mobile {
+    display: flex;
+    @media (min-width: 631px){
+      top: 10%;
+      height: 100%;
+      width: 50%;
+    }
+
 }
 .foodsShowPageContent {
     height: 100%;
