@@ -103,17 +103,29 @@ hr {
     cursor: pointer;
     text-decoration: none;
     position: relative;
-}
-
-.login {
     border: 1px solid #99CC33;
     border-radius: 15px;
     margin: 15px;
     padding-top: 6px;
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* height: 20px; */
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid #99CC33;
+  border-radius: 15px;
+  margin: 15px;
+  padding-top: 9px;
+  padding-bottom: 6px;
+  }
 }
-.navbar-end {
-    padding-right: 20px;
-}
+
+
+
 
 hr {
     /* background-color: whitesmoke; */
@@ -161,17 +173,15 @@ nav.navbar{
       }
 }
 
-.login {
-    border: 1px solid #99CC33;
-    border-radius: 15px;
-    margin: 15px;
-    padding-top: 6px;
-}
 .navbar-end {
     padding-right: 10px;
+    height: 100%;
     float: right;
     right: 0;
     position: absolute;
+    @media (min-width: 320px) and (max-width: 425px) {
+      padding-top: 25px;
+    }
 }
 hr {
     /* background-color: whitesmoke; */
@@ -213,18 +223,8 @@ hr {
       }
 }
 
-.login {
-    border: 1px solid #99CC33;
-    border-radius: 15px;
-    margin: 15px;
-    padding-top: 6px;
-}
-.navbar-end {
-    padding-right: 10px;
-    float: right;
-    right: 0;
-    position: absolute;
-}
+
+
 hr {
     /* background-color: whitesmoke; */
     border: 1px solid whitesmoke;

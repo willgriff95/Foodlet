@@ -234,6 +234,17 @@
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
+.card-imageShowPage {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      border-radius: 0;
+  }
+}
 .card {
     background-color: white;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
@@ -246,6 +257,10 @@
     height: 60vh;
     position: relative;
     border-radius: 20px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 }
 .card5 {
     background-color: white;
@@ -306,7 +321,11 @@ width: 100%;
 .username {
     /* width: 100%; */
     float: left;
-    left: 20px;
+    text-align: right;
+    height: 100%;
+    top: 20px;
+    z-index: 10000;
+    right: 20px;
     position: relative;
     font-size: 20px;
 }
