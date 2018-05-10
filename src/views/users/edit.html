@@ -13,7 +13,7 @@
 
             <img class="profilePictureMain" ng-if="!usersEdit.user.picture" src="../assets/camera.svg" alt="">
             <img class="profilePictureMainOverlay" ng-if="usersEdit.user.picture" src="../assets/camera1.svg" alt="" style="opacity: 0.5;">
-            <img class="profilePictureMain" ng-if="usersEdit.user.picture" src="{{ usersEdit.user.picture }}" alt="">
+            <img class="profilePictureMain" ng-if="usersEdit.user.picture" ng-src="{{ usersEdit.user.picture }}" alt="">
           </label>
         <!-- </div> -->
         <div ng-messages="usersEdit.form.picture.$error"  ng-if="usersEdit.form.picture.$dirty || usersEdit.form.$submitted">
