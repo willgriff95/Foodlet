@@ -10,7 +10,10 @@ function UsersShowCtrl(Food, User, $auth){
   function handleRequestAccept(foodId, requestId){
     Food
       .requestAccept(foodId, requestId)
-      .then((res) => res.$apply());
+      .then(res => {
+        const index = this.user.foods.findIndex(food => food._id === res.data._id);
+        this.user.foods.splice(index, 1, res.data);
+      });
   }
   this.handleRequestAccept = handleRequestAccept;
 }
