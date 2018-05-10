@@ -1,0 +1,100 @@
+// backgrounds
+
+.backgroundImageHomePage {
+  // width: 100vw;
+    background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.backgroundImageLoginPage {
+    // width: 100vw;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.backgroundImageRegisterPage {
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homePageContent {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    margin: 0 auto;
+    height: 75vh;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+.loginPageContent {
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px;
+    height: 55vh;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    top: 70px;
+    position: relative;
+    @media (max-width: 630px){
+      top: 20%;
+      padding: 5%;
+      height: 100%;
+    }
+}
+.columns.is-mobile {
+    display: flex;
+    @media (min-width: 631px){
+      top: 10%;
+      height: 100%;
+      width: 50%;
+    }
+
+}
+.foodsShowPageContent {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    top: 40px;
+    position: relative;
+}
+.registerPageContent {
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 50%;
+    margin: 0 auto;
+    top: 20px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 70vh;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    top: 55px;
+    position: relative;
+}
+.addFoodPageContent {
+    height: 100%;
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 50%;
+    margin: 0 auto;
+    top: -10px;
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    height: 80vh;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    /* top: 25px; */
+    position: relative;
+}
+.modal-content{
+  text-align: center;
+  color: #8CC63F;
+}
