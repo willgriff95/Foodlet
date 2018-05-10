@@ -9,7 +9,8 @@ function UsersShowCtrl(Food, User, $auth){
 
   function handleRequestAccept(foodId, requestId){
     Food
-      .requestAccept(foodId, requestId);
+      .requestAccept(foodId, requestId)
+      .then((res) => res.$apply());
   }
   this.handleRequestAccept = handleRequestAccept;
 }
