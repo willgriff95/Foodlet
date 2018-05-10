@@ -4,7 +4,7 @@
     <div class="columns">
 
       <div class="column">
-        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration">MAP HERE</div>
+        <div class="mapShowPage" g-map geoLocation="foodsShow.geoLocation" food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration">MAP HERE</div>
         <div class="directions"></div>
       </div>
 
@@ -19,8 +19,11 @@
                 <p class="title is-4">{{ foodsShow.food.title }}</p>
                 <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
                 <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
-                <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
-                <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
+                <div ng-if="!foodsShow.geoLocation">
+                  <p>{{foodsShow.geoLocation}}</p>
+                  <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
+                  <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
+                </div>
                 <!-- hide distance if geolocation turned off  -->
                 <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
               </div>

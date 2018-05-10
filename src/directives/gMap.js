@@ -8,7 +8,8 @@ function gMap(){
       center: '=?',
       food: '=?',
       distance: '=?',
-      duration: '=?'
+      duration: '=?',
+      geoLocation: '=?'
     },
 
     link($scope, $element){
@@ -251,6 +252,7 @@ function gMap(){
           $scope.$apply();
         }, function() {
           handleLocationError(true, infoWindow, map.getCenter());
+          $scope.geoLocation = true;
         });
       } else {
         // Browser doesn't support Geolocation
