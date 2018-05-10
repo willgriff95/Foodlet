@@ -7,6 +7,15 @@
     /* padding-right: 3%; */
     width: 80%;
     position: relative;
+    &.columns.is-mobile {
+        display: flex;
+        @media (min-width: 631px){
+          top: 16%;
+          height: 100%;
+          width: 50%;
+        }
+
+    }
 }
 
 .content3 {

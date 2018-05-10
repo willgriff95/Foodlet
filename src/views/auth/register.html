@@ -1,7 +1,19 @@
 <div class="backgroundImageRegisterPage">
-  <div class="content3">
-    <div class="registerPageContent">
+  <div class="content columns is-mobile">
+    <div class="registerPageContent column is-two-thirds-desktop">
       <form name="register.form" ng-submit="register.handleRegister()" novalidate>
+
+        <div class="field">
+          <label class="center label" >
+            <input[type='file'] {color: transparent;} name="picture" ng-model="register.data.picture" image-upload />
+            <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
+
+            <img class="profilePictureMain" ng-if="!register.data.picture" src="../assets/camera.svg">
+            <img class="profilePictureMainOverlay" ng-if="register.data.picture" src="../assets/camera1.svg" style="opacity: 0.5;">
+            <img class="profilePictureMain" ng-if="register.data.picture" ng-src="{{ register.data.picture }}">
+          </label>
+        </div>
+
 
         <div class="field">
           <label for="username">Username</label>
@@ -32,17 +44,6 @@
           <input class="input" type="password" placeholder="Password Confirmation" name="passwordConfirmation" ng-model="register.data.passwordConfirmation" required/>
           <div ng-messages="register.form.passwordConfirmation.$error" ng-if="register.form.passwordConfirmation.$dirty || register.form.$submitted">
             <div class="requiredField" ng-message="required">Please confirm your password</div>
-          </div>
-        </div>
-        <div class="field">
-          <label for="picture">Profile Picture</label>
-          <!-- <div class="file"> -->
-            <label class="label" >
-              <input  type="file" placeholder="Image" name="picture" ng-model='register.data.picture' picture-upload />
-            </label>
-          <!-- </div> -->
-          <div ng-messages="register.form.picture.$error" ng-if="register.form.picture.$dirty || register.form.$submitted">
-            <div class="requiredField" ng-message="required">Please upload an picture</div>
           </div>
         </div>
 

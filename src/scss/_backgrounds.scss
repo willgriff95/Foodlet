@@ -7,16 +7,10 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.backgroundImageLoginPage {
+.backgroundImageLoginPage, .backgroundImageRegisterPage {
     // width: 100vw;
     background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.backgroundImageRegisterPage {
-    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
-    height: 100vh;
+    height: 110vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -30,32 +24,32 @@
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
-.loginPageContent {
-    height: 100%;
+.loginPageContent, .registerPageContent {
     background-color: rgba(244, 244, 244, 0.95);
     width: 50%;
     margin: 0 auto;
     padding: 50px;
-    height: 55vh;
+    height: 420px;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 70px;
+    top: 10px;
     position: relative;
     @media (max-width: 630px){
-      top: 20%;
+      top: 10px;
       padding: 5%;
       height: 100%;
     }
 }
-.columns.is-mobile {
-    display: flex;
-    @media (min-width: 631px){
-      top: 22%;
-      height: 100%;
-      width: 50%;
-    }
-
+.registerPageContent {
+  height: 560px;
+  top: 10px;
+  width: 100%;
+  img{
+    width: 100px;
+    height: 100px;
+  }
 }
+
 .foodsShowPageContent {
     height: 100%;
     width: 100%;
@@ -65,21 +59,6 @@
     @media (min-width: 1000px){
       width: 70%;
     }
-}
-.registerPageContent {
-    height: 100%;
-    background-color: rgba(244, 244, 244, 0.95);
-    width: 50%;
-    margin: 0 auto;
-    top: 20px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    height: 70vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 55px;
-    position: relative;
 }
 .addFoodPageContent {
     height: 100%;
