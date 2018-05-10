@@ -25,6 +25,10 @@
 
 
 
+body{
+  font-family: 'circe rounded', 'helvetica';
+  // font-size: 10px;
+}
 
 
 // images
@@ -158,6 +162,14 @@
     border-bottom-left-radius: 20px;
 }
 
+.status {
+    /* width: 100%; */
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8CC63F;
+}
+
 
 
 
@@ -178,6 +190,22 @@
     padding: 0;
     position: relative;
 }
+
+.username {
+    /* width: 100%; */
+    float: left;
+    left: 20px;
+    position: relative;
+    font-size: 20px;
+}
+.time {
+    /* width: 100%; */
+    float: right;
+    font-size: 11px;
+}
+
+
+
 
 
 // navbar
@@ -376,35 +404,6 @@ hr {
   // top: 10px;
 }
 
-
-
-
-
-body{
-  font-family: 'circe rounded', 'helvetica';
-  // font-size: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.status {
-    /* width: 100%; */
-    float: right;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #8CC63F;
-
-
-}
 .requestButton {
     border: 1px solid #99CC33;
     border-radius: 15px;
@@ -417,18 +416,12 @@ body{
     /* padding-top: 6px; */
     background-color: #99CC33;
 }
-.username {
-    /* width: 100%; */
-    float: left;
-    left: 20px;
-    position: relative;
-    font-size: 20px;
-}
-.time {
-    /* width: 100%; */
-    float: right;
-    font-size: 11px;
-}
+
+
+
+
+// modals
+
 .modal-background {
     background-color: rgba(10, 10, 10, 0.8);
 }
@@ -439,6 +432,14 @@ padding: 0;
 text-align: center;
 color: #8CC63F;
 }
+
+
+
+
+
+
+
+
 
 .content {
     margin: 0 auto;
