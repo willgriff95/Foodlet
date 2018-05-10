@@ -33,6 +33,7 @@
     width: 150px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     height: 150px;
+    cursor: pointer;
 }
 
 .profilePictureMainOverlay{
@@ -41,6 +42,7 @@
   width: 150px;
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   height: 150px;
+  cursor: pointer;
 
 }
 .requests{
@@ -615,9 +617,7 @@ hr {
     /* width: 100px; */
     text-align: center;
 }
-.is-active{
-  display: block;
-}
+
 .imageUpload{
   float: left;
   position: absolute;
@@ -636,7 +636,7 @@ hr {
 }
 
 
-@media only screen and (max-width: 1087px){
+@media only screen and (max-width: 800px){
 
   .navbar-menu.is-active {
       display: block;
@@ -718,10 +718,6 @@ width: 100%;
     float: right;
     padding-top: 10px;
 }
-//
-// a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-//     background-color: none;
-// }
 
 nav.navbar{
 
