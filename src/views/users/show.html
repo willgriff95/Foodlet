@@ -9,7 +9,7 @@
       <div class="rightColumnUsersShow">
         <p class="subtitle is-4">{{ food.title }}</p>
         <div ng-if="!food.requests[0].status">
-          <p>No requests yet!</p>
+          <p class="no-requests">No requests yet!</p>
         </div>
         <div class="requests" ng-repeat="request in food.requests">
           <div class="contain">

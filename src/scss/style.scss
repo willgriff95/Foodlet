@@ -82,6 +82,28 @@ body{
     position: absolute;
     left: 5%;
     top: 60%;
+    .requestedUserPP{
+      position: absolute;
+      bottom: 150%;
+      left: 5%;
+      width: 40px;
+      height: 40px;
+    }
+    .username.left{
+      position: absolute;
+      bottom: 120%;
+      left: 5%;
+    }
+    .status{
+      position: absolute;
+      bottom: 145%;
+      right: 0;
+    }
+    .time{
+      position: absolute;
+      bottom: 125%;
+      right: 0;
+    }
   }
   @media (min-width: 425px) and (max-width: 767px){
     position: absolute;
@@ -96,7 +118,20 @@ body{
   padding: 3%;
   text-align: center;
   @media (max-width: 424px){
+    .subtitle.is-4{
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .no-requests{
+      position: absolute;
+      left: 35%;
+    }
+    font-size: 12px;
     position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    right: 5%;
   }
 }
 .center{
