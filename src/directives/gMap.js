@@ -1,5 +1,4 @@
 /*global google*/
-// gMap.$inject = ['$compile'];
 function gMap(){
   return {
     restrict: 'A',
@@ -8,12 +7,10 @@ function gMap(){
       center: '=?',
       food: '=?',
       distance: '=?',
-      duration: '=?',
-      geoLocation: '=?'
+      duration: '=?'
     },
 
     link($scope, $element){
-      // console.log($element);
       const map = new google.maps.Map($element[0], {
         center: { lat: 51.515, lng: -0.078 },
         zoom: 14,
@@ -185,18 +182,10 @@ function gMap(){
             icon: 'https://i.imgur.com/aVQgzGW.png?1',
             animation: google.maps.Animation.DROP
           });
-          //Commented code is an attempt to use ui-sref to go to foods show page.
 
-          // const content = `<a ui-sref="foodsShow({ id: ${food._id} })">
-          //                     <img src="${food.image}" style="width: 100px; position:relative; " ></img>
-          //                     <p>${food.title}</p>
-          //                     <p>${food.description}</p>
-          //                   </a>`;
-          // const compiledContent = $compile(content)($scope);
-          // console.log(compiledContent);
           marker.addListener('click', () => {
             infoWindow.setContent(`
-                <a ui-sref="foodsShow(${food._id} })" class="infoWindow" style=" background-image: url(${food.image}); background-size: cover; height:100px; width: 100px; background-position: center;">
+                <a href="#!/foods/${food._id}" class="infoWindow" style=" background-image: url(${food.image}); background-size: cover; height:100px; width: 100px; background-position: center;">
                 </a>
             `);
             // <p>${food.title}</p>
@@ -245,14 +234,12 @@ function gMap(){
           });
 
           marker.setPosition(pos);
-          // infoWindow.setContent('Your Current Location.');
-          // infoWindow.open(map);
           map.setCenter(pos);
           displayRoute();
           $scope.$apply();
         }, function() {
           handleLocationError(true, infoWindow, map.getCenter());
-          $scope.geoLocation = true;
+
         });
       } else {
         // Browser doesn't support Geolocation
@@ -277,7 +264,6 @@ function gMap(){
           destination: $scope.food.location,
           travelMode: 'WALKING'
         }, (response) => {
-          // console.log(response.routes[0].legs[0]);
           $scope.distance = response.routes[0].legs[0].distance.text;
           $scope.duration = response.routes[0].legs[0].duration.text;
           $scope.$apply();

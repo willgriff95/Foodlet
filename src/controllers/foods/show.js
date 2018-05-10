@@ -25,33 +25,18 @@ function FoodsShowCtrl(Food, $state, $auth){
       .then(() => this.modalOpen = true);
   }
 
-  // function handleRequestAccept(id, requestId){
-  //   this.request = {status: 'accepted'};
-  //   Food
-  //     .findById(id)
-  //     .then(res => {
-  //       this.request = res.data;
-  //     })
-  //     .then(res => {
-  //       Food
-  //         .requestAccept(id, requestId, res.data);
-  //     });
-  // }
-
-
-  function closeModal() {
-    this.modalOpen = false;
-  }
 
   function foodHasBeenRequested() {
     if(!this.food.requests) return false;
     return !!this.food.requests.find(request => request.user = $auth.getPayload().sub);
   }
 
+  function closeModal() {
+    this.modalOpen = false;
+  }
 
   this.handleDelete = handleDelete;
   this.handleRequestCreate = handleRequestCreate;
-  // this.handleRequestAccept = handleRequestAccept;
   this.closeModal = closeModal;
   this.foodHasBeenRequested = foodHasBeenRequested;
 

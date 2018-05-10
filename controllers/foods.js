@@ -76,14 +76,13 @@ function foodsRequestAccept(req, res, next) {
     .exec()
     .then(food => {
       food.active = false;
-      console.log('req.params.requestId--->', req.params.requestId);
       food.requests = food.requests.map(request => {
-        console.log('request._id--->', request._id);
         request.status = request._id.equals(req.params.requestId) ? 'accepted' : 'rejected';
         return request;
       });
       return food.save();
     })
+    .then(food => Food.populate(food, { path: 'requests.user' }))
     .then(food => res.json(food))
     .catch(next);
 }

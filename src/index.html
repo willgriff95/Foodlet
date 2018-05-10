@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDocspp2Re0jRZf41iKET3YRAC8o3IwvV0&libraries=places"></script>
-    <script src="https://static.filestackapi.com/v3/filestack.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <title>foodlet</title>
   </head>
@@ -15,11 +14,14 @@
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <!-- navbar-brand -->
         <div class="navbar-brand">
-          <a class="navbar-item" ui-sref="home">
+          <a class="navbar-item" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">
             <img src="./assets/foodlet_logo.png">
-            <a class="navbarItem allFood" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">Browse</a>
-            <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add a food</a>
           </a>
+          <a class="navbar-item" ui-sref="home" ng-if="!main.isAuthenticated()">
+            <img src="./assets/foodlet_logo.png">
+          </a>
+            <a class="navbarItem allFood" ui-sref="home" ng-if="main.isAuthenticated()">About</a>
+            <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add an item</a>
 
           <a role="button" class="navbar-burger" ng-click="main.toggleNav()" ng-class="{ 'is-active': main.navBarIsOpen }">
             <span aria-hidden="true"></span>
@@ -52,8 +54,8 @@
                   </div>
                 </div>
               </div>
-              <img class="profilePicture" ng-if="!main.currentUser.picture" src="../assets/user.svg" alt="">
-              <img class="profilePicture" ng-if="main.currentUser.picture" src="{{ main.currentUser.picture }}" alt="">
+              <img class="profilePicture" ng-if="!main.currentUser.picture" src="/assets/user.svg" alt="">
+              <img class="profilePicture" ng-if="main.currentUser.picture" ng-src="{{ main.currentUser.picture }}" alt="">
             <!-- <img class="profilePicture" src="{{ main.currentUser.picture }}" alt=""> -->
           </div>
 

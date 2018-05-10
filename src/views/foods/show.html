@@ -4,7 +4,7 @@
     <div class="columns">
 
       <div class="column">
-        <div class="mapShowPage" g-map geoLocation="foodsShow.geoLocation" food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration">MAP HERE</div>
+        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration" center="foodsShow.food.location">MAP HERE</div>
         <div class="directions"></div>
       </div>
 
@@ -13,6 +13,7 @@
           <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
           <div class="card-content2">
 
+<<<<<<< HEAD
             <!-- {{ foodsShow.user }} -->
             <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
             <p class="title is-4">{{ foodsShow.food.title }}</p>
@@ -28,6 +29,16 @@
                 </p>
             </div>
             <!-- hide distance if geolocation turned off  -->
+=======
+                <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
+                <p class="title is-4">{{ foodsShow.food.title }}</p>
+                <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
+                <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
+                <div ng-if="foodsShow.distance">
+                  <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
+                  <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
+                </div>
+>>>>>>> development
 
             <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
               <a class="far fa-trash-alt"></a>
@@ -46,6 +57,7 @@
   </div>
 </div>
 
+<!-- modal -->
 
 <div class="modal" ng-class="{ 'is-active': foodsShow.modalOpen }">
   <div class="modal-background"></div>
