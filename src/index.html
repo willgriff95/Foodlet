@@ -1,90 +1,89 @@
 <!DOCTYPE html>
 <html ng-app='foodlet'>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDocspp2Re0jRZf41iKET3YRAC8o3IwvV0&libraries=places"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-    <title>foodlet</title>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDocspp2Re0jRZf41iKET3YRAC8o3IwvV0&libraries=places"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <title>foodlet</title>
+</head>
 
-  <body ng-controller="MainCtrl as main">
+<body ng-controller="MainCtrl as main">
 
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
 
-        <!-- navbar-brand -->
-        <div class="navbar-brand">
-          <a class="navbar-item" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">
-            <img src="./assets/foodlet_logo.png">
-          </a>
-          <a class="navbar-item" ui-sref="home" ng-if="!main.isAuthenticated()">
-            <img src="./assets/foodlet_logo.png">
-          </a>
+    <!-- navbar-brand -->
+    <div class="navbar-brand">
+      <a class="navbar-item" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">
+        <img src="./assets/foodlet_logo.png">
+      </a>
+      <a class="navbar-item" ui-sref="home" ng-if="!main.isAuthenticated()">
+        <img src="./assets/foodlet_logo.png">
+      </a>
 
-            <a class="navbarItem allFood" ui-sref="home" ng-if="main.isAuthenticated()">About</a>
-            <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add an item</a>
-
-          <a role="button" class="navbar-burger" ng-click="main.toggleNav()" ng-class="{ 'is-active': main.navBarIsOpen }">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-        <!-- navbar-menu -->
-        <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
-          <div class="navbar-end">
-            <div ng-if="main.isAuthenticated()" class="dropdown is-hoverable">
-
-              <div class="account dropdown-trigger">
-                <div class="userLoggedIn" aria-controls="dropdown-menu4">
-                  <span>{{ main.currentUser.username }}</span>
-                  <span class="icon is-small">
-                    <i class="fas fa-angle-down"></i>
-                  </span>
-                </div>
-              </div>
+      <a class="navbarItem allFood" ui-sref="home" ng-if="main.isAuthenticated()">About</a>
+      <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">Add item</a>
+      <!--
+      <a role="button" class="navbar-burger" ng-click="main.toggleNav()" ng-class="{ 'is-active': main.navBarIsOpen }">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
 
 
-              <div ng-controller="UsersShowCtrl as usersShow">
-                <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
-                  <div class=" dropdown-content">
-                      <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">My items</a>
-                      <hr>
-                      <a class="userLoggedIn logOut" ui-sref="usersEdit({ id: usersShow.user._id })" ng-if="main.isAuthenticated()">Account</a>
-                      <hr>
-                      <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
-                  </div>
-                </div>
-              </div>
+    </a> -->
 
-              <img class="profilePicture" ng-if="!main.currentUser.picture" src="/assets/user.svg" alt="">
-              <img class="profilePicture" ng-if="main.currentUser.picture" ng-src="{{ main.currentUser.picture }}" alt="">
+    <!-- navbar-menu -->
+    <div class="navbar-end">
+      <div ng-if="main.isAuthenticated()" class="dropdown is-hoverable">
+
+        <div class="account dropdown-trigger">
+          <div class="userLoggedIn" aria-controls="dropdown-menu4">
+            <span class="username">{{ main.currentUser.username }}</span>
+            <span class="arrow con is-small">
+              <i class="fas fa-angle-down"></i>
+            </span>
+            <img class="profilePicture" ng-if="!main.currentUser.picture" src="/assets/user.svg" alt="">
+            <img class="profilePicture" ng-if="main.currentUser.picture" ng-src="{{ main.currentUser.picture }}" alt="">
           </div>
 
-            <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
 
+          <div ng-controller="UsersShowCtrl as usersShow">
+            <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
+              <div class=" dropdown-content">
+                <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">My items</a>
+                <hr>
+                <a class="userLoggedIn logOut" ui-sref="usersEdit({ id: usersShow.user._id })" ng-if="main.isAuthenticated()">Account</a>
+                <hr>
+                <a class="userLoggedIn logOut" ng-click="main.logout()" ng-if="main.isAuthenticated()">Logout</a>
+              </div>
+            </div>
           </div>
         </div>
+        <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
+      </div>
+    </div>
+  </div>
 
-      </nav>
+
+
+</nav>
 
 <!-- end navbar-menu -->
 
 
 <!--- flash message --->
-    <div ng-if="main.flashMessage.content" class="notification is-{{ main.flashMessage.type }}">
-      {{ main.flashMessage.content }}
-    </div>
+<div ng-if="main.flashMessage.content" class="notification is-{{ main.flashMessage.type }}">
+  {{ main.flashMessage.content }}
+</div>
 
 
 <!-- main-section -->
-    <ui-view ng-if="main.isHome"></ui-view>
-    <section ng-if="!main.isHome">
-      <ui-view></ui-view>
-    </section>
+<ui-view ng-if="main.isHome"></ui-view>
+<section ng-if="!main.isHome">
+  <ui-view></ui-view>
+</section>
 
-  </body>
+</body>
 </html>
