@@ -13,6 +13,7 @@
   <body ng-controller="MainCtrl as main">
 
       <nav class="navbar" role="navigation" aria-label="main navigation">
+
         <!-- navbar-brand -->
         <div class="navbar-brand">
           <a class="navbar-item" ui-sref="foodsIndex" ng-if="main.isAuthenticated()">
@@ -21,6 +22,7 @@
           <a class="navbar-item" ui-sref="home" ng-if="!main.isAuthenticated()">
             <img src="./assets/foodlet_logo.png">
           </a>
+
             <a class="navbarItem allFood" ui-sref="home" ng-if="main.isAuthenticated()">About</a>
             <a class="navbarItem addFood" ui-sref="foodsNew" ng-if="main.isAuthenticated()">+ Add an item</a>
 
@@ -30,20 +32,22 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <!-- end navbar-brand -->
 
         <!-- navbar-menu -->
         <div class="navbar-menu" ng-class="{ 'is-active': main.navBarIsOpen }">
           <div class="navbar-end">
             <div ng-if="main.isAuthenticated()" class="dropdown is-hoverable">
+
               <div class="account dropdown-trigger">
-                <div class="userLoggedIn" aria-haspopup="true" aria-controls="dropdown-menu4">
+                <div class="userLoggedIn" aria-controls="dropdown-menu4">
                   <span>{{ main.currentUser.username }}</span>
                   <span class="icon is-small">
-                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    <i class="fas fa-angle-down"></i>
                   </span>
                 </div>
               </div>
+
+
               <div ng-controller="UsersShowCtrl as usersShow">
                 <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
                   <div class=" dropdown-content">
@@ -55,26 +59,20 @@
                   </div>
                 </div>
               </div>
+
               <img class="profilePicture" ng-if="!main.currentUser.picture" src="/assets/user.svg" alt="">
               <img class="profilePicture" ng-if="main.currentUser.picture" ng-src="{{ main.currentUser.picture }}" alt="">
-            <!-- <img class="profilePicture" src="{{ main.currentUser.picture }}" alt=""> -->
           </div>
 
-            <!-- navbar items -->
-
-            <!-- <a class="navbarItem" ui-sref="home">Home</a> -->
-            <!-- <a class="navbarItem" ui-sref="register" ng-if="!main.isAuthenticated()">Register</a> -->
             <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
+
           </div>
         </div>
-        <!-- {{ main }} -->
 
       </nav>
 
 <!-- end navbar-menu -->
 
-
-<!-- {{ id: locals.user._id}} -->
 
 <!--- flash message --->
     <div ng-if="main.flashMessage.content" class="notification is-{{ main.flashMessage.type }}">
