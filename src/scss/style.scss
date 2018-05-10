@@ -18,23 +18,16 @@
 @import 'cards';
 @import 'icons';
 @import 'images';
+@import 'infowindow';
+@import 'maps';
 @import 'text';
+@import 'navbar';
 
 
 
-// backgrounds
-
-
-.showcards {
-    height: 100%;
-    background-position: center;
-    width: 100%;
-    float: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border-radius: 20px; */
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+body{
+  font-family: 'circe rounded', 'helvetica';
+  // font-size: 10px;
 }
 
 
@@ -63,6 +56,17 @@
   border-radius: 80px;
   float: left;
 }
+
+.profilePicture {
+    width: 55px;
+    top: 8px;
+    position: relative;
+    height: 55px;
+    border-radius: 55px;
+}
+
+
+
 
 // cards
 
@@ -109,18 +113,24 @@
     border-radius: 20px 20px 20px 20px;
 }
 
-
-
-
-
-// icons
-
-.imageicon {
-    position: relative;
-    top: 15px;
+.card-content {
+    background-color: none;
+    padding: 0.4rem;
+    margin: 0 auto;
+    height: 100px;
+}
+.card-content2{
+   background-color: none;
+    padding: 0.9rem;
+    margin: 0 auto;
+    height: 100px;
 }
 
+.left{
+  float: left;
+}
 
+<<<<<<< HEAD
 
 
 
@@ -136,15 +146,15 @@
       padding-right: 0;
 
 }
+=======
+.paddingtop{
+  padding-top: 50px;
+  @media (min-width: 320px)  {
+    padding-top: 0;
+>>>>>>> development
 }
-.dropdown-content {
-    height: 90px;
-    border-radius: 20px;
-    width: 100px;
-    top: 10px;
-    right: 20px;
-    position: relative;
 }
+<<<<<<< HEAD
 .profilePicture {
   width: 55px;
   top: 8px;
@@ -166,7 +176,249 @@
    top: 0 !important;
    left: 0 !important;
    border-radius: 2px 2px 0 0;
+=======
+
+.card2 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 375px;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+>>>>>>> development
 }
+
+.showcards {
+    height: 100%;
+    background-position: center;
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.status {
+    /* width: 100%; */
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8CC63F;
+}
+
+.card-image {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    // margin-right: -10%;
+    height: 60vh;
+    position: relative;
+    border-radius: 20px;
+}
+.card5 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 50vh;
+    position: relative;
+    border-radius: 20px;
+    @media (min-width: 320px)  {
+      height: 100%;
+      margin-top: 10%;
+  }
+}
+
+// .card {
+//     background-color: white;
+//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+//     color: #4a4a4a;
+//     /* max-width: 100%; */
+//     width: 100%;
+//     float: right;
+//     margin-top: -25px;
+//     height: 60vh;
+//     position: relative;
+//     border-radius: 20px;
+// }
+
+.subtitle{
+    font-size: 2rem;
+    padding-left: 20px;
+}
+.title.is-4 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+
+
+
+// icons
+
+.imageicon {
+    position: relative;
+    top: 15px;
+}
+
+.icon {
+    /* align-items: center; */
+    /* display: inline-flex; */
+    justify-content: center;
+    /* height: 1.5rem; */
+    height: 50%;
+    width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.username {
+    /* width: 100%; */
+    float: left;
+    left: 20px;
+    position: relative;
+    font-size: 20px;
+}
+.time {
+    /* width: 100%; */
+    float: right;
+    font-size: 11px;
+}
+
+
+
+
+
+// navbar
+
+.account {
+  padding-top: 24px;
+  padding-right: 20px;
+  text-align: right;
+  width: 100%;
+}
+.dropdown-content {
+  height: 90px;
+  border-radius: 20px;
+  width: 100px;
+  top: 10px;
+  right: 20px;
+  position: relative;
+}
+
+.userLoggedIn{
+  color: #363636;
+}
+
+hr {
+    background-color: whitesmoke;
+    border: none;
+    display: block;
+    height: 2px;
+    margin: 0;
+}
+
+.navbar-burger {
+
+    height: 3.25rem;
+    position: relative;
+    width: 3.25rem;
+    height: 70px;
+    margin-left: auto;
+}
+
+.navbar-item img {
+  max-height: 2.75rem;
+}
+
+@media only screen and (max-width: 1087px) {
+  .navbar-menu {
+      background-color: white;
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+      padding: 0.5rem 0;
+  }
+}
+.field:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+}
+}
+
+.navbar {
+    background-color: white;
+    min-height: 3.25rem;
+    /* position: relative; */
+    width: 80%;
+    margin: 0 auto;
+    z-index: 30;
+    top: 4%;
+    position: absolute;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.navbarItem:hover {
+    background-color: none;
+    color: darkGrey;
+    position: relative;
+}
+
+.allfood {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.addfood {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    float: right;
+}
+
+.login {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+// backgrounds
+
 .backgroundImageHomePage {
   // width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
@@ -186,121 +438,6 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-// .field:not(:last-child) {
-//     margin-bottom: 0rem;
-// }
-
-
-.left{
-  float: left;
-}
-.map {
-    height: 100vh;
-    // width: 100vw;
-    margin-top: -25px;
-    margin-left: 0px;
-    // position: absolute;
-}
-
-.submitButton{
-  // top: 10px;
-}
-
-.userLoggedIn{
-  color: #363636;
-}
-.paddingtop{
-  padding-top: 50px;
-  @media (min-width: 320px)  {
-    padding-top: 0;
-}
-}
-body{
-  font-family: 'circe rounded', 'helvetica';
-  // font-size: 10px;
-}
-.toggleMapList {
-    width: 50px;
-    height: 80px;
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    top: 200px;
-    margin: 0 auto;
-    right: 10%;
-    z-index: 100;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-.card-content {
-    background-color: none;
-    padding: 0.4rem;
-    margin: 0 auto;
-    height: 100px;
-}
-.card-content2{
-   background-color: none;
-    padding: 0.9rem;
-    margin: 0 auto;
-    height: 100px;
-}
-
-hr {
-    background-color: whitesmoke;
-    border: none;
-    display: block;
-    height: 2px;
-    margin: 0;
-}
-
-
-.card2 {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    height: 375px;
-    position: relative;
-    border-radius: 0px 0px 20px 20px;
-}
-.infoWindow {
-    // background-color: red;
-    width: 100px;
-    border-radius: 20px;
-    top: -5px;
-    left: -40px;
-    position: absolute;
-    height: 100px;
-    margin: 0 auto;
-}
-// .infoWindow img{
-// border-radius: 20px;
-// width:100px;
-// height: 100px;
-// background-size: cover;
-// }
-.gm-style-iw{
-  display: contents;
-  background-color: pink;
-  text-align: center;
-  position: relative;
-  border-radius: 2px 2px 0 0;
-
-}
-
-.icon {
-    /* align-items: center; */
-    /* display: inline-flex; */
-    justify-content: center;
-    /* height: 1.5rem; */
-    height: 50%;
-    width: 100%;
-    padding: 0;
-    position: relative;
 }
 
 .homePageContent {
@@ -323,6 +460,20 @@ hr {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 70px;
     position: relative;
+    @media (max-width: 630px){
+      top: 20%;
+      padding: 5%;
+      height: 100%;
+    }
+}
+.columns.is-mobile {
+    display: flex;
+    @media (min-width: 631px){
+      top: 10%;
+      height: 100%;
+      width: 50%;
+    }
+
 }
 .foodsShowPageContent {
     height: 100%;
@@ -365,18 +516,73 @@ hr {
 .modal-content{
   text-align: center;
   color: #8CC63F;
+}
+
+
+
+// maps
+
+.map {
+    height: 100vh;
+    // width: 100vw;
+    margin-top: -25px;
+    margin-left: 0px;
+    // position: absolute;
+}
+
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
+
+.toggleMapList {
+    width: 50px;
+    height: 80px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 200px;
+    margin: 0 auto;
+    right: 10%;
+    z-index: 100;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.infoWindow {
+    // background-color: red;
+    width: 100px;
+    border-radius: 20px;
+    top: -5px;
+    left: -40px;
+    position: absolute;
+    height: 100px;
+    margin: 0 auto;
+}
+// .infoWindow img{
+// border-radius: 20px;
+// width:100px;
+// height: 100px;
+// background-size: cover;
+// }
+.gm-style-iw{
+  display: contents;
+  background-color: pink;
+  text-align: center;
+  position: relative;
+  border-radius: 2px 2px 0 0;
 
 }
 
-.status {
-    /* width: 100%; */
-    float: right;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #8CC63F;
 
 
+// buttons
+
+.submitButton{
+  // top: 10px;
 }
+
 .requestButton {
     border: 1px solid #99CC33;
     border-radius: 15px;
@@ -389,18 +595,49 @@ hr {
     /* padding-top: 6px; */
     background-color: #99CC33;
 }
-.username {
-    /* width: 100%; */
-    float: left;
-    left: 20px;
-    position: relative;
-    font-size: 20px;
+
+.button.is-primary {
+    background-color: #99CC33;
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
 }
-.time {
-    /* width: 100%; */
-    float: right;
-    font-size: 11px;
+
+.twitter.button:hover, .twiter.button.is-hovered {
+    background-color: #24c3ff;
+    border-color: transparent;
+    color: #fff;
 }
+
+.twitter {
+  background-color: #00aced;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  border: 1px solid transparent;
+  height: 2.25em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.fa-twitter{
+  color: #fff;
+  position: absolute;
+  left: 20px;
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+    background-color: #9DDD48;
+    border-color: transparent;
+    color: #fff;
+}
+
+
+
+// modals
+
 .modal-background {
     background-color: rgba(10, 10, 10, 0.8);
 }
@@ -411,6 +648,10 @@ padding: 0;
 text-align: center;
 color: #8CC63F;
 }
+
+
+
+// forms
 
 .content {
     margin: 0 auto;
@@ -429,73 +670,9 @@ color: #8CC63F;
     width: 80%;
     position: relative;
 }
-.button.is-primary {
-    background-color: #99CC33;
-    border-radius: 10px;
-    border-color: transparent;
-    color: #fff;
-    width: 100%;
-    margin-bottom: 10px;
-}
 
-.container {
-    margin: 0 auto;
-    position: relative;
-    // width: 100vw;
-}
-a:hover{
-  color: #9DDD48;
-}
-.navbar-burger {
-
-    height: 3.25rem;
-    position: relative;
-    width: 3.25rem;
-    height: 70px;
-    margin-left: auto;
-}
-.button.is-primary:hover, .button.is-primary.is-hovered {
-    background-color: #9DDD48;
-    border-color: transparent;
-    color: #fff;
-}
-
-.card-image {
-    height: 220px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.card {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    // margin-right: -10%;
-    height: 60vh;
-    position: relative;
-    border-radius: 20px;
-}
-.card5 {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    height: 50vh;
-    position: relative;
-    border-radius: 20px;
-    @media (min-width: 320px)  {
-      height: 100%;
-      margin-top: 10%;
-  }
+.register {
+  padding-top: 15px;
 }
 
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
@@ -506,6 +683,7 @@ a:hover{
     margin-top: 0rem;
 }
 
+<<<<<<< HEAD
 .subtitle{
     font-size: 2rem;
     padding-left: 20px;
@@ -555,32 +733,18 @@ a:hover{
     height: 100%;
 }
 }
+=======
+>>>>>>> development
 .requiredField{
   font-size: 12px;
   margin-top: 6px;
   color: red;
   position: absolute;
 }
-.navbar {
-    background-color: white;
-    min-height: 3.25rem;
-    /* position: relative; */
-    width: 80%;
-    margin: 0 auto;
-    z-index: 30;
-    top: 4%;
-    position: absolute;
-    border-radius: 20px;
-    height: 70px;
-}
 
-.navbarItem:hover {
-    background-color: none;
-    color: darkGrey;
-    position: relative;
 
-}
 
+<<<<<<< HEAD
 .allfood {
   color: #99CC33;
   padding-left: 30px;
@@ -600,15 +764,24 @@ a:hover{
     position: relative;
     float: right;
 }
+=======
+>>>>>>> development
 
-.login {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .mapShowPage {
@@ -825,30 +998,21 @@ nav.navbar{
   margin: 0 auto;
 }
 
-.twitter {
-  background-color: #00aced;
-  border-radius: 10px;
-  color: #fff;
-  width: 100%;
-  border: 1px solid transparent;
-  height: 2.25em;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
 
-.fa-twitter{
-  color: #fff;
-  position: absolute;
-  left: 20px;
-}
 
-.twitter.button:hover, .twiter.button.is-hovered {
-    background-color: #24c3ff;
-    border-color: transparent;
-    color: #fff;
-}
+
 
 .homepageOr{
   color: darkGrey;
   text-align: center;
+}
+
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    // width: 100vw;
+}
+a:hover{
+  color: #9DDD48;
 }
