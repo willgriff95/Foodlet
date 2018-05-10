@@ -2,37 +2,35 @@
   <a ng-click="list=false" class="icon">
     <i class="fa fa-map-marker"></i>
   </a>
+  <hr/>
   <a ng-click="list=true" class="icon">
     <i class="fas fa-list"></i>
   </a>
 </div>
-<div class="content">
 
-  <h1>Foods Index</h1>
-  <!-- <p>Here {{currentUser | json}}</p> -->
 
-  <div class="columns is-multiline ng-hide" ng-show="list">
-    <div ng-repeat="food in foodsIndex.all" class="column is-half-tablet is-one-third-desktop">
+<div class="content foodsIndexcontent">
+  <div class="foodsShowPageContent">
+    <!-- <p>Here {{currentUser | json}}</p> -->
+    <div class="columns is-multiline ng-hide" ng-show="list">
+      <div ng-repeat="food in foodsIndex.all" class="paddingtop column is-half-tablet is-one-third-desktop">
 
-      <a ui-sref="foodsShow({ id: food._id })">
-        <div class="card">
-          <div class="card-image" style="background-image: url({{ food.image }})"></div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-4">{{ food.title }}</p>
-                <p class="subtitle is-6">{{ food.description }}</p>
-                <p class="subtitle is-6">{{ food.user }}</p>
-                <p><small>{{ food.createdAtRelative }}</small></p>
-                <!--- add location tag --->
-              </div>
+        <a ui-sref="foodsShow({ id: food._id })">
+          <div class="card5">
+            <div class="card-image" style="background-image: url({{ food.image }})"></div>
+            <div class="card-content">
+              <p class="time" ><small>{{ food.createdAtRelative }}</small></p>
+              <p class="title is-4">{{ food.title }}</p>
+              <p class="subtitle is-6 description-card">{{ food.description }}</p>
+              <!-- <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p> -->
+              <!-- <p class="subtitle is-6">{{ food.user.username }}</p> -->
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+
+      </div>
 
     </div>
   </div>
-      <div ng-show="map" ng-hide="list" class="map" g-map center="currentUser.location" control="control">MAP HERE</div>
-  </div>
 </div>
+<div ng-show="map" ng-hide="list" class="map" g-map foods="foodsIndex.all">MAP HERE</div>

@@ -1,0 +1,105 @@
+// forms
+
+.content {
+    margin: 0 auto;
+    top: 120px;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
+    width: 80%;
+    position: relative;
+    &.columns.is-mobile {
+        display: flex;
+        @media (min-width: 631px){
+          top: 16%;
+          height: 100%;
+          width: 50%;
+        }
+
+    }
+}
+
+.content3 {
+    margin: 0 auto;
+    top: 90px;
+    /* padding-left: 0; */
+    /* padding-right: 3%; */
+    width: 80%;
+    position: relative;
+}
+
+.register {
+  padding-top: 15px;
+}
+
+.content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
+    margin-bottom: 0.4em;
+}
+
+.title:not(.is-spaced) + .subtitle {
+    margin-top: 0rem;
+}
+
+.subtitle{
+    font-size: 2rem;
+    padding-left: 20px;
+}
+.title.is-4 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+// .card {
+//     background-color: white;
+//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+//     color: #4a4a4a;
+//     /* max-width: 100%; */
+//     width: 100%;
+//     float: right;
+//     margin-top: -25px;
+//     height: 60vh;
+//     position: relative;
+//     border-radius: 20px;
+// }
+.register {
+  padding-top: 15px;
+}
+
+
+.navbar-item img {
+  max-height: 2.75rem;
+  @media (min-width: 320px) and (max-width: 425px)  {
+    max-height: 1.75rem;
+}
+}
+
+// @media only screen and (max-width: 1087px) {
+//   .navbar-menu {
+//       background-color: white;
+//       border-radius: 10px 10px 10px 10px;
+//       box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+//       padding: 0.5rem 0;
+//   }
+// }
+.field:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+}
+}
+.requiredField{
+  font-size: 12px;
+  margin-top: 6px;
+  color: red;
+  position: absolute;
+}
+
+.label:not(:last-child) {
+    margin-bottom: 0em;
+}
+
+.login-text{
+  color: darkGrey;
+  text-align: center;
+}

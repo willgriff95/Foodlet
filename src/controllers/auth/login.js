@@ -1,26 +1,13 @@
-LoginCtrl.$inject = ['$auth', '$state', '$http', '$rootScope'];
-//$auth refers to a package called satellizer.
-function LoginCtrl($auth, $state, $http, $rootScope){
+LoginCtrl.$inject = ['$auth', '$state', '$rootScope'];
+function LoginCtrl($auth, $state, $rootScope){
   this.data = {};
   // let currentUser;
 
   function handleLogin(){
     if(this.form.$invalid) return false;
-    const vm = this.data;
 
     $auth.login(this.data)
-      .then(() => {
-        $http
-          .get('/api/users')
-          .then(res => {
-            // console.log(res.data, vm.email);
-            res.data.forEach(function(user){
-              if(user.email === vm.email){
-                $rootScope.currentUser = user;
-              }
-            });
-          });
-      })
+      .then(res => $rootScope.$broadcast('loggedIn', res.data.user))
       .then(()=> $state.go('foodsIndex'));
   }
 

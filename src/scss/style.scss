@@ -5,6 +5,7 @@
 @import "~bulma/sass/utilities/initial-variables";
 
 // modify bulma variables
+
 // import font Circe Rounded
 @import url("https://use.typekit.net/ykn5qky.css");
 
@@ -12,236 +13,64 @@
 // import bulma
 @import '~bulma';
 
+@import 'backgrounds';
+@import 'buttons';
+@import 'cards';
+@import 'forms';
+@import 'icons';
+@import 'images';
+@import 'maps';
+@import 'modals';
+@import 'text';
+@import 'navbar';
 
-// our css
 
-.backgroundImageHomePage {
-    background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.backgroundImageLoginPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.backgroundImageRegisterPage {
-    background-image: url(https://previews.123rf.com/images/dusanzidar/dusanzidar1703/dusanzidar170300042/75076205-selection-of-healthy-food-on-white-background-healthy-diet-foods-for-heart-cholesterol-and-diabetes-.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
-.map.mapmain{
-  height: 600px;
-}
 
-.map {
-    height: 100vh;
-    width: 100vw;
-    margin-top: -175px;
-    margin-left: -180px;
-}
 
-body{
-  font-family: 'circe rounded', 'helvetica';
-  // font-size: 10px;
-}
-.toggleMapList {
-    width: 50px;
-    height: 80px;
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    top: 200px;
-    left: 10%;
-    z-index: 100;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
+// not found
 
-.icon {
-    /* align-items: center; */
-    /* display: inline-flex; */
-    justify-content: center;
-    /* height: 1.5rem; */
-    height: 50%;
-    width: 100%;
-    padding: 0;
-    position: relative;
-}
-
-.homePageContent {
-    height: 100%;
-    background-color: rgba(255,255,255,0.5);
-    width: 100%;
-    height: 75vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-.loginPageContent {
-    height: 100%;
-    background-color: rgba(244, 244, 244, 0.95);
-    width: 50%;
+.container {
     margin: 0 auto;
-    padding: 50px;
-    height: 55vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 70px;
     position: relative;
+    // width: 100vw;
 }
-.registerPageContent {
-    height: 100%;
-    background-color: rgba(244, 244, 244, 0.95);
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px;
-    height: 70vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 25px;
+
+.plusbutton {
+    color: white;
+    cursor: pointer;
+    top: -10px;
+    text-align: center;
+    text-decoration: none;
     position: relative;
+    font-size: 50px;
+    font-weight: 200;
 }
 
-.addFoodPageContent {
-    height: 100%;
-    background-color: rgba(244, 244, 244, 0.95);
-    width: 50%;
-    margin: 0 auto;
-    padding: 50px;
-    height: 70vh;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 25px;
-    position: relative;
-}
-.content {
-    margin: 0 auto;
-    top: 120px;
-    width: 80%;
-    position: relative;
-}
-
-.button.is-primary {
-    background-color:  #99CC33;
-    border-color: transparent;
-    color: #fff;
-    width: 100%;
-    // border-radius: 10px;
-}
-.navbar-burger {
-
-    height: 3.25rem;
-    position: relative;
-    width: 3.25rem;
-    height: 70px;
-    margin-left: auto;
-}
-.button.is-primary:hover, .button.is-primary.is-hovered {
-    background-color: #9DDD48;
-    border-color: transparent;
-    color: #fff;
-}
-
-.card-image{
-  height: 250px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.register {
-  padding-top: 15px;
-}
-
-
-.navbar-item img {
-  max-height: 2.75rem;
-}
-
-@media only screen and (max-width: 1087px) {
-  .navbar-menu {
-      background-color: white;
-      border-radius: 0px 10px 10px 10px;
-      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-      padding: 0.5rem 0;
-  }
-}
-.field:not(:last-child) {
-    margin-bottom: 1.4rem;
-}
-
-
-.requiredField{
-  font-size: 12px;
-  margin-top: 3px;
-  color: red;
+.imageUpload{
+  float: left;
   position: absolute;
 }
-.navbar {
-    background-color: white;
-    min-height: 3.25rem;
-    /* position: relative; */
-    width: 80%;
-    margin: 0 auto;
-    z-index: 30;
-    top: 4%;
-    position: absolute;
-    border-radius: 20px;
-    height: 70px;
+
+.right {
+  float: right;
+  position: relative;
 }
 
-.navbarItem:hover {
-    background-color: none;
-    color: darkGrey;
-    position: relative;
-
+.allfood {
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
 }
-
-a {
+.addfood {
     color: #99CC33;
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
     text-decoration: none;
     position: relative;
-}
-
-.login {
-    border: 1px solid #99CC33;
-    border-radius: 15px;
-    margin: 15px;
-    padding-top: 6px;
-}
-
-.logOut {
-    border: 1px solid #99CC33;
-    border-radius: 15px;
-    margin: 15px;
-    padding-top: 6px;
-}
-
-.addFood {
-    margin: 15px;
-    padding-top: 6px;
-}
-
-.allFood {
-    margin: 15px;
-    padding-top: 6px;
-}
-
-//
-// a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-//     background-color: none;
-// }
-
-nav.navbar{
-
-  right: 0;
-  margin: 0 auto;
-  left: 0;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    float: right;
 }

@@ -3,14 +3,16 @@ const Food = require('../models/food');
 function foodsIndex(req, res, next){
   Food
     .find()
+    .populate('user')
     .exec()
     .then(foods => res.json(foods))
-    .catch(next);           // catch gets error as argument
+    .catch(next);
 }
 
 function foodsShow(req, res, next){
   Food
     .findById(req.params.id)
+    .populate('user')
     .exec()
     .then(food => {
       if(!food) return res.sendStatus(404);
@@ -20,7 +22,7 @@ function foodsShow(req, res, next){
 }
 
 function foodsCreate(req, res, next){
-  req.body.createdBy = req.currentUser;         // ! so we can check token and store on req
+  req.body.createdBy = req.currentUser;
   Food
     .create(req.body)
     .then(food => res.status(201).json(food))
@@ -50,10 +52,48 @@ function foodsDelete(req, res, next){
     .catch(next);
 }
 
+function foodsRequestCreate(req, res, next){
+  req.body.user = req.currentUser;
+  Food
+    .findById(req.params.id)
+    .exec()
+    .then(food => {
+      food.requests.push(req.body);
+      return food.save();
+    })
+    .then(food => res.json(food))
+    .catch(next);
+}
+
+function foodsRequestAccept(req, res, next) {
+  // console.log('req.body: ', req.body);
+  //if request.user === req.body.user, return 'accepted'. Else return 'rejected'.
+
+  //This backend should check each request to see if it's accepted.
+  // If one is accepted, reject all others, and set the food's active property to false.
+  Food
+    .findById(req.params.id)
+    .exec()
+    .then(food => {
+      food.active = false;
+      food.requests = food.requests.map(request => {
+        request.status = request._id.equals(req.params.requestId) ? 'accepted' : 'rejected';
+        return request;
+      });
+      return food.save();
+    })
+    .then(food => Food.populate(food, { path: 'requests.user' }))
+    .then(food => res.json(food))
+    .catch(next);
+}
+
+
 module.exports = {
   index: foodsIndex,
   show: foodsShow,
   create: foodsCreate,
   update: foodsUpdate,
-  delete: foodsDelete
+  delete: foodsDelete,
+  requestCreate: foodsRequestCreate,
+  requestAccept: foodsRequestAccept
 };

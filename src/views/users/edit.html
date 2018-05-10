@@ -1,0 +1,44 @@
+
+<div class="backgroundImageRegisterPage">
+  <div class="content3">
+    <div class="registerPageContent">
+      <form name="usersEdit.form" ng-submit="usersEdit.handleUpdate()" novalidate>
+      <!-- user: {{ usersEdit.user.picture }} -->
+      <div class="field">
+        <!-- <label for="picture">Profile Picture</label> -->
+        <!-- <div class="file"> -->
+          <label class="center label" >
+            <input[type='file'] {color: transparent;} name="picture" ng-model="usersEdit.user.picture" image-upload />
+            <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
+
+            <img class="profilePictureMain" ng-if="!usersEdit.user.picture" src="../assets/camera.svg" alt="">
+            <img class="profilePictureMainOverlay" ng-if="usersEdit.user.picture" src="../assets/camera1.svg" alt="" style="opacity: 0.5;">
+            <img class="profilePictureMain" ng-if="usersEdit.user.picture" ng-src="{{ usersEdit.user.picture }}" alt="">
+          </label>
+        <!-- </div> -->
+        <div ng-messages="usersEdit.form.picture.$error"  ng-if="usersEdit.form.picture.$dirty || usersEdit.form.$submitted">
+          <div class="requiredField" ng-message="required">Please upload an picture</div>
+        </div>
+      </div>
+
+        <div class="field">
+          <label for="username">Username</label>
+          <input class="input" name="username" ng-model="usersEdit.user.username" required/>
+          <div ng-messages="usersEdit.form.username.$error" ng-if="usersEdit.form.username.$dirty || usersEdit.form.$submitted">
+            <div class="requiredField" ng-message="required">Please enter a username</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" name="email" ng-model="usersEdit.user.email" required/>
+          <div ng-messages="usersEdit.form.email.$error" ng-if="usersEdit.form.email.$dirty || usersEdit.form.$submitted">
+            <div class="requiredField" ng-message="required">Please enter a valid email address</div>
+          </div>
+        </div>
+        <button class="submitButton button is-primary">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>

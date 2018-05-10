@@ -8,19 +8,27 @@ const userSchema = new mongoose.Schema({
   password: { type: String },
   picture: { type: String },
   location: {
-    lat: { type: Number, required: true },
-    lng: { type: Number, required: true }
-  }
+    lat: { type: Number },
+    lng: { type: Number }
+  },
+  twitterId: { type: Number }
 });
 
 userSchema.plugin(require('mongoose-unique-validator'));
 
 // Prevents the hashed password from being sent alongside the rest of the data. We've modified the way the userSchema converts to JSON - in `transform()`, `json` is the original json object, where `doc` is the document in the database.
 userSchema.set('toJSON', {
+  virtuals: true,
   transform(doc, json) {
     delete json.password;
     return json;
   }
+});
+
+userSchema.virtual('foods', {
+  localField: '_id',
+  foreignField: 'user',
+  ref: 'Food'
 });
 
 userSchema.methods.validatePassword = function validatePassword(password){
@@ -34,7 +42,7 @@ userSchema
   });
 
 userSchema.pre('validate', function checkPassword(next){
-  if(!this.password) {
+  if(!this.password && !this.twitterId) {
     this.invalidate('password', 'password is required');
   }
   if(this.isModified('password') && this._passwordConfirmation !== this.password){

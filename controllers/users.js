@@ -11,16 +11,35 @@ function indexRoute(req, res, next){
 function showRoute(req, res, next) {
   User
     .findById(req.params.id)
+    .populate({
+      path: 'foods',
+      populate: {
+        path: 'requests.user'
+      }
+    })
     .exec()
     .then(user => {
       if(!user) return res.sendStatus(404);
-      return res.render('users/show', { user });
+      return res.json(user);
     })
+    .catch(next);
+}
+
+function updateRoute(req, res, next){
+  User
+    .findById(req.params.id)
+    .then(user => {
+      if(!user) return res.sendStatus(404);
+      return Object.assign(user, req.body);
+    })
+    .then(user =>  user.save())
+    .then(user => res.json(user))
     .catch(next);
 }
 
 
 module.exports = {
   show: showRoute,
-  index: indexRoute
+  index: indexRoute,
+  update: updateRoute
 };

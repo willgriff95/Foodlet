@@ -1,7 +1,19 @@
 <div class="backgroundImageRegisterPage">
   <div class="content">
-    <div class="registerPageContent">
+    <div class="registerPageContent column is-two-thirds-desktop">
       <form name="register.form" ng-submit="register.handleRegister()" novalidate>
+
+        <div class="field">
+          <label class="center label" >
+            <input[type='file'] {color: transparent;} name="picture" ng-model="register.data.picture" image-upload />
+            <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
+
+            <img class="profilePictureMain" ng-if="!register.data.picture" src="../assets/camera.svg">
+            <img class="profilePictureMainOverlay" ng-if="register.data.picture" src="../assets/camera1.svg" style="opacity: 0.5;">
+            <img class="profilePictureMain" ng-if="register.data.picture" ng-src="{{ register.data.picture }}">
+          </label>
+        </div>
+
 
         <div class="field">
           <label for="username">Username</label>
@@ -23,7 +35,7 @@
           <label for="password">Password</label>
           <input class="input" type="password" placeholder="Password" name="password" ng-model="register.data.password" required/>
           <div ng-messages="register.form.password.$error" ng-if="register.form.password.$dirty || register.form.$submitted">
-            <div class="requiredField" ng-message="required">Your password must contain between 4 and 60 characters</div>
+            <div class="requiredField" ng-message="required">Please enter a password</div>
           </div>
         </div>
 
@@ -35,7 +47,7 @@
           </div>
         </div>
 
-        <button class="button is-primary">Submit</button>
+        <button class="submitButton button is-primary">Submit</button>
 
       </form>
     </div>

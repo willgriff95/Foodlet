@@ -1,6 +1,6 @@
 <div class="backgroundImageLoginPage">
   <div class="content">
-    <div class="loginPageContent">
+    <div class="loginPageContent column is-two-thirds-desktop">
       <form name="login.form" ng-submit="login.handleLogin()" novalidate>
         <div class="field">
           <label for="email">Email</label>
@@ -13,12 +13,14 @@
           <label for="password">Password</label>
           <input class="input" type="password" placeholder="Password" name="password" ng-model="login.data.password" required/>
           <div ng-messages="login.form.password.$error" ng-if="login.form.password.$dirty || login.form.$submitted">
-            <div class="requiredField" ng-message="required">Your password must contain between 4 and 60 characters</div>
+            <div class="requiredField" ng-message="required">Please enter the correct password</div>
           </div>
         </div>
-        <button class="button is-primary">Submit</button>
+        <button class="submitButton button is-primary">Submit</button>
+        <p class="login-text">or</p>
+        <button ng-click="login.authenticate('twitter')" class="submitButton button twitter"><i class="fab fa-twitter"></i>Sign in with Twitter</button>
         <div class="register">
-          New to foodlet?<a ui-sref="register">Sign up now</a>
+          <em>New to foodlet?</em> <a ui-sref="register">Sign up now</a>
         </div>
       </form>
     </div>

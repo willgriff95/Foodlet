@@ -2,6 +2,7 @@ const router = require('express').Router();
 const foods = require('../controllers/foods');
 const users = require('../controllers/users');
 const auth = require('../controllers/auth');
+const oauth = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
 
 router.route('/foods')
@@ -13,13 +14,22 @@ router.route('/foods/:id')
   .put(secureRoute, foods.update)
   .delete(secureRoute, foods.delete);
 
+router.route('/foods/:id/requests')
+  .post(secureRoute, foods.requestCreate);
+
+router.route('/foods/:id/requests/:requestId')
+  .put(secureRoute, foods.requestAccept);
+
 router.route('/users')
   .get(secureRoute, users.index);
 
 router.route('/users/:id')
-  .get(secureRoute, users.show);
+  .get(secureRoute, users.show)
+  .put(secureRoute, users.update);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
+router.post('/twitter', oauth.twitter);
+
 
 module.exports = router;

@@ -1,21 +1,53 @@
-<div class="content">
-  <h1>Foods Show</h1>
+<!-- {{foodsShow.food.location}} -->
+<div class="content foodsShowcontent">
+  <div class="foodsShowPageContent">
+    <div class="columns">
 
-  <div class="card">
-    <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
-    <div class="card-content">
-      <div class="media">
-        <div class="media-content">
-          <p class="title is-4">{{ foodsShow.food.title }}</p>
-          <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-          <p class="subtitle is-6">{{ foodsShow.food.user }}</p>
-          <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
-          <!--- add location tag --->
-          <div class="map" g-map center="foodsShow.food.location">MAP HERE</div>
+      <div class="column">
+        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration" center="foodsShow.food.location">MAP HERE</div>
+        <div class="directions"></div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="card-imageShowPage" style="background-image: url({{ foodsShow.food.image }})"></div>
+          <div class="card-content2">
+
+            <!-- {{ foodsShow.user }} -->
+            <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
+            <p class="title is-4">{{ foodsShow.food.title }}</p>
+            <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
+            <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
+            <div ng-if="foodsShow.distance">
+              <span class="tag is-rounded">Distance: {{ foodsShow.distance }}</span>
+              <span class="tag is-rounded">Duration: {{ foodsShow.duration }}</span>
+            </div>
+            <!-- hide distance if geolocation turned off  -->
+
+            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
+              <a class="far fa-trash-alt"></a>
+            </div>
+
+            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
+              <a  class="far fa-edit"></a>
+            </div>
+            <div class="requestButton2" ng-click="foodsShow.handleRequestCreate()" ng-if="!foodsShow.foodHasBeenRequested()">
+              Send Request
+            </div>
+          </div>
         </div>
       </div>
-      <a ui-sref="foodsEdit({ id: foodsShow.food._id })" class="button is-primary">Edit</a>
-      <button ng-click="foodsShow.handleDelete()" class="button">Delete</button>
     </div>
   </div>
+</div>
+
+<!-- modal -->
+
+<div class="modal" ng-class="{ 'is-active': foodsShow.modalOpen }">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <div class="success">Request successful!</div>
+    <i class="fas fa-check"></i>
+  </div>
+  <button ng-click="foodsShow.closeModal()" class="modal-close is-large" aria-label="close"></button>
 </div>

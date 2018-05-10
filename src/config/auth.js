@@ -4,13 +4,12 @@ function Auth($authProvider){
   $authProvider.loginUrl = '/api/login';
   $authProvider.signupUrl = '/api/register';
 
-
-  $authProvider.github({
-    clientId: '2ddcde4b5519aabdae44',
-    url: '/api/github'
+  $authProvider.twitter({
+    clientId: '6HUsn9JKJiatTlcb8AxBGQkTV',
+    url: '/api/twitter'
   });
-}
 
+}
 
 
 export default Auth;
