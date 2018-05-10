@@ -172,6 +172,9 @@
 }
 .paddingtop{
   padding-top: 50px;
+  @media (min-width: 320px)  {
+    padding-top: 0;
+}
 }
 body{
   font-family: 'circe rounded', 'helvetica';
@@ -450,7 +453,7 @@ a:hover{
     border-radius: 20px;
     @media (min-width: 320px)  {
       height: 100%;
-      margin-top: 20px;
+      margin-top: 10%;
   }
 }
 
