@@ -18,24 +18,13 @@
 @import 'cards';
 @import 'icons';
 @import 'images';
+@import 'infowindow';
+@import 'maps';
 @import 'text';
+@import 'navbar';
 
 
 
-// backgrounds
-
-
-.showcards {
-    height: 100%;
-    background-position: center;
-    width: 100%;
-    float: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border-radius: 20px; */
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
 
 
 // images
@@ -55,7 +44,7 @@
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   height: 150px;
   cursor: pointer;
-}  
+}
 
 .requestedUserPP{
   height: 80px;
@@ -63,6 +52,17 @@
   border-radius: 80px;
   float: left;
 }
+
+.profilePicture {
+    width: 55px;
+    top: 8px;
+    position: relative;
+    height: 55px;
+    border-radius: 55px;
+}
+
+
+
 
 // cards
 
@@ -109,6 +109,54 @@
     border-radius: 20px 20px 20px 20px;
 }
 
+.card-content {
+    background-color: none;
+    padding: 0.4rem;
+    margin: 0 auto;
+    height: 100px;
+}
+.card-content2{
+   background-color: none;
+    padding: 0.9rem;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.left{
+  float: left;
+}
+
+.paddingtop{
+  padding-top: 50px;
+  @media (min-width: 320px)  {
+    padding-top: 0;
+}
+}
+
+.card2 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 375px;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.showcards {
+    height: 100%;
+    background-position: center;
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
 
 
 
@@ -120,39 +168,50 @@
     top: 15px;
 }
 
-
-
-
-
-
-// our css
-.account {
-    padding-top: 24px;
-    padding-right: 20px;
-    text-align: right;
+.icon {
+    /* align-items: center; */
+    /* display: inline-flex; */
+    justify-content: center;
+    /* height: 1.5rem; */
+    height: 50%;
     width: 100%;
+    padding: 0;
+    position: relative;
+}
+
+
+// navbar
+
+.account {
+  padding-top: 24px;
+  padding-right: 20px;
+  text-align: right;
+  width: 100%;
 }
 .dropdown-content {
-    height: 90px;
-    border-radius: 20px;
-    width: 100px;
-    top: 10px;
-    right: 20px;
-    position: relative;
+  height: 90px;
+  border-radius: 20px;
+  width: 100px;
+  top: 10px;
+  right: 20px;
+  position: relative;
 }
-.profilePicture {
-    width: 55px;
-    top: 8px;
-    position: relative;
-    height: 55px;
-    border-radius: 55px;
+
+.userLoggedIn{
+  color: #363636;
 }
-.gm-style-iw {
-   width: 350px !important;
-   top: 0 !important;
-   left: 0 !important;
-   border-radius: 2px 2px 0 0;
+
+hr {
+    background-color: whitesmoke;
+    border: none;
+    display: block;
+    height: 2px;
+    margin: 0;
 }
+
+
+// backgrounds
+
 .backgroundImageHomePage {
   // width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
@@ -172,121 +231,6 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-// .field:not(:last-child) {
-//     margin-bottom: 0rem;
-// }
-
-
-.left{
-  float: left;
-}
-.map {
-    height: 100vh;
-    // width: 100vw;
-    margin-top: -25px;
-    margin-left: 0px;
-    // position: absolute;
-}
-
-.submitButton{
-  // top: 10px;
-}
-
-.userLoggedIn{
-  color: #363636;
-}
-.paddingtop{
-  padding-top: 50px;
-  @media (min-width: 320px)  {
-    padding-top: 0;
-}
-}
-body{
-  font-family: 'circe rounded', 'helvetica';
-  // font-size: 10px;
-}
-.toggleMapList {
-    width: 50px;
-    height: 80px;
-    background-color: white;
-    border-radius: 15px;
-    position: absolute;
-    top: 200px;
-    margin: 0 auto;
-    right: 10%;
-    z-index: 100;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-}
-.card-content {
-    background-color: none;
-    padding: 0.4rem;
-    margin: 0 auto;
-    height: 100px;
-}
-.card-content2{
-   background-color: none;
-    padding: 0.9rem;
-    margin: 0 auto;
-    height: 100px;
-}
-
-hr {
-    background-color: whitesmoke;
-    border: none;
-    display: block;
-    height: 2px;
-    margin: 0;
-}
-
-
-.card2 {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    height: 375px;
-    position: relative;
-    border-radius: 0px 0px 20px 20px;
-}
-.infoWindow {
-    // background-color: red;
-    width: 100px;
-    border-radius: 20px;
-    top: -5px;
-    left: -40px;
-    position: absolute;
-    height: 100px;
-    margin: 0 auto;
-}
-// .infoWindow img{
-// border-radius: 20px;
-// width:100px;
-// height: 100px;
-// background-size: cover;
-// }
-.gm-style-iw{
-  display: contents;
-  background-color: pink;
-  text-align: center;
-  position: relative;
-  border-radius: 2px 2px 0 0;
-
-}
-
-.icon {
-    /* align-items: center; */
-    /* display: inline-flex; */
-    justify-content: center;
-    /* height: 1.5rem; */
-    height: 50%;
-    width: 100%;
-    padding: 0;
-    position: relative;
 }
 
 .homePageContent {
@@ -351,8 +295,92 @@ hr {
 .modal-content{
   text-align: center;
   color: #8CC63F;
+}
+
+
+
+// maps
+
+.map {
+    height: 100vh;
+    // width: 100vw;
+    margin-top: -25px;
+    margin-left: 0px;
+    // position: absolute;
+}
+
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
+
+.toggleMapList {
+    width: 50px;
+    height: 80px;
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    top: 200px;
+    margin: 0 auto;
+    right: 10%;
+    z-index: 100;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.infoWindow {
+    // background-color: red;
+    width: 100px;
+    border-radius: 20px;
+    top: -5px;
+    left: -40px;
+    position: absolute;
+    height: 100px;
+    margin: 0 auto;
+}
+// .infoWindow img{
+// border-radius: 20px;
+// width:100px;
+// height: 100px;
+// background-size: cover;
+// }
+.gm-style-iw{
+  display: contents;
+  background-color: pink;
+  text-align: center;
+  position: relative;
+  border-radius: 2px 2px 0 0;
 
 }
+
+
+
+// buttons
+
+.submitButton{
+  // top: 10px;
+}
+
+
+
+
+
+body{
+  font-family: 'circe rounded', 'helvetica';
+  // font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .status {
     /* width: 100%; */
