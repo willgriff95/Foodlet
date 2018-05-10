@@ -1,4 +1,3 @@
-<!-- {{foodsEdit.food.location}} -->
 <div class="content foodsShowcontent">
   <div class="foodsShowPageContent">
     <div class="columns">
@@ -6,11 +5,9 @@
         <div class="mapShowPage2" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
         <div class="directions"></div>
       </div>
-      <!-- {{ foodsEdit.food.requests[0].id}} -->
       <div class="column">
 
         <div class="card2">
-          <!-- <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div> -->
           <div class="card-content">
             <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
 
@@ -40,11 +37,9 @@
 
               <div class="field">
                 <label for="image">Profile Picture</label>
-                <!-- <div class="file"> -->
                 <label class="label" >
                   <input  type="file" placeholder="Image" name="image" ng-model='foodsEdit.food.image' image-upload />
                 </label>
-                <!-- </div> -->
                 <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
                   <div class="requiredField" ng-message="required">Please upload an image</div>
                 </div>
@@ -52,29 +47,15 @@
 
               <button class="submitButton button is-primary">Submit</button>
             </form>
+
             <div class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
               <a class="far fa-trash-alt"></a>
             </div>
-            <div class="editFoodButton" ui-sref="foodsShow({ id: food._id })">
-              <!-- foodsShow({ foodsEdit.food.requests[0].id}) -->
-              <a  class="far fa-edit"></a>
-            </div>
+
             <div class="addFoodButton" ng-click="foodsShow.handleRequestCreate()">
-              <a class="far fa-comments"></a>
+
             </div>
           </div>
         </div>
-        <!-- </div> -->
       </div>
     </div>
-
-
-
-    <!-- <div class="backgroundImageLoginPage">
-    <div class="content">
-    <div class="loginPageContent">
-
-
-  </div>
-</div>
-</div> -->
