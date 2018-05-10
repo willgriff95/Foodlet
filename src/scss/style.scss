@@ -33,6 +33,17 @@
     width: 150px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     height: 150px;
+    cursor: pointer;
+}
+
+.profilePictureMainOverlay{
+  position: absolute;
+  border-radius: 500px;
+  width: 150px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  height: 150px;
+  cursor: pointer;
+
 }
 .requests{
   width: 100%;
@@ -378,11 +389,12 @@ color: #8CC63F;
     position: relative;
 }
 .button.is-primary {
-    background-color:  #99CC33;
+    background-color: #99CC33;
+    border-radius: 10px;
     border-color: transparent;
     color: #fff;
     width: 100%;
-    // border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -412,8 +424,8 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // border-top-left-radius: 20px;
-    // border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 .card {
     background-color: white;
@@ -426,7 +438,7 @@ a:hover{
     // margin-right: -10%;
     height: 60vh;
     position: relative;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px;
 }
 .card5 {
     background-color: white;
@@ -438,7 +450,7 @@ a:hover{
     margin-top: -25px;
     height: 50vh;
     position: relative;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px;
 }
 
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
@@ -609,9 +621,7 @@ hr {
     /* width: 100px; */
     text-align: center;
 }
-.is-active{
-  display: block;
-}
+
 .imageUpload{
   float: left;
   position: absolute;
@@ -630,7 +640,7 @@ hr {
 }
 
 
-@media only screen and (max-width: 1087px){
+@media only screen and (max-width: 800px){
 
   .navbar-menu.is-active {
       display: block;
@@ -639,6 +649,12 @@ hr {
 
 }
 
+.details {
+display: inline;
+position: relative;
+font-size: 12px;
+width: 100%;
+}
 
 // .addFoodButton {
 //     width: 50px;
@@ -653,13 +669,16 @@ hr {
 //     text-align: center;
 // }
 .requestButton2 {
-    width: 40%;
+    width: 100%;
     height: 40px;
-    border-radius: 50px;
-    position: absolute;
+    border-radius: 10px;
+    position: relative;
     background-color: #99CC33;
-    right: 5%;
-    top: 75%;
+    cursor: pointer;
+    /* right: 5%; */
+    top: 10px;
+    position: 0px 0px 0px 0px;
+    margin: 0;
     padding: 10px;
     color: white;
     z-index: 1000;
@@ -703,10 +722,6 @@ hr {
     float: right;
     padding-top: 10px;
 }
-//
-// a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-//     background-color: none;
-// }
 
 nav.navbar{
 
@@ -726,4 +741,32 @@ nav.navbar{
   font-size: 4em;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.twitter {
+  background-color: #00aced;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  border: 1px solid transparent;
+  height: 2.25em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.fa-twitter{
+  color: #fff;
+  position: absolute;
+  left: 20px;
+}
+
+.twitter.button:hover, .twiter.button.is-hovered {
+    background-color: #24c3ff;
+    border-color: transparent;
+    color: #fff;
+}
+
+.homepageOr{
+  color: darkGrey;
+  text-align: center;
 }

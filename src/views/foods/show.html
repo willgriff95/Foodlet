@@ -13,14 +13,21 @@
           <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div>
           <div class="card-content2">
 
-                <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
-                <p class="title is-4">{{ foodsShow.food.title }}</p>
-                <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
-                <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
-                <div ng-if="foodsShow.distance">
-                  <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
-                  <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
-                </div>
+            <!-- {{ foodsShow.user }} -->
+            <p class="time"><small>{{ foodsShow.food.createdAtRelative }}</small></p>
+            <p class="title is-4">{{ foodsShow.food.title }}</p>
+            <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
+            <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
+            <div class="" ng-if="!foodsShow.geoLocation">
+              <p>{{foodsShow.geoLocation}}</p>
+              <p class="subtitle details">
+                <span class="tag is-rounded">Distance: {{ foodsShow.distance }}</span>
+              </p>
+              <p class="subtitle details">
+                <span class="tag is-rounded">Duration: {{ foodsShow.duration }}</span>
+                </p>
+            </div>
+            <!-- hide distance if geolocation turned off  -->
 
             <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
               <a class="far fa-trash-alt"></a>
@@ -29,7 +36,6 @@
             <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
               <a  class="far fa-edit"></a>
             </div>
-
             <div class="requestButton2" ng-click="foodsShow.handleRequestCreate()" ng-if="!foodsShow.foodHasBeenRequested()">
               Send Request
             </div>
