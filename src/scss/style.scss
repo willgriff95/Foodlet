@@ -170,6 +170,66 @@ body{
     color: #8CC63F;
 }
 
+.card-image {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    // margin-right: -10%;
+    height: 60vh;
+    position: relative;
+    border-radius: 20px;
+}
+.card5 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 50vh;
+    position: relative;
+    border-radius: 20px;
+    @media (min-width: 320px)  {
+      height: 100%;
+      margin-top: 10%;
+  }
+}
+
+// .card {
+//     background-color: white;
+//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+//     color: #4a4a4a;
+//     /* max-width: 100%; */
+//     width: 100%;
+//     float: right;
+//     margin-top: -25px;
+//     height: 60vh;
+//     position: relative;
+//     border-radius: 20px;
+// }
+
+.subtitle{
+    font-size: 2rem;
+    padding-left: 20px;
+}
+.title.is-4 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
 
 
 
@@ -236,6 +296,83 @@ hr {
     height: 2px;
     margin: 0;
 }
+
+.navbar-burger {
+
+    height: 3.25rem;
+    position: relative;
+    width: 3.25rem;
+    height: 70px;
+    margin-left: auto;
+}
+
+.navbar-item img {
+  max-height: 2.75rem;
+}
+
+@media only screen and (max-width: 1087px) {
+  .navbar-menu {
+      background-color: white;
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+      padding: 0.5rem 0;
+  }
+}
+.field:not(:last-child) {
+    margin-bottom: 1.3rem;
+}
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+}
+}
+
+.navbar {
+    background-color: white;
+    min-height: 3.25rem;
+    /* position: relative; */
+    width: 80%;
+    margin: 0 auto;
+    z-index: 30;
+    top: 4%;
+    position: absolute;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.navbarItem:hover {
+    background-color: none;
+    color: darkGrey;
+    position: relative;
+}
+
+.allfood {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+.addfood {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    float: right;
+}
+
+.login {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
 
 
 // backgrounds
@@ -333,18 +470,6 @@ hr {
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     /* top: 25px; */
     position: relative;
-    @media (max-width: 780px){
-      top: 10%;
-      padding: 5%;
-      height: 100%;
-      width: 100%;
-    }
-    @media (min-width: 781px){
-      top: 10%;
-      padding: 5%;
-      height: 100%;
-      width: 70%;
-    }
 }
 .modal-content{
   text-align: center;
@@ -429,6 +554,43 @@ hr {
     background-color: #99CC33;
 }
 
+.button.is-primary {
+    background-color: #99CC33;
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.twitter.button:hover, .twiter.button.is-hovered {
+    background-color: #24c3ff;
+    border-color: transparent;
+    color: #fff;
+}
+
+.twitter {
+  background-color: #00aced;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  border: 1px solid transparent;
+  height: 2.25em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.fa-twitter{
+  color: #fff;
+  position: absolute;
+  left: 20px;
+}
+
+.button.is-primary:hover, .button.is-primary.is-hovered {
+    background-color: #9DDD48;
+    border-color: transparent;
+    color: #fff;
+}
 
 
 
@@ -447,11 +609,7 @@ color: #8CC63F;
 
 
 
-
-
-
-
-
+// forms
 
 .content {
     margin: 0 auto;
@@ -470,73 +628,9 @@ color: #8CC63F;
     width: 80%;
     position: relative;
 }
-.button.is-primary {
-    background-color: #99CC33;
-    border-radius: 10px;
-    border-color: transparent;
-    color: #fff;
-    width: 100%;
-    margin-bottom: 10px;
-}
 
-.container {
-    margin: 0 auto;
-    position: relative;
-    // width: 100vw;
-}
-a:hover{
-  color: #9DDD48;
-}
-.navbar-burger {
-
-    height: 3.25rem;
-    position: relative;
-    width: 3.25rem;
-    height: 70px;
-    margin-left: auto;
-}
-.button.is-primary:hover, .button.is-primary.is-hovered {
-    background-color: #9DDD48;
-    border-color: transparent;
-    color: #fff;
-}
-
-.card-image {
-    height: 220px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-.card {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    // margin-right: -10%;
-    height: 60vh;
-    position: relative;
-    border-radius: 20px;
-}
-.card5 {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    height: 50vh;
-    position: relative;
-    border-radius: 20px;
-    @media (min-width: 320px)  {
-      height: 100%;
-      margin-top: 10%;
-  }
+.register {
+  padding-top: 15px;
 }
 
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
@@ -547,104 +641,31 @@ a:hover{
     margin-top: 0rem;
 }
 
-.subtitle{
-    font-size: 2rem;
-    padding-left: 20px;
-}
-.title.is-4 {
-    font-size: 1.5rem;
-    padding-left: 20px;
-}
-
-// .card {
-//     background-color: white;
-//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-//     color: #4a4a4a;
-//     /* max-width: 100%; */
-//     width: 100%;
-//     float: right;
-//     margin-top: -25px;
-//     height: 60vh;
-//     position: relative;
-//     border-radius: 20px;
-// }
-.register {
-  padding-top: 15px;
-}
-
-
-.navbar-item img {
-  max-height: 2.75rem;
-}
-
-@media only screen and (max-width: 1087px) {
-  .navbar-menu {
-      background-color: white;
-      border-radius: 10px 10px 10px 10px;
-      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-      padding: 0.5rem 0;
-  }
-}
-.field:not(:last-child) {
-    margin-bottom: 1.3rem;
-}
-.navbar-brand{
-  @media (min-width: 320px)  {
-    height: 100%;
-}
-}
 .requiredField{
   font-size: 12px;
   margin-top: 6px;
   color: red;
   position: absolute;
 }
-.navbar {
-    background-color: white;
-    min-height: 3.25rem;
-    /* position: relative; */
-    width: 80%;
-    margin: 0 auto;
-    z-index: 30;
-    top: 4%;
-    position: absolute;
-    border-radius: 20px;
-    height: 70px;
-}
 
-.navbarItem:hover {
-    background-color: none;
-    color: darkGrey;
-    position: relative;
 
-}
 
-.allfood {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
-.addfood {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    float: right;
-}
 
-.login {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .mapShowPage {
@@ -838,30 +859,21 @@ nav.navbar{
   margin: 0 auto;
 }
 
-.twitter {
-  background-color: #00aced;
-  border-radius: 10px;
-  color: #fff;
-  width: 100%;
-  border: 1px solid transparent;
-  height: 2.25em;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
 
-.fa-twitter{
-  color: #fff;
-  position: absolute;
-  left: 20px;
-}
 
-.twitter.button:hover, .twiter.button.is-hovered {
-    background-color: #24c3ff;
-    border-color: transparent;
-    color: #fff;
-}
+
 
 .homepageOr{
   color: darkGrey;
   text-align: center;
+}
+
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    // width: 100vw;
+}
+a:hover{
+  color: #9DDD48;
 }
