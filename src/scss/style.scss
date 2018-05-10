@@ -180,9 +180,17 @@ body{
 }
 .card-content {
     background-color: none;
-    padding: 1rem;
+    padding: 0.4rem;
     margin: 0 auto;
+    height: 100px;
 }
+.card-content2{
+   background-color: none;
+    padding: 0.9rem;
+    margin: 0 auto;
+    height: 100px;
+}
+
 hr {
     background-color: whitesmoke;
     border: none;
@@ -434,9 +442,19 @@ a:hover{
     margin-bottom: 0.4em;
 }
 
-.subtitle.is-4 {
-    font-size: 2rem;
+.title:not(.is-spaced) + .subtitle {
+    margin-top: 0rem;
 }
+
+.subtitle{
+    font-size: 2rem;
+    padding-left: 20px;
+}
+.title.is-4 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
 // .card {
 //     background-color: white;
 //     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
