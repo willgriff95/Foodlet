@@ -12,6 +12,7 @@
             <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
 
             <img class="profilePictureMain" ng-if="!usersEdit.user.picture" src="../assets/camera.svg" alt="">
+            <img class="profilePictureMainOverlay" ng-if="usersEdit.user.picture" src="../assets/camera1.svg" alt="" style="opacity: 0.5;">
             <img class="profilePictureMain" ng-if="usersEdit.user.picture" src="{{ usersEdit.user.picture }}" alt="">
           </label>
         <!-- </div> -->
