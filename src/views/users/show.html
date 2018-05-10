@@ -4,8 +4,8 @@
       <div class="leftColumnUsersShow">
         <a ui-sref="foodsShow({ id: food.id })">
           <div class="showcards" style="background-image: url({{ food.image }})"></div>
-        </div>
         </a>
+      </div>
       <div class="rightColumnUsersShow">
         <p class="subtitle is-4">{{ food.title }}</p>
         <div ng-if="!food.requests[0].status">
@@ -22,7 +22,7 @@
           <div ng-if="request.status === 'pending'" class="requestButton" ng-click="usersShow.handleRequestAccept(food.id, request.id)">
             Accept Request
           </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
