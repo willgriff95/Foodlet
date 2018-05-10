@@ -130,7 +130,6 @@ body{
   float: left;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -146,15 +145,7 @@ body{
       padding-right: 0;
 
 }
-=======
-.paddingtop{
-  padding-top: 50px;
-  @media (min-width: 320px)  {
-    padding-top: 0;
->>>>>>> development
 }
-}
-<<<<<<< HEAD
 .profilePicture {
   width: 55px;
   top: 8px;
@@ -167,6 +158,10 @@ body{
 }
 
 .arrow{
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+
   @media (min-width: 320px) and (max-width: 425px) {
     display: none
   }
@@ -176,20 +171,6 @@ body{
    top: 0 !important;
    left: 0 !important;
    border-radius: 2px 2px 0 0;
-=======
-
-.card2 {
-    background-color: white;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    color: #4a4a4a;
-    /* max-width: 100%; */
-    width: 100%;
-    float: right;
-    margin-top: -25px;
-    height: 375px;
-    position: relative;
-    border-radius: 0px 0px 20px 20px;
->>>>>>> development
 }
 
 .showcards {
@@ -296,7 +277,8 @@ body{
 .username {
     /* width: 100%; */
     float: left;
-    left: 20px;
+    top: 20px;
+    right: 20px;
     position: relative;
     font-size: 20px;
 }
@@ -313,10 +295,15 @@ body{
 // navbar
 
 .account {
-  padding-top: 24px;
-  padding-right: 20px;
+  padding-top: 0;
+  padding-right: 0;
   text-align: right;
   width: 100%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-top: 0;
+    padding-right: 0;
+
+}
 }
 .dropdown-content {
   height: 90px;
@@ -683,7 +670,6 @@ color: #8CC63F;
     margin-top: 0rem;
 }
 
-<<<<<<< HEAD
 .subtitle{
     font-size: 2rem;
     padding-left: 20px;
@@ -733,8 +719,6 @@ color: #8CC63F;
     height: 100%;
 }
 }
-=======
->>>>>>> development
 .requiredField{
   font-size: 12px;
   margin-top: 6px;
@@ -744,7 +728,6 @@ color: #8CC63F;
 
 
 
-<<<<<<< HEAD
 .allfood {
   color: #99CC33;
   padding-left: 30px;
@@ -764,8 +747,6 @@ color: #8CC63F;
     position: relative;
     float: right;
 }
-=======
->>>>>>> development
 
 
 
@@ -827,7 +808,7 @@ a {
     padding-top: 6px;
 }
 .navbar-end {
-    padding-right: 20px;
+    padding-right: 10px;
     float: right;
     right: 0;
     position: absolute;
@@ -951,12 +932,11 @@ width: 100%;
     float: right;
 
     @media (min-width: 320px) and (max-width: 425px) {
-    margin-top: 15px;
-    margin-left: 0;
-    margin-right: 0;
-    // padding-top: 10px;
-    font-size: 12px;
-    }
+          margin-top: 15px;
+          margin-left: 20px;
+          margin-right: 0;
+          font-size: 12px;
+      }
 }
 
 .username{
@@ -970,12 +950,11 @@ width: 100%;
     padding-top: 10px;
 
     @media (min-width: 320px) and (max-width: 425px) {
-    margin-top: 15px;
-    margin-left: 0;
-    margin-right: 0;
-    // padding-top: 10px;
-    font-size: 12px;
-    }
+          margin-top: 15px;
+          margin-left: 10px;
+          margin-right: 0;
+          font-size: 12px;
+      }
 }
 
 nav.navbar{
