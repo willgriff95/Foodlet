@@ -5,6 +5,7 @@ function FoodsShowCtrl(Food, $state, $auth){
   this.food = {};
   this.distance = null;
   this.duration = null;
+  this.geoLocation = null;
   this.modalOpen = false;
 
   Food

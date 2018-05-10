@@ -19,14 +19,10 @@
           <div class="card5">
             <div class="card-image" style="background-image: url({{ food.image }})"></div>
             <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-4">{{ food.title }}</p>
-                  <p class="subtitle is-6 description-card">{{ food.description }}</p>
-                  <p class="subtitle is-6">{{ food.user.username }}</p>
-                  <p><small>{{ food.createdAtRelative }}</small></p>
-                </div>
-              </div>
+              <p class="time" ><small>{{ food.createdAtRelative }}</small></p>
+              <p class="title is-4">{{ food.title }}</p>
+              <p class="subtitle is-6 description-card">{{ food.description }}</p>
+              <!-- <p class="subtitle is-6">{{ food.user.username }}</p> -->
             </div>
           </div>
         </a>
