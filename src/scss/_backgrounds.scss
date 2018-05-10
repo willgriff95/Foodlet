@@ -96,24 +96,24 @@
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     /* top: 25px; */
     position: relative;
-    @media (min-width: 320px) and (max-width: 768px){
+    @media (min-width: 320px) and (max-width: 999px){
       top: -18px;
       width: 90%;
       padding: 5%;
       font-size: 14px;
       .profilePictureMain{
-        height: 100px;
-        width: 100px;
+        height: 120px;
+        width: 120px;
       }
     }
-    @media (min-width: 769px){
+    @media (min-width: 1000px){
       top: -18px;
       padding: 5%;
       font-size: 14px;
       width: 65%;
       .profilePictureMain{
-        height: 100px;
-        width: 100px;
+        height: 150px;
+        width: 150px;
       }
     }
 }
