@@ -48,6 +48,9 @@
     width: 100px;
     height: 100px;
   }
+  @media (max-width: 425px){
+    height: 520px;
+  }
 }
 
 .foodsShowPageContent {
