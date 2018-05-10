@@ -74,6 +74,26 @@
   width: 200px;
   height: 120px;
   margin: 0 auto;
+  @media (max-width: 424px){
+    position: absolute;
+    left: 5%;
+    top: 60%;
+  }
+  @media (min-width: 425px) and (max-width: 767px){
+    position: absolute;
+    left: 5%;
+    top: 60%;
+  }
+}
+.rightColumnUsersShow{
+  float: right;
+  width: 50%;
+  height: 100%;
+  padding: 3%;
+  text-align: center;
+  @media (max-width: 424px){
+    position: absolute;
+  }
 }
 .center{
   text-align: center;
@@ -86,13 +106,6 @@
   height: 100%;
 }
 
-.rightColumnUsersShow{
-  float: right;
-  width: 50%;
-  height: 100%;
-  padding: 3%;
-  text-align: center;
-}
 
 .card3 {
     background-color: white;
@@ -107,6 +120,9 @@
     position: relative;
     // padding: 3%;
     border-radius: 20px 20px 20px 20px;
+    @media (max-width: 630px){
+      width: 100%;
+    }
 }
 
 .card-content {
@@ -156,6 +172,14 @@
     /* border-radius: 20px; */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    @media (max-width: 630px){
+      float: none;
+      position: absolute;
+      height: 50%;
+      top: 0px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+    }
 }
 
 
