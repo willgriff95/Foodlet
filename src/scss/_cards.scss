@@ -1,0 +1,341 @@
+// cards
+
+.requests{
+  width: 100%;
+  height: 100%;
+}
+.contain{
+  width: 200px;
+  height: 120px;
+  margin: 0 auto;
+  @media (min-width: 425px) and (max-width: 630px){
+    position: absolute;
+    left: 5%;
+    top: 60%;
+  }
+  @media (max-width: 630px){
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    .requestedUserPP{
+      position: absolute;
+      bottom: 143%;
+      left: 5%;
+      width: 60px;
+      height: 60px;
+    }
+    .name.left{
+      position: absolute;
+      bottom: 125%;
+      left: 12%;
+      display: block;
+    }
+    .status{
+      position: absolute;
+      bottom: 155%;
+      right: -10%;
+    }
+    .time{
+      position: absolute;
+      bottom: 125%;
+      right: 2%;
+    }
+  }
+}
+.rightColumnUsersShow{
+  float: right;
+  width: 50%;
+  height: 100%;
+  padding: 3%;
+  text-align: center;
+  @media (max-width: 630px){
+    .subtitle.is-4{
+      font-weight: normal;
+      font-size: 20px;
+    }
+    .no-requests{
+      position: absolute;
+      left: 35%;
+    }
+    font-size: 12px;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    right: 5%;
+  }
+  @media (min-width: 630px) and (max-width: 1060px){
+    .subtitle.is-4{
+      width: 230px;
+      position: relative;
+      right: 8%;
+    }
+    .requestedUserPP{
+      position: relative;
+      top: 80%;
+    }
+    .name.left{
+      position: relative;
+      top: 80%;
+      left: 6%;
+      display: block;
+    }
+    .status{
+      position: relative;
+      top: 80%;
+    }
+    .time{
+      position: relative;
+      top: 80%;
+    }
+  }
+}
+.center{
+  text-align: center;
+}
+
+.leftColumnUsersShow {
+  float: left;
+  width: 50%;
+  // padding: 3%;
+  height: 100%;
+  @media (max-width: 630px){
+    .showcards{
+      float: none;
+      position: absolute;
+      height: 50%;
+      top: 0px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+}
+
+
+.card3 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    margin-top: 20px;
+    float: right;
+    margin-top: 25px;
+    height: 250px;
+    position: relative;
+    // padding: 3%;
+    border-radius: 20px 20px 20px 20px;
+    @media (max-width: 630px){
+      width: 100%;
+    }
+}
+
+.card-content {
+    background-color: none;
+    padding: 0.4rem;
+    margin: 0 auto;
+    height: 100px;
+}
+.card-content2{
+   background-color: none;
+    padding: 0.9rem;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.left{
+  float: left;
+}
+
+.account {
+    /* padding-top: 24px; */
+    /* padding-right: 20px; */
+    text-align: right;
+    width: 100%;
+    @media (min-width: 320px) and (max-width: 425px) {
+      padding-top: 0;
+      padding-right: 0;
+  }
+}
+.paddingtop{
+  padding-top: 50px;
+  @media (min-width: 320px)  {
+    padding-top: 0;
+
+}
+}
+
+.profilePicture {
+  width: 55px;
+  top: 8px;
+  position: relative;
+  height: 55px;
+  border-radius: 55px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    float: right;
+  }
+}
+
+.arrow{
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    display: none
+  }
+}
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
+
+.card2 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -25px;
+    height: 375px;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.showcards {
+    height: 100%;
+    background-position: center;
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.status {
+    /* width: 100%; */
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #8CC63F;
+}
+
+.card-image {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.card-imageShowPage {
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      border-radius: 0;
+  }
+}
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    // margin-right: -10%;
+    height: 60vh;
+    position: relative;
+    border-radius: 20px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+}
+.card5 {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    /* max-width: 100%; */
+    width: 100%;
+    float: right;
+    margin-top: -25px;
+    height: 50vh;
+    position: relative;
+    border-radius: 20px;
+    @media (min-width: 320px)  {
+      height: 100%;
+      margin-top: 10%;
+  }
+}
+
+// .card {
+//     background-color: white;
+//     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+//     color: #4a4a4a;
+//     /* max-width: 100%; */
+//     width: 100%;
+//     float: right;
+//     margin-top: -25px;
+//     height: 60vh;
+//     position: relative;
+//     border-radius: 20px;
+// }
+
+.subtitle{
+    font-size: 2rem;
+    padding-left: 20px;
+}
+.title.is-4 {
+    font-size: 1.5rem;
+    padding-left: 20px;
+}
+
+.foodsIndexcontent{
+  padding-left: 90px;
+  padding-right: 90px;
+
+  @media (min-width: 320px)  {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+}
+
+.details {
+display: inline;
+position: relative;
+font-size: 12px;
+width: 100%;
+}
+
+.username {
+    /* width: 100%; */
+    float: left;
+    text-align: right;
+    height: 100%;
+    top: 20px;
+    z-index: 10000;
+    right: 20px;
+    position: relative;
+    font-size: 20px;
+}
+.time {
+    /* width: 100%; */
+    float: right;
+    font-size: 11px;
+}
+
+.description-card {
+  font-style: italic;
+}

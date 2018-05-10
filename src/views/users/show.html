@@ -4,25 +4,25 @@
       <div class="leftColumnUsersShow">
         <a ui-sref="foodsShow({ id: food.id })">
           <div class="showcards" style="background-image: url({{ food.image }})"></div>
-        </div>
         </a>
+      </div>
       <div class="rightColumnUsersShow">
         <p class="subtitle is-4">{{ food.title }}</p>
         <div ng-if="!food.requests[0].status">
-          <p>No requests yet!</p>
+          <p class="no-requests">No requests yet!</p>
         </div>
         <div class="requests" ng-repeat="request in food.requests">
           <div class="contain">
             <!-- {{request}} -->
             <img class="requestedUserPP" ng-src="{{ request.user.picture }}">
-            <div class="username left">{{ request.user.username }}</div>
+            <div class="name left">{{ request.user.username }}</div>
             <div  class="status" >{{ request.status }}</div>
             <div  class="time" >{{ request.createdAtRelative }}</div>
           </div>
           <div ng-if="request.status === 'pending'" class="requestButton" ng-click="usersShow.handleRequestAccept(food.id, request.id)">
             Accept Request
           </div>
+        </div>
       </div>
     </div>
   </div>
-</div>

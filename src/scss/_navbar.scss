@@ -1,0 +1,199 @@
+// navbar
+
+.account {
+  padding-top: 0;
+  padding-right: 0;
+  text-align: right;
+  width: 100%;
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-top: 0;
+    padding-right: 0;
+
+  }
+}
+.dropdown-content {
+  height: 90px;
+  border-radius: 20px;
+  width: 100px;
+  top: 10px;
+  right: 20px;
+  position: relative;
+}
+
+.userLoggedIn{
+  color: #363636;
+}
+
+
+.navbar-burger {
+
+  height: 3.25rem;
+  position: relative;
+  width: 3.25rem;
+  height: 70px;
+  margin-left: auto;
+}
+
+
+@media only screen and (max-width: 1087px) {
+  .navbar-menu {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    padding: 0.5rem 0;
+  }
+}
+.field:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+  }
+}
+
+.navbar {
+  background-color: white;
+  min-height: 3.25rem;
+  /* position: relative; */
+  width: 80%;
+  margin: 0 auto;
+  z-index: 30;
+  top: 4%;
+  position: absolute;
+  border-radius: 20px;
+  height: 70px;
+}
+
+.navbarItem:hover {
+  background-color: none;
+  color: darkGrey;
+  position: relative;
+}
+
+.allfood {
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  margin: 15px;
+  float: right;
+  padding-top: 10px;
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 12px;
+  }
+}
+
+
+.addfood {
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  float: right;
+  margin: 15px;
+  padding-top: 10px;
+
+  @media (min-width: 320px) and (max-width: 425px) {
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 0;
+    font-size: 12px;
+  }
+}
+
+.login {
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid #99CC33;
+  border-radius: 15px;
+  margin: 15px;
+  padding-top: 6px;
+
+  @media (min-width: 320px) and (max-width: 1024px) {
+    color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    /* height: 20px; */
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid #99CC33;
+    border-radius: 15px;
+    top: 35%;
+    padding-top: 9px;
+    padding-bottom: 6px;
+  }
+}
+
+
+
+.logOut {
+  /* border: 1px solid #99CC33; */
+  /* border-radius: 15px; */
+  margin: 0 auto;
+  float: right;
+  width: 100%;
+  position: relative;
+  /* width: 100px; */
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+  .navbar-menu.is-active {
+    display: block;
+    height: 100%;
+  }
+}
+
+nav.navbar{
+
+  right: 0;
+  margin: 0 auto;
+  left: 0;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+
+.navbar-end {
+  padding-right: 10px;
+  height: 100%;
+  float: right;
+  right: 0;
+  position: absolute;
+  @media (min-width: 320px) and (max-width: 425px) {
+    padding-top: 0px;
+  }
+}
+
+
+
+
+
+.username{
+  @media (min-width: 320px) and (max-width: 425px) {
+    display: none;
+  }
+}
+
+
+
+hr {
+  /* background-color: whitesmoke; */
+  border: 1px solid whitesmoke;
+  display: block;
+  height: 2px;
+  margin: 0;
+}

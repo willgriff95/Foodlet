@@ -1,8 +1,7 @@
 MainCtrl.$inject = ['$rootScope','$timeout', '$transitions', '$auth', '$state'];
 
 function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
-  this.navBarIsOpen = false;
-  this.isHome = true;
+
   // this.ModalIsOpen = false;
 
   this.isAuthenticated = $auth.isAuthenticated;
@@ -25,15 +24,15 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
 
   // navbar function
 
-  $transitions.onSuccess({}, (transition) => {
-    this.isHome = (transition.to().name === 'home');
-    this.navBarIsOpen = false;
-  });
-
-  function toggleNav(){
-    console.log('clicked!');
-    this.navBarIsOpen = !this.navBarIsOpen;
-  }
+  // $transitions.onSuccess({}, (transition) => {
+  //   this.isHome = (transition.to().name === 'home');
+  //   this.navBarIsOpen = false;
+  // });
+  //
+  // function toggleNav(){
+  //   console.log('clicked!');
+  //   this.navBarIsOpen = !this.navBarIsOpen;
+  // }
 
 
   // logout function
@@ -56,7 +55,7 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
   //   this.ModalIsOpen = !this.ModalIsOpen;
   // }
 
-  this.toggleNav = toggleNav;
+  // this.toggleNav = toggleNav;
   this.logout = logout;
 
 }
