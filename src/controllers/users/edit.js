@@ -1,6 +1,6 @@
-UsersEditCtrl.$inject = ['User', '$state'];
+UsersEditCtrl.$inject = ['User', '$state', '$rootScope'];
 
-function UsersEditCtrl(User, $state){
+function UsersEditCtrl(User, $state, $rootScope){
   this.user = {};
   console.log('user id: ',$state.params.id);
 
@@ -15,6 +15,7 @@ function UsersEditCtrl(User, $state){
   function handleUpdate(){
     User
       .updateById($state.params.id, this.user)
+      .then(res => $rootScope.$broadcast('loggedIn', res.data))
       .then(() => $state.go('profile', $state.params));
   }
   this.handleUpdate = handleUpdate;
