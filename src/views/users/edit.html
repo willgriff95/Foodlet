@@ -11,7 +11,7 @@
             <input[type='file'] {color: transparent;} name="picture" ng-model="usersEdit.user.picture" image-upload />
             <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
 
-            <img class="profilePictureMain" ng-if="!usersEdit.user.picture" src="https://i.stack.imgur.com/gjwr8.png" alt="">
+            <img class="profilePictureMain" ng-if="!usersEdit.user.picture" src="../assets/camera.svg" alt="">
             <img class="profilePictureMain" ng-if="usersEdit.user.picture" src="{{ usersEdit.user.picture }}" alt="">
           </label>
         <!-- </div> -->

@@ -13,12 +13,14 @@
         </div>
         <div class="requests" ng-repeat="request in food.requests">
           <div class="contain">
+            <!-- {{request}} -->
             <img class="requestedUserPP" src="{{ request.user.picture }}">
-            <div class="left">{{ request.user.username }}</div>
-            <p>{{ request.status }}</p>
+            <div class="username left">{{ request.user.username }}</div>
+            <div  class="status" >{{ request.status }}</div>
+            <div  class="time" >{{ request.createdAtRelative }}</div>
           </div>
-          <div ng-click="usersShow.handleRequestAccept(food.id, request.id)">
-            <a class="login">Accept Request</a>
+          <div class="requestButton" ng-click="usersShow.handleRequestAccept(food.id, request.id)">
+            Accept Request
           </div>
       </div>
     </div>

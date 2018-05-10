@@ -195,12 +195,11 @@ function gMap(){
           // console.log(compiledContent);
           marker.addListener('click', () => {
             infoWindow.setContent(`
-                <div class="infoWindow">
-                  <img src="${food.image}" style="width: 100px; position:relative; " ></img>
-                  <p>${food.title}</p>
-                  <p>${food.description}</p>
-                </div>
+                <a ui-sref="foodsShow(${food._id} })" class="infoWindow" style=" background-image: url(${food.image}); background-size: cover; height:100px; width: 100px; background-position: center;">
+                </a>
             `);
+            // <p>${food.title}</p>
+            // <p>${food.description}</p>
             infoWindow.open(map, marker);
           });
 

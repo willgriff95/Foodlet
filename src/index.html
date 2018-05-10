@@ -11,6 +11,7 @@
   </head>
 
   <body ng-controller="MainCtrl as main">
+
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <!-- navbar-brand -->
         <div class="navbar-brand">
@@ -41,7 +42,7 @@
                 </div>
               </div>
               <div ng-controller="UsersShowCtrl as usersShow">
-                <div class="is-active dropdown-menu"  id="dropdown-menu4" role="menu">
+                <div class="dropdown-menu"  id="dropdown-menu4" role="menu">
                   <div class=" dropdown-content">
                       <a class="userLoggedIn logOut" ui-sref="profile" ng-if="main.isAuthenticated()">My items</a>
                       <hr>
@@ -51,7 +52,9 @@
                   </div>
                 </div>
               </div>
-            <img class="profilePicture" src="{{ main.currentUser.picture }}" alt="">
+              <img class="profilePicture" ng-if="!main.currentUser.picture" src="../assets/user.svg" alt="">
+              <img class="profilePicture" ng-if="main.currentUser.picture" src="{{ main.currentUser.picture }}" alt="">
+            <!-- <img class="profilePicture" src="{{ main.currentUser.picture }}" alt=""> -->
           </div>
 
             <!-- navbar items -->
@@ -61,6 +64,8 @@
             <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Login</a>
           </div>
         </div>
+        <!-- {{ main }} -->
+
       </nav>
 
 <!-- end navbar-menu -->

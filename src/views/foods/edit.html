@@ -1,71 +1,80 @@
 <!-- {{foodsEdit.food.location}} -->
 <div class="content foodsShowcontent">
   <div class="foodsShowPageContent">
-    <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
-    <div class="directions"></div>
-    <div class="card2">
-      <!-- <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div> -->
-      <div class="card-content">
-          <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
-
-            <div class="field">
-              <label for="title">Title</label>
-              <input class="input" ng-model="foodsEdit.food.title" name="title" required/>
-              <div ng-messages="foodsEdit.form.title.$error" ng-if="foodsEdit.form.title.$dirty || foodsEdit.form.$submitted">
-                <div class="requiredField" ng-message="required">Please fill in this field</div>
-              </div>
-            </div>
-
-        <div class="field">
-          <label for="description">Description</label>
-          <input class="input" ng-model="foodsEdit.food.description" name="description" required/>
-          <div ng-messages="foodsEdit.form.description.$error" ng-if="foodsEdit.form.description.$dirty || foodsEdit.form.$submitted">
-            <div class="requiredField" ng-message="required">Please enter a description</div>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="location">Location</label>
-          <input ng-model='foodsEdit.food.location' class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsEdit.updateLocation(location)" required/>
-          <div ng-messages="foodsEdit.form.location.$error" ng-if="foodsEdit.form.location.$dirty || foodsEdit.form.$submitted">
-            <div class="requiredField" ng-message="required">Please enter a location</div>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="image">Profile Picture</label>
-          <!-- <div class="file"> -->
-            <label class="label" >
-              <input  type="file" placeholder="Image" name="image" ng-model='foodsEdit.food.image' image-upload />
-            </label>
-          <!-- </div> -->
-          <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
-            <div class="requiredField" ng-message="required">Please upload an image</div>
-          </div>
-        </div>
-
-            <button class="submitButton button is-primary">Submit</button>
-          </form>
-        <div class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
-        <a class="far fa-trash-alt"></a>
-        </div>
-        <div class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
-        <a  class="far fa-edit"></a>
-        </div>
-        <div class="addFoodButton" ng-click="foodsShow.handleRequestCreate()">
-        <a class="far fa-comments"></a>
-        </div>
+    <div class="columns">
+      <div class="column">
+        <div class="mapShowPage2" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
+        <div class="directions"></div>
       </div>
-  <!-- </div> -->
-</div>
+      <!-- {{ foodsEdit.food.requests[0].id}} -->
+      <div class="column">
+
+        <div class="card2">
+          <!-- <div class="card-image" style="background-image: url({{ foodsShow.food.image }})"></div> -->
+          <div class="card-content">
+            <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
+
+              <div class="field">
+                <label for="title">Title</label>
+                <input class="input" ng-model="foodsEdit.food.title" name="title" required/>
+                <div ng-messages="foodsEdit.form.title.$error" ng-if="foodsEdit.form.title.$dirty || foodsEdit.form.$submitted">
+                  <div class="requiredField" ng-message="required">Please fill in this field</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="description">Description</label>
+                <input class="input" ng-model="foodsEdit.food.description" name="description" required/>
+                <div ng-messages="foodsEdit.form.description.$error" ng-if="foodsEdit.form.description.$dirty || foodsEdit.form.$submitted">
+                  <div class="requiredField" ng-message="required">Please enter a description</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="location">Location</label>
+                <input ng-model='foodsEdit.food.location' class="input" placeholder="Location" name="location" g-autocomplete handle-change="foodsEdit.updateLocation(location)" required/>
+                <div ng-messages="foodsEdit.form.location.$error" ng-if="foodsEdit.form.location.$dirty || foodsEdit.form.$submitted">
+                  <div class="requiredField" ng-message="required">Please enter a location</div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="image">Profile Picture</label>
+                <!-- <div class="file"> -->
+                <label class="label" >
+                  <input  type="file" placeholder="Image" name="image" ng-model='foodsEdit.food.image' image-upload />
+                </label>
+                <!-- </div> -->
+                <div ng-messages="foodsEdit.form.image.$error" ng-if="foodsEdit.form.image.$dirty || foodsEdit.form.$submitted">
+                  <div class="requiredField" ng-message="required">Please upload an image</div>
+                </div>
+              </div>
+
+              <button class="submitButton button is-primary">Submit</button>
+            </form>
+            <div class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
+              <a class="far fa-trash-alt"></a>
+            </div>
+            <div class="editFoodButton" ui-sref="foodsShow({ id: food._id })">
+              <!-- foodsShow({ foodsEdit.food.requests[0].id}) -->
+              <a  class="far fa-edit"></a>
+            </div>
+            <div class="addFoodButton" ng-click="foodsShow.handleRequestCreate()">
+              <a class="far fa-comments"></a>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
 
 
 
-<!-- <div class="backgroundImageLoginPage">
-  <div class="content">
+    <!-- <div class="backgroundImageLoginPage">
+    <div class="content">
     <div class="loginPageContent">
 
 
-    </div>
   </div>
+</div>
 </div> -->
