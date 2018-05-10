@@ -1,16 +1,22 @@
 // backgrounds
 
 .backgroundImageHomePage {
-  // width: 100vw;
     background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.backgroundImageLoginPage, .backgroundImageRegisterPage {
-    // width: 100vw;
+
+.backgroundImageRegisterPage {
     background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
-    height: 110vh;
+    height: 115vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.backgroundImageLoginPage{
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -24,12 +30,12 @@
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
-.loginPageContent, .registerPageContent {
+.registerPageContent {
     background-color: rgba(244, 244, 244, 0.95);
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
-    padding: 50px;
-    height: 420px;
+    padding: 10px 50px 10px 50px;
+    height: 80%;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 10px;
@@ -38,19 +44,26 @@
       top: 10px;
       padding: 5%;
       height: 100%;
+      width: 100%;
     }
 }
-.registerPageContent {
-  height: 560px;
-  top: 10px;
-  width: 100%;
-  img{
-    width: 100px;
-    height: 100px;
-  }
-  @media (max-width: 425px){
-    height: 520px;
-  }
+
+.loginPageContent{
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+    height: 60%;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    top: 10px;
+    position: relative;
+    @media (max-width: 630px){
+      top: 10px;
+      padding: 5%;
+      width: 100%;
+      height: 100%;
+    }
 }
 
 .foodsShowPageContent {
