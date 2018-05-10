@@ -258,7 +258,7 @@ function gMap(){
 
       //Directions
       function displayRoute(){
-        if(!currentLocation || !$scope.food.location) return false;
+        if(!$scope.food || !currentLocation) return false;
         directionsService.route({
           origin: currentLocation,
           destination: $scope.food.location,
