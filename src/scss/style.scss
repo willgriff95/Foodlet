@@ -55,7 +55,7 @@
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   height: 150px;
   cursor: pointer;
-}  
+}
 
 .requestedUserPP{
   height: 80px;
@@ -127,10 +127,15 @@
 
 // our css
 .account {
-    padding-top: 24px;
-    padding-right: 20px;
+    /* padding-top: 24px; */
+    /* padding-right: 20px; */
     text-align: right;
     width: 100%;
+    @media (min-width: 320px) and (max-width: 425px) {
+      padding-top: 0;
+      padding-right: 0;
+
+}
 }
 .dropdown-content {
     height: 90px;
@@ -141,11 +146,20 @@
     position: relative;
 }
 .profilePicture {
-    width: 55px;
-    top: 8px;
-    position: relative;
-    height: 55px;
-    border-radius: 55px;
+  width: 55px;
+  top: 8px;
+  position: relative;
+  height: 55px;
+  border-radius: 55px;
+  @media (min-width: 320px) and (max-width: 425px) {
+    float: right;
+  }
+}
+
+.arrow{
+  @media (min-width: 320px) and (max-width: 425px) {
+    display: none
+  }
 }
 .gm-style-iw {
    width: 350px !important;
@@ -520,16 +534,19 @@ a:hover{
 
 .navbar-item img {
   max-height: 2.75rem;
+  @media (min-width: 320px) and (max-width: 425px)  {
+    max-height: 1.75rem;
+}
 }
 
-@media only screen and (max-width: 1087px) {
-  .navbar-menu {
-      background-color: white;
-      border-radius: 10px 10px 10px 10px;
-      box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
-      padding: 0.5rem 0;
-  }
-}
+// @media only screen and (max-width: 1087px) {
+//   .navbar-menu {
+//       background-color: white;
+//       border-radius: 10px 10px 10px 10px;
+//       box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+//       padding: 0.5rem 0;
+//   }
+// }
 .field:not(:last-child) {
     margin-bottom: 1.3rem;
 }
@@ -565,12 +582,14 @@ a:hover{
 }
 
 .allfood {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
+  color: #99CC33;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+
 }
 .addfood {
     color: #99CC33;
@@ -636,8 +655,10 @@ a {
 }
 .navbar-end {
     padding-right: 20px;
+    float: right;
+    right: 0;
+    position: absolute;
 }
-
 hr {
     /* background-color: whitesmoke; */
     border: 1px solid whitesmoke;
@@ -755,12 +776,33 @@ width: 100%;
     margin: 15px;
     padding-top: 10px;
     float: right;
+
+    @media (min-width: 320px) and (max-width: 425px) {
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    // padding-top: 10px;
+    font-size: 12px;
+    }
 }
 
+.username{
+  @media (min-width: 320px) and (max-width: 425px) {
+    display: none;
+  }
+}
 .allFood {
     margin: 15px;
     float: right;
     padding-top: 10px;
+
+    @media (min-width: 320px) and (max-width: 425px) {
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    // padding-top: 10px;
+    font-size: 12px;
+    }
 }
 
 nav.navbar{
