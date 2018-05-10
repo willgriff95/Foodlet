@@ -8,38 +8,38 @@
   width: 200px;
   height: 120px;
   margin: 0 auto;
-  @media (max-width: 424px){
+  @media (min-width: 425px) and (max-width: 630px){
+    position: absolute;
+    left: 5%;
+    top: 60%;
+  }
+  @media (max-width: 630px){
     position: absolute;
     left: 5%;
     top: 60%;
     .requestedUserPP{
       position: absolute;
-      bottom: 150%;
+      bottom: 143%;
       left: 5%;
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 60px;
     }
     .name.left{
       position: absolute;
       bottom: 125%;
-      left: 8%;
+      left: 12%;
       display: block;
     }
     .status{
       position: absolute;
       bottom: 155%;
-      right: 0;
+      right: -10%;
     }
     .time{
       position: absolute;
       bottom: 125%;
-      right: 0;
+      right: 2%;
     }
-  }
-  @media (min-width: 425px) and (max-width: 767px){
-    position: absolute;
-    left: 5%;
-    top: 60%;
   }
 }
 .rightColumnUsersShow{
@@ -48,7 +48,7 @@
   height: 100%;
   padding: 3%;
   text-align: center;
-  @media (max-width: 424px){
+  @media (max-width: 630px){
     .subtitle.is-4{
       font-weight: normal;
       font-size: 20px;
@@ -64,6 +64,31 @@
     top: 50%;
     right: 5%;
   }
+  @media (min-width: 630px) and (max-width: 1060px){
+    .subtitle.is-4{
+      width: 230px;
+      position: relative;
+      right: 8%;
+    }
+    .requestedUserPP{
+      position: relative;
+      top: 80%;
+    }
+    .name.left{
+      position: relative;
+      top: 80%;
+      left: 6%;
+      display: block;
+    }
+    .status{
+      position: relative;
+      top: 80%;
+    }
+    .time{
+      position: relative;
+      top: 80%;
+    }
+  }
 }
 .center{
   text-align: center;
@@ -74,6 +99,16 @@
   width: 50%;
   // padding: 3%;
   height: 100%;
+  @media (max-width: 630px){
+    .showcards{
+      float: none;
+      position: absolute;
+      height: 50%;
+      top: 0px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0px;
+    }
+  }
 }
 
 
@@ -181,14 +216,6 @@
     /* border-radius: 20px; */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    @media (max-width: 630px){
-      float: none;
-      position: absolute;
-      height: 50%;
-      top: 0px;
-      border-top-right-radius: 20px;
-      border-bottom-left-radius: 0px;
-    }
 }
 
 .status {
