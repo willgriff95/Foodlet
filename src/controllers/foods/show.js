@@ -4,6 +4,7 @@ FoodsShowCtrl.$inject = ['Food', '$state', '$auth'];
 function FoodsShowCtrl(Food, $state, $auth){
   this.food = {};
   this.distance = null;
+  this.duration = null;
   this.modalOpen = false;
 
   Food

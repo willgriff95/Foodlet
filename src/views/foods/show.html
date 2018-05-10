@@ -4,7 +4,7 @@
     <div class="columns">
 
       <div class="column">
-        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance">MAP HERE</div>
+        <div class="mapShowPage" g-map food="foodsShow.food" distance="foodsShow.distance" duration="foodsShow.duration">MAP HERE</div>
         <div class="directions"></div>
       </div>
 
@@ -20,6 +20,7 @@
                 <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
                 <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
                 <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p>
+                <p class="subtitle is-6">Duration: {{ foodsShow.duration }}</p>
                 <!-- hide distance if geolocation turned off  -->
                 <p><small>{{ foodsShow.food.createdAtRelative }}</small></p>
               </div>

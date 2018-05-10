@@ -7,7 +7,8 @@ function gMap(){
       foods: '=?',
       center: '=?',
       food: '=?',
-      distance: '=?'
+      distance: '=?',
+      duration: '=?'
     },
 
     link($scope, $element){
@@ -275,8 +276,9 @@ function gMap(){
           destination: $scope.food.location,
           travelMode: 'WALKING'
         }, (response) => {
-          // console.log(response.routes[0].legs[0].distance.text);
+          // console.log(response.routes[0].legs[0]);
           $scope.distance = response.routes[0].legs[0].distance.text;
+          $scope.duration = response.routes[0].legs[0].duration.text;
           $scope.$apply();
           directionsDisplay.setDirections(response);
         });
