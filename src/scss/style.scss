@@ -274,14 +274,11 @@ hr {
     width: 50%;
     margin: 0 auto;
     padding: 50px;
-    height: 400px;
+    height: 55vh;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 70px;
     position: relative;
-    @media (max-width: 320px){
-      top: 20%;
-    }
 }
 .foodsShowPageContent {
     height: 100%;
@@ -451,6 +448,10 @@ a:hover{
     height: 50vh;
     position: relative;
     border-radius: 20px;
+    @media (min-width: 320px)  {
+      height: 100%;
+      margin-top: 20px;
+  }
 }
 
 .content p:not(:last-child), .content dl:not(:last-child), .content ol:not(:last-child), .content ul:not(:last-child), .content blockquote:not(:last-child), .content pre:not(:last-child), .content table:not(:last-child) {
@@ -502,7 +503,11 @@ a:hover{
 .field:not(:last-child) {
     margin-bottom: 1.3rem;
 }
-
+.navbar-brand{
+  @media (min-width: 320px)  {
+    height: 100%;
+}
+}
 .requiredField{
   font-size: 12px;
   margin-top: 6px;
@@ -637,6 +642,11 @@ hr {
 .foodsIndexcontent{
   padding-left: 90px;
   padding-right: 90px;
+
+  @media (min-width: 320px)  {
+  padding-left: 5%;
+  padding-right: 5%;
+}
 }
 
 
