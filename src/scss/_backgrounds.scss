@@ -50,7 +50,7 @@
 .columns.is-mobile {
     display: flex;
     @media (min-width: 631px){
-      top: 10%;
+      top: 22%;
       height: 100%;
       width: 50%;
     }
@@ -93,6 +93,26 @@
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     /* top: 25px; */
     position: relative;
+    @media (min-width: 320px) and (max-width: 768px){
+      top: -18px;
+      width: 90%;
+      padding: 5%;
+      font-size: 14px;
+      .profilePictureMain{
+        height: 100px;
+        width: 100px;
+      }
+    }
+    @media (min-width: 769px){
+      top: -18px;
+      padding: 5%;
+      font-size: 14px;
+      width: 65%;
+      .profilePictureMain{
+        height: 100px;
+        width: 100px;
+      }
+    }
 }
 .modal-content{
   text-align: center;
