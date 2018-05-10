@@ -141,6 +141,19 @@
     padding: 0.9rem;
     margin: 0 auto;
     height: 100px;
+    .tag.is-rounded{
+      position: absolute;
+      padding-left: 20px;
+      &:first-child{
+        bottom: 10%;
+      }
+      &:last-child{
+        bottom: 2%;
+      }
+      @media (min-width: 412px){
+        margin-bottom: 5%;
+      }
+    }
 }
 
 .left{

@@ -19,12 +19,8 @@
             <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
             <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
             <div ng-if="foodsShow.distance">
-              <p class="subtitle details">
-                <span class="tag is-rounded">Distance: {{ foodsShow.distance }}</span>
-              </p>
-              <p class="subtitle details">
-                <span class="tag is-rounded">Duration: {{ foodsShow.duration }}</span>
-                </p>
+              <span class="tag is-rounded">Distance: {{ foodsShow.distance }}</span>
+              <span class="tag is-rounded">Duration: {{ foodsShow.duration }}</span>
             </div>
             <!-- hide distance if geolocation turned off  -->
 
