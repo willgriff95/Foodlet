@@ -18,8 +18,7 @@
             <p class="title is-4">{{ foodsShow.food.title }}</p>
             <p class="subtitle is-6">{{ foodsShow.food.description }}</p>
             <p class="subtitle is-6">{{ foodsShow.user.username }}</p>
-            <div class="" ng-if="!foodsShow.geoLocation">
-              <p>{{foodsShow.geoLocation}}</p>
+            <div ng-if="foodsShow.distance">
               <p class="subtitle details">
                 <span class="tag is-rounded">Distance: {{ foodsShow.distance }}</span>
               </p>
