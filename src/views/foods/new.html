@@ -6,8 +6,8 @@
           <label class="imageicon center label" >
             <input[type='file'] {color: transparent;} name="picture" ng-model="foodsNew.food.image" image-upload />
             <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
-            <img class="profilePictureMain" ng-if="!foodsNew.food.image" src="../assets/camera.svg" alt="">
-            <img class="profilePictureMain" ng-if="foodsNew.food.image" src="{{ foodsNew.food.image }}" alt="">
+            <img class="profilePictureMain" ng-if="!foodsNew.food.image" src="../assets/camera.svg">
+            <img class="profilePictureMain" ng-if="foodsNew.food.image" ng-src="{{ foodsNew.food.image }}">
           </label>
           <div ng-messages="foodsNew.form.image.$error"  ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
             <div class="requiredField" ng-message="required">Please upload an picture</div>
