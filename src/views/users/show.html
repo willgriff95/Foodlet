@@ -19,9 +19,9 @@
             <div  class="status" >{{ request.status }}</div>
             <div  class="time" >{{ request.createdAtRelative }}</div>
           </div>
-          <div ng-if="request.status === 'pending'" class="requestButton" ng-click="usersShow.handleRequestAccept(food.id, request.id)">
+          <a ng-if="request.status === 'pending'" class="requestButton" ng-click="usersShow.handleRequestAccept(food.id, request.id)">
             Accept Request
-          </div>
+          </a>
         </div>
       </div>
     </div>

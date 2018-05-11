@@ -107,3 +107,10 @@
 .edit-form{
   margin-top: 40px;
 }
+
+
+@media (max-width: 767px){
+  .edit-card{
+    height: 80vh;
+  }
+}

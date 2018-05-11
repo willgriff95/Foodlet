@@ -28,6 +28,9 @@ function Food($http){
   function requestAccept(foodId, requestId){
     return $http.put(`/api/foods/${foodId}/requests/${requestId}`);
   }
+  function relistItem(foodId){
+    return $http.put(`/api/foods/${foodId}/relist`);
+  }
 
 
 
@@ -38,6 +41,7 @@ function Food($http){
   this.updateById = updateById;
   this.requestCreate = requestCreate;
   this.requestAccept = requestAccept;
+  this.relistItem = relistItem;
 }
 
 export default Food;

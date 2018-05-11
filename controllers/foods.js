@@ -84,6 +84,19 @@ function foodsRequestAccept(req, res, next) {
     .catch(next);
 }
 
+function foodsRelistItem(req, res, next){
+  Food
+    .findById(req.params.id)
+    .exec()
+    .then(food => {
+      food.active = true;
+      food.requests = [];
+      return food.save();
+    })
+    .then(food => res.json(food))
+    .catch(next);
+}
+
 
 module.exports = {
   index: foodsIndex,
@@ -92,5 +105,6 @@ module.exports = {
   update: foodsUpdate,
   delete: foodsDelete,
   requestCreate: foodsRequestCreate,
-  requestAccept: foodsRequestAccept
+  requestAccept: foodsRequestAccept,
+  relistItem: foodsRelistItem
 };
