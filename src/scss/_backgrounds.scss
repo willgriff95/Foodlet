@@ -85,6 +85,15 @@
     margin: 0 auto;
     top: 40px;
     position: relative;
+    .image-text{
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      padding: 6px 10px;
+      background: $green;
+      color: white;
+      border-radius: 55px;
+    }
     @media (min-width: 1000px){
       width: 95%;
     }
