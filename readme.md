@@ -17,6 +17,8 @@ to work in a group to produce a MEAN stack app, including an API with all RESTFU
 * Webpack
 * Heroku
 * Google Maps and Directions API
+* Bulma
+
 
 ### The site:
 We have created a food waste sharing app, using Google Maps. On login, users are taken to a map based on their location, where they can see markers indicating shared food in their local area. Users can then click on the item to see more details and to request collection.
@@ -34,15 +36,22 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 
 5. Having achieved the MVP much more quickly than we expected, we started to develop the other features. First of these was Google Maps, which we added to our index map page. However, we thought some users might prefer a list view, so we added a toggle for the two different views.
 
+(maps screenhot)
+
 6. The next features to be added were Filestack, which allows users to upload images from their device, and a request function. We limited all functions so that users can request an item only once, can edit and delete only their own items, and only item owners can accept requests.
 
+(screenshot of filestack upload)
 
+7. The final stage was to add the remaining styling and making the site mobile responsive with the use of media queries.
+
+(mobile screenshots)
 
 
 
 ### Issues faced:
 * Adding multiple map markers
 * Adding a route mapping function
+* Styling infowindows in Google Maps
 * Adding Filestack
 
 
