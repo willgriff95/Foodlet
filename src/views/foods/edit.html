@@ -7,9 +7,9 @@
       </div>
       <div class="column">
 
-        <div class="card2">
+        <div class="card card2">
           <div class="card-content">
-            <form name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
+            <form class="edit-form" name="foodsEdit.form" ng-submit='foodsEdit.handleUpdate()' novalidate>
 
               <div class="field">
                 <label for="title">Title</label>
@@ -36,7 +36,7 @@
               </div>
 
               <div class="field">
-                <label for="image">Profile Picture</label>
+                <label for="image">Image</label>
                 <label class="label" >
                   <input  type="file" placeholder="Image" name="image" ng-model='foodsEdit.food.image' image-upload />
                 </label>

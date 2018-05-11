@@ -10,7 +10,15 @@
 
       <div class="column">
         <div class="card">
-          <div class="card-imageShowPage" style="background-image: url({{ foodsShow.food.image }})"></div>
+          <div class="card-imageShowPage" style="background-image: url({{ foodsShow.food.image }})">
+            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
+              <a class="far fa-trash-alt"></a>
+            </div>
+
+            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
+              <a  class="far fa-edit"></a>
+            </div>
+          </div>
           <div class="card-content2">
 
             <!-- {{ foodsShow.user }} -->
@@ -24,13 +32,7 @@
             </div>
             <!-- hide distance if geolocation turned off  -->
 
-            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="deleteFoodButton" ng-click="foodsShow.handleDelete()">
-              <a class="far fa-trash-alt"></a>
-            </div>
 
-            <div ng-if="main.currentUser._id === foodsShow.food.user._id" class="editFoodButton" ui-sref="foodsEdit({ id: foodsShow.food._id })">
-              <a  class="far fa-edit"></a>
-            </div>
             <div class="requestButton2" ng-click="foodsShow.handleRequestCreate()" ng-if="!foodsShow.foodHasBeenRequested()">
               Send Request
             </div>
