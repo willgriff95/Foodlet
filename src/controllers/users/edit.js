@@ -6,7 +6,6 @@ function UsersEditCtrl(User, $state, $rootScope){
   User
     .findById($state.params.id)
     .then(res => {
-      console.log(res.data);
       this.user = res.data;
     });
 
