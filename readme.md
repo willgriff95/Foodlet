@@ -57,3 +57,4 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 
 ### Future plans:
 * Adding nodemailer so that when users request or accept an item, they receive an email notification.
+* Add tags to each item and a search feature so users can search by tags and distance.
