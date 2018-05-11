@@ -14,6 +14,9 @@ router.route('/foods/:id')
   .put(secureRoute, foods.update)
   .delete(secureRoute, foods.delete);
 
+router.route('/foods/:id/relist')
+  .put(secureRoute, foods.relistItem);
+
 router.route('/foods/:id/requests')
   .post(secureRoute, foods.requestCreate);
 
