@@ -34,20 +34,12 @@
             <div class="requestButton2" ng-click="foodsShow.handleRequestCreate()" ng-if="!foodsShow.foodHasBeenRequested()">
               Send Request
             </div>
+            <div class="success" ng-hide="!foodsShow.foodHasBeenRequested()">
+              Request successful!
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- modal -->
-
-<div class="modal" ng-class="{ 'is-active': foodsShow.modalOpen }">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <div class="success">Request successful!</div>
-    <i class="fas fa-check"></i>
-  </div>
-  <button ng-click="foodsShow.closeModal()" class="modal-close is-large" aria-label="close"></button>
 </div>

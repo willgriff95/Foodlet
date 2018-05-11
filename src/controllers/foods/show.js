@@ -6,7 +6,6 @@ function FoodsShowCtrl(Food, $state, $auth){
   this.distance = null;
   this.duration = null;
   this.geoLocation = null;
-  this.modalOpen = false;
 
   Food
     .findById($state.params.id)
@@ -21,8 +20,7 @@ function FoodsShowCtrl(Food, $state, $auth){
 
   function handleRequestCreate(){
     Food.requestCreate($state.params.id)
-      .then(res => this.food = res.data)
-      .then(() => this.modalOpen = true);
+      .then(res => this.food = res.data);
   }
 
 
@@ -31,13 +29,8 @@ function FoodsShowCtrl(Food, $state, $auth){
     return !!this.food.requests.find(request => request.user = $auth.getPayload().sub);
   }
 
-  function closeModal() {
-    this.modalOpen = false;
-  }
-
   this.handleDelete = handleDelete;
   this.handleRequestCreate = handleRequestCreate;
-  this.closeModal = closeModal;
   this.foodHasBeenRequested = foodHasBeenRequested;
 
 
