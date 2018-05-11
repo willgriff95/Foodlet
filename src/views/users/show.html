@@ -3,6 +3,9 @@
     <div class="card3" ng-repeat="food in usersShow.user.foods">
       <div class="leftColumnUsersShow">
         <a ui-sref="foodsShow({ id: food.id })">
+          <div class="image-text">
+            <i class="fas fa-search"></i>
+          </div>
           <div class="showcards" style="background-image: url({{ food.image }})"></div>
         </a>
       </div>

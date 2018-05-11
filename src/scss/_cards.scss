@@ -110,6 +110,15 @@
   width: 50%;
   // padding: 3%;
   height: 100%;
+  .image-text{
+    position: absolute;
+    right: 53%;
+    bottom: 5%;
+    padding: 6px 10px;
+    background: $green;
+    color: white;
+    border-radius: 55px;
+  }
   @media (max-width: 630px){
     .showcards{
       float: none;
@@ -118,6 +127,11 @@
       top: 0px;
       border-top-right-radius: 20px;
       border-bottom-left-radius: 0px;
+    }
+    .image-text{
+      right: 5%;
+      bottom: 55%;
+      z-index: 50;
     }
   }
 }
