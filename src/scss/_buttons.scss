@@ -5,7 +5,7 @@
 }
 
 .requestButton {
-    border: 1px solid $green;
+    border: 1px solid #99CC33;
     border-radius: 15px;
     color: white;
     /* margin: 15px; */
@@ -14,11 +14,11 @@
     position: relative;
     padding: 10px;
     /* padding-top: 6px; */
-    background-color: $green;
+    background-color: #99CC33;
 }
 
 .button.is-primary {
-    background-color: $green;
+    background-color: #99CC33;
     border-radius: 10px;
     border-color: transparent;
     color: #fff;
@@ -50,28 +50,27 @@
 }
 
 .button.is-primary:hover, .button.is-primary.is-hovered {
-    background-color: $light-green;
+    background-color: #9DDD48;
     border-color: transparent;
     color: #fff;
 }
 
 
 .requestButton2 {
-    width: 100%;
-    height: 40px;
+    width: 94%;
+    height: 25%;
     border-radius: 10px;
-    position: relative;
-    background-color: $green;
+    position: absolute;
+    background-color: #99CC33;
+    bottom: -10px;
     cursor: pointer;
-    top: 10px;
-    position: 0px 0px 0px 0px;
-    margin-bottom: 20px;
+    /* top: 10px; */
+    /* margin-bottom: 20px; */
     padding: 10px;
     color: white;
     z-index: 1000;
     text-align: center;
 }
-
 .editFoodButton {
     width: 40px;
     height: 40px;
