@@ -24,27 +24,28 @@
 @import 'text';
 @import 'navbar';
 
-
+$green: #99CC33;
+$light-green: #9DDD48;
 
 
 
 // not found
 
 .container {
-    margin: 0 auto;
-    position: relative;
-    // width: 100vw;
+  margin: 0 auto;
+  position: relative;
+  // width: 100vw;
 }
 
 .plusbutton {
-    color: white;
-    cursor: pointer;
-    top: -10px;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    font-size: 50px;
-    font-weight: 200;
+  color: white;
+  cursor: pointer;
+  top: -10px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  font-size: 50px;
+  font-weight: 200;
 }
 
 .imageUpload{
@@ -58,7 +59,7 @@
 }
 
 .allfood {
-  color: #99CC33;
+  color: $green;
   padding-left: 30px;
   padding-right: 30px;
   cursor: pointer;
@@ -66,11 +67,11 @@
   position: relative;
 }
 .addfood {
-    color: #99CC33;
-    padding-left: 30px;
-    padding-right: 30px;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    float: right;
+  color: $green;
+  padding-left: 30px;
+  padding-right: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  float: right;
 }
