@@ -1,0 +1,25 @@
+.videoHome {
+  width: 70%;
+  border-radius: 20px;
+}
+
+.logoAboutPage{
+  display: inline;
+  width: 15%;
+  position: absolute;
+  top: 100px;
+  margin: 0 auto;
+  right: 6%;
+}
+.videoContainer{
+  text-align: center;
+}
+
+.whiteBlock{
+  background-color: red;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+}
