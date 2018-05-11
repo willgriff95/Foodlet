@@ -22,19 +22,6 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
   });
 
 
-  // navbar function
-
-  // $transitions.onSuccess({}, (transition) => {
-  //   this.isHome = (transition.to().name === 'home');
-  //   this.navBarIsOpen = false;
-  // });
-  //
-  // function toggleNav(){
-  //   console.log('clicked!');
-  //   this.navBarIsOpen = !this.navBarIsOpen;
-  // }
-
-
   // logout function
 
   function logout(){
@@ -44,20 +31,7 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
     localStorage.removeItem('currentUser');
   }
 
-
-  // modal function
-
-  // $event.onClick({}, (event) => {
-  //   this.ModalIsOpen = false;
-  // });
-  //
-  // function toggleModalClass(){
-  //   this.ModalIsOpen = !this.ModalIsOpen;
-  // }
-
-  // this.toggleNav = toggleNav;
   this.logout = logout;
-
 }
 
 export default MainCtrl;

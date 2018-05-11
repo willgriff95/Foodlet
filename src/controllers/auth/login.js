@@ -1,7 +1,6 @@
 LoginCtrl.$inject = ['$auth', '$state', '$rootScope'];
 function LoginCtrl($auth, $state, $rootScope){
   this.data = {};
-  // let currentUser;
 
   function handleLogin(){
     if(this.form.$invalid) return false;

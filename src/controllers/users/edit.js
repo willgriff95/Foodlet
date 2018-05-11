@@ -2,14 +2,12 @@ UsersEditCtrl.$inject = ['User', '$state', '$rootScope'];
 
 function UsersEditCtrl(User, $state, $rootScope){
   this.user = {};
-  console.log('user id: ',$state.params.id);
 
   User
     .findById($state.params.id)
     .then(res => {
       console.log(res.data);
       this.user = res.data;
-      console.log('THIS.USER',this.user);
     });
 
   function handleUpdate(){

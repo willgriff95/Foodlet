@@ -2,6 +2,7 @@
   <div class="content">
     <div class="loginPageContent column is-half-desktop">
       <form name="login.form" ng-submit="login.handleLogin()" novalidate>
+
         <div class="field">
           <label for="email">Email</label>
           <input class="input" placeholder="Email" name="email" ng-model="login.data.email"  required/>
@@ -9,6 +10,7 @@
             <div class="requiredField" ng-message="required">Please enter a valid email address</div>
           </div>
         </div>
+
         <div class="field">
           <label for="password">Password</label>
           <input class="input" type="password" placeholder="Password" name="password" ng-model="login.data.password" required/>
@@ -16,11 +18,15 @@
             <div class="requiredField" ng-message="required">Please enter the correct password</div>
           </div>
         </div>
+
         <button class="submitButton button is-primary">Submit</button>
+
         <p class="login-text">or</p>
+
         <button ng-click="login.authenticate('twitter')" class="submitButton button twitter"><i class="fab fa-twitter"></i>Sign in with Twitter</button>
         <div class="register">
           <em>New to foodlet?</em> <a ui-sref="register">Sign up now</a>
+
         </div>
       </form>
     </div>
