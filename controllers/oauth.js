@@ -11,8 +11,8 @@ function twitter(req, res, next) {
       consumer_secret: process.env.TWITTER_APP_SECRET,
       callback: req.body.redirectUri
     };
-    // step 1, we send our APIs credentials to twitter, to get a request token
-    // twitter will then send a second request to this endpoint with a token and verifier
+    // Send our APIs credentials to twitter, get request token
+    // Twitter sends a second request to this endpoint with a token and verifier
     rp({
       method: 'POST',
       url: 'https://api.twitter.com/oauth/request_token',
@@ -29,8 +29,7 @@ function twitter(req, res, next) {
       oauth_verifier: req.body.oauth_verifier
     };
 
-    // step 2, when the second arrives with the token and verifier
-    // we can make a request for an access token
+    //  When the second arrives with the token and verifier, make request for acces token
     rp({
       method: 'POST',
       url: 'https://api.twitter.com/oauth/access_token',
@@ -44,7 +43,7 @@ function twitter(req, res, next) {
           oauth_token: token.oauth_token
         };
 
-        // step 3, we use the access token to get the user's profile data
+        // Use access token to get user's profile data
         return rp({
           url: 'https://api.twitter.com/1.1/users/show.json',
           qs: {
@@ -55,24 +54,23 @@ function twitter(req, res, next) {
         });
       })
       .then(response => {
-        // step 4, we cannot get the user's email address from twitter, so we have to search for a user
-        // by their twitter id
+        // Cannot get user's email address from twitter, so search for a user by their twitter id
         return User.findOne({ twitterId: response.id })
           .then((user) => {
             if(!user) {
-              // if no user, we create a new user record, using their profile data
+              // if no user, create new user record using their profile data
               user = new User({
                 username: response.name
               });
             }
-            // either way, we save the user record
+            // either way, save user record
             user.twitterId = response.id;
             user.picture = user.picture || response.profile_image_url.replace('_normal', '');
             return user.save();
           });
       })
       .then(user => {
-        // step 5, we create a JWT and send it back to our angular app
+        // Create JWT and send it back to angular app
         const token = jwt.sign({ sub: user._id }, secret, { expiresIn: '6h' });
         return res.status(200).json({ token: token });
       })
