@@ -13,7 +13,7 @@ function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
   this.flashMessage = null;
   $rootScope.$on('flashMessage', (e, data) => {
     this.flashMessage = data;
-    $timeout(() => this.flashMessage = null, 10000000);
+    $timeout(() => this.flashMessage = null, 5000);
   });
 
   $rootScope.$on('loggedIn', (e, data) => {
