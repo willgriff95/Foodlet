@@ -24,7 +24,8 @@
 @import 'text';
 @import 'navbar';
 
-
+$green: #99CC33;
+$light-green: #9DDD48;
 
 
 
@@ -58,7 +59,7 @@
 }
 
 .allfood {
-  color: #99CC33;
+  color: $green;
   padding-left: 30px;
   padding-right: 30px;
   cursor: pointer;
@@ -66,7 +67,7 @@
   position: relative;
 }
 .addfood {
-    color: #99CC33;
+    color: $green;
     padding-left: 30px;
     padding-right: 30px;
     cursor: pointer;
