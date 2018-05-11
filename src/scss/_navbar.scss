@@ -44,9 +44,13 @@
     padding: 0.5rem 0;
   }
 }
+
+
 .field:not(:last-child) {
   margin-bottom: 1.3rem;
 }
+
+
 .navbar-brand{
   @media (min-width: 320px)  {
     height: 100%;
@@ -139,8 +143,6 @@
   }
 }
 
-
-
 .logOut {
   /* border: 1px solid #99CC33; */
   /* border-radius: 15px; */
@@ -167,7 +169,6 @@ nav.navbar{
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
 }
 
-
 .navbar-end {
   padding-right: 10px;
   height: 100%;
@@ -179,17 +180,11 @@ nav.navbar{
   }
 }
 
-
-
-
-
 .username{
   @media (min-width: 320px) and (max-width: 425px) {
     display: none;
   }
 }
-
-
 
 hr {
   /* background-color: whitesmoke; */
