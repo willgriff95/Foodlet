@@ -5,7 +5,15 @@ function FoodsIndexCtrl(Food){
 
   Food
     .find()
-    .then(res => this.all = res.data);
+    .then(res => {
+      const filter = res.data.map(food =>{
+        if(food.active){
+          return food;
+        }
+      });
+      res.data = filter;
+      this.all = res.data;
+    });
 }
 
 export default FoodsIndexCtrl;
