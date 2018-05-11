@@ -7,13 +7,15 @@ function FoodsIndexCtrl(Food){
     .find()
     .then(res => {
       const filter = res.data.map(food =>{
-        if(food.active === true){
+        // console.log(food.active);
+        if(food.active){
           return food;
         }
       });
       res.data = filter;
-    })
-    .then(res => this.all = res.data);
+      this.all = res.data;
+      // console.log(res.data);
+    });
 }
 
 export default FoodsIndexCtrl;

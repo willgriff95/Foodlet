@@ -2,16 +2,16 @@
   <div class="content columns is-mobile">
     <div class="addFoodPageContent">
       <form name="foodsNew.form" ng-submit='foodsNew.handleCreate()' novalidate>
-        
+
         <div class="field">
           <label class="imageicon center label" >
-            <input[type='file'] {color: transparent;} name="picture" ng-model="foodsNew.food.image" image-upload />
+            <input[type='file'] {color: transparent;} name="picture" ng-model="foodsNew.food.image" image-upload required/>
             <!-- <i class="fas fa-cloud-upload-alt upload-icon"></i> -->
             <img class="profilePictureMain" ng-if="!foodsNew.food.image" src="../assets/camera.svg">
             <img class="profilePictureMain" ng-if="foodsNew.food.image" ng-src="{{ foodsNew.food.image }}">
           </label>
           <div ng-messages="foodsNew.form.image.$error"  ng-if="foodsNew.form.image.$dirty || foodsNew.form.$submitted">
-            <div class="requiredField" ng-message="required">Please upload an picture</div>
+            <div class="requiredField" ng-message="required">Please upload a picture</div>
           </div>
         </div>
 
