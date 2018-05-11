@@ -13,7 +13,7 @@
   <div class="foodsShowPageContent">
     <!-- <p>Here {{currentUser | json}}</p> -->
     <div class="columns is-multiline ng-hide" ng-show="list">
-      <div ng-repeat="food in foodsIndex.all" class="paddingtop column is-half-tablet is-one-third-desktop">
+      <div ng-repeat="food in foodsIndex.all track by $index" class="paddingtop column is-half-tablet is-one-third-desktop">
 
         <a ui-sref="foodsShow({ id: food._id })">
           <div class="card5">

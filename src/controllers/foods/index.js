@@ -6,7 +6,7 @@ function FoodsIndexCtrl(Food){
   Food
     .find()
     .then(res => {
-      const filter = res.data.map(food =>{
+      const filter = res.data.filter(food =>{
         if(food.active){
           return food;
         }
