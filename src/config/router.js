@@ -5,7 +5,7 @@ function secureState($q, $auth, $state, $rootScope){
 
     $rootScope.$broadcast('flashMessage', {
       type: 'danger',
-      content: 'You must be logged in to view this page.'
+      content: 'Please log in to view this page.'
     });
 
     $state.go('login');
