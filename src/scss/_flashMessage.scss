@@ -1,0 +1,15 @@
+.notification.is-danger {
+    background-color: #ff3860;
+    color: #fff;
+    z-index: 30;
+    position: absolute;
+    top: 4%;
+    left: 34%;
+    width: 33%;
+    @media (max-width: 630px){
+      font-size: 12px;
+      top: 10%;
+      width: 80%;
+      left: 10%;
+    }
+}
