@@ -20,7 +20,7 @@
     background-size: cover;
 }
 .backgroundImageUserEditPage {
-    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    // background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,6 +52,23 @@
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
     top: 20px;
+    position: relative;
+    @media (max-width: 630px){
+      top: 10px;
+      padding: 5%;
+      height: 100%;
+      width: 100%;
+    }
+}
+.userEditPageContent {
+    background-color: rgba(244, 244, 244, 0.95);
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 50px 10px 50px;
+    height: 80%;
+    border-radius: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    top: 40px;
     position: relative;
     @media (max-width: 630px){
       top: 10px;
