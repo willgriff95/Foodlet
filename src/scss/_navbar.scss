@@ -115,6 +115,26 @@
   }
 }
 
+
+.registerButton:hover{
+  background-color: $light-green;
+}
+.registerButton {
+    color: white;
+    background-color: #99CC33;
+    padding-left: 30px;
+    padding-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    height: 40px;
+    border-radius: 10px;
+    /* margin: 15px; */
+    margin-top: 30px;
+    margin-right: 20px;
+    padding-top: 6px;
+}
 .login {
   color: #99CC33;
   padding-left: 30px;

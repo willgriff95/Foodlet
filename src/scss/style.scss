@@ -90,8 +90,29 @@ $light-green: #9DDD48;
 .columnNew2 {
     display: block;
     flex-basis: 0;
+    text-align: left;
     flex-grow: 1;
     flex-shrink: 1;
     padding-top: 80px;
-    // padding: 0rem;
+}
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    height: 20px;
+    padding: 0;
+}
+.footer {
+    padding: 0;
+    padding-top: 15px;
+    height: 70px;
+}
+.homePageText {
+    font-weight: 400;
+    font-family: 'circe rounded', 'helvetica';
+    font-size: 16px;
+    padding-right: 40px;
+    height: 200px;
 }

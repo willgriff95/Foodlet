@@ -63,7 +63,7 @@ mongoose.connect(dbURI, (err, db) => {
             lat: 51.515 ,
             lng: -0.078
           },
-          image: 'https://1.bp.blogspot.com/-67b5IA_NG8c/VwnRgMQpKJI/AAAAAAAAQu8/F-ZQvf5i3QIcTAa_8UXC5tqyEXpZtg-Iw/s1600/tomatoes%2B-%2B1.jpg',
+          image: 'http://www.producebusinessuk.com/images/default-source/insight/waitrose_13178276317644.tmb-765x500-cr.jpg?sfvrsn=0',
           active: true,
           user: users[1]
         }, {
@@ -73,7 +73,7 @@ mongoose.connect(dbURI, (err, db) => {
             lat: 51.54,
             lng: -0.06
           },
-          image: 'http://www.dinnerwithjulie.com/wp-content/uploads/2017/05/Cereal-doughnuts-1.jpg',
+          image: 'http://www.fortfindlaycoffee.com/wp-content/uploads/2015/04/fresh_doughnuts.jpg',
           active: true,
           user: users[2]
         }, {
@@ -83,7 +83,7 @@ mongoose.connect(dbURI, (err, db) => {
             lat: 51.5,
             lng: -0.09
           },
-          image: 'https://img.tesco.com/Groceries/pi/305/5000119532305/IDShot_540x540.jpg',
+          image: 'https://1.bp.blogspot.com/-sW1VDfjq7WM/VzG-KuSIKrI/AAAAAAABZkE/5sd0VJbmo7UpioJRaQjfDPioizvMIT7LQCLcB/s1600/P1410649.JPG',
           active: true,
           user: users[2]
         }, {
@@ -103,7 +103,7 @@ mongoose.connect(dbURI, (err, db) => {
             lat: 51.318,
             lng: -0.06
           },
-          image: 'https://cdn.shopify.com/s/files/1/0206/9470/products/60470_HFARM_9332683000024-1_500d4751-a5d0-458b-900c-3d7d83390fca_1024x1024.jpeg?v=1441108615',
+          image: 'http://www.afooda.com/wp-content/uploads/2016/03/drained-green-olives.jpg',
           active: true,
           user: users[1]
         }, {
@@ -113,7 +113,7 @@ mongoose.connect(dbURI, (err, db) => {
             lat: 51.412,
             lng: -0.075
           },
-          image: 'https://www.telegraph.co.uk/content/dam/food-and-drink/2018/01/19/5052449669527_T1_trans_NvBQzQNjv4Bqeo_i_u9APj8RuoebjoAHt0k9u7HhRJvuo-ZLenGRumA.jpg?imwidth=480',
+          image: 'https://o.aolcdn.com/images/dims3/GLOB/crop/2045x1024+3+58/resize/630x315!/format/jpg/quality/85/http%3A%2F%2Fi.huffpost.com%2Fgen%2F5157324%2Fimages%2Fh-PEANUT-BUTTER-2048x1144.jpg',
           active: true,
           user: users[0]
         }, {

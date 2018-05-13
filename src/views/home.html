@@ -1,12 +1,13 @@
 
 <div class="backgroundImageHomePage">
-  <div class="content">
+  <div class="content homePageContent">
     <div class="columns is-mobile homePageColumns">
       <div class="columnNew2 is-one-quarter-desktop is-one-quarter-tablet is-full-mobile">
-        <h2 class="homePageHeader">Join the food sharing revolution</h2>
-        <p>Foodlet connects neighbours with each other and with local shops so surplus food and other items can be shared, not thrown away.
-        If you love food, hate waste, care about the environment or want to connect with your community, Foodlet is for you.</p>
-        <a class="navbarItem login" ui-sref="login" ng-if="!main.isAuthenticated()">Sign up</a>
+        <h2 class="homePageFirstHeader">Let others<br/> share your food</h2>
+        <div class="homePageText">foodlet connects neighbours with each other and with local shops so surplus food and other items can be shared, not thrown away.
+        <br/><br/>If you love food, hate waste, care about the environment or want to connect with your community, Foodlet is for you.
+        <div class="registerButton" ui-sref="register" ng-if="!main.isAuthenticated()">Sign up</div>
+      </div>
       </div>
       <div class="columnNew2 is-one-quarter-desktop is-one-quarter-tablet is-full-mobile">
         <img src="./assets/foodlet-UI-homepage.png" alt="">
@@ -14,8 +15,18 @@
     </div>
   </div>
 </div>
-<div class="videoContainer" style="padding-top: 7%">
-  <h2 class="homePageHeader">How it works</h2>
+<div class="videoContainer">
+  <!-- <div class="columns is-mobile ">
+    <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile problemMain problemContainers center-table"><h2 class="homePageHeader">The Problem</h2></div>
+    <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile problem1 problemContainers center-table"><p>If wasted food was a country, it would be the third largest producer of carbon dioxide in the world, after the United States and China</p> </div>
+    <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile problem2 problemContainers center-table"><p>A European or North American consumer wastes almost 100 kilograms of food annually, which is more than his or her weight (70 kilograms)</p> </div>
+    <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile problem3 problemContainers center-table"><p>Food waste in Europe alone could feed 200 million hungry people
+</p> </div>
+  </div> -->
+  <div class="band">
+    <p>Food waste is one of the biggest problems facing mankind today. <br/><b>YOU</b> can make a difference.</p>
+  </div>
+  <h2 class="homePageHeader">How foodlet Works</h2>
   <div class="columns is-mobile homePageColumns">
     <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile"><img src="./assets/assets_share1.svg" alt=""> </div>
     <div class="columnNew is-one-quarter-desktop is-one-quarter-tablet is-full-mobile"><img src="./assets/assets_share2.svg" alt=""> </div>
@@ -24,3 +35,8 @@
   </div>
   <!-- <img class="logoAboutPage" src="./assets/foodlet_logo.png" style="display: inline; width: 15%;position: absolute;top: 100px;margin: 0 auto;right: 6%;" > -->
 </div>
+<footer>
+  <div class="footer">
+    © 2018 foodlet | Created by <a href="https://www.linkedin.com/in/willgriff/">Will Griffiths</a>, <a href="https://www.linkedin.com/in/caroline-r-15984b112/">Caroline Roden</a> and <a href="#">Hugo Cowan</a>
+  </div>
+</footer>

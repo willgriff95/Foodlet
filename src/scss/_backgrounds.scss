@@ -1,11 +1,26 @@
 // backgrounds
 
 .backgroundImageHomePage {
-    background-image: url('/assets/foodlet-UI-background.png');
+    // background-image: url('/assets/foodlet-UI-background.png');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+
 }
+.backgroundImageHomePage::after {
+    background: url('/assets/foodlet-UI-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 
 .backgroundImageRegisterPage {
     // background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
@@ -36,23 +51,23 @@
 .homePageContent {
     height: 100%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
     width: 100%;
     margin: 0 auto;
     height: 75vh;
     border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    /* box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1); */
 }
 .registerPageContent {
-    background-color: rgba(244, 244, 244, 0.95);
-    width: 60%;
-    margin: 0 auto;
-    padding: 10px 50px 10px 50px;
-    height: 80%;
-    border-radius: 20px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 40px;
-    position: relative;
+  background-color: rgba(244, 244, 244, 0.95);
+  width: 60%;
+  margin: 0 auto;
+  padding: 10px 50px 10px 50px;
+  height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  top: 20px;
+  position: relative;
     @media (max-width: 630px){
       top: 10px;
       padding: 5%;
@@ -60,6 +75,9 @@
       width: 100%;
     }
 }
+
+
+
 .userEditPageContent {
     background-color: rgba(244, 244, 244, 0.95);
     width: 60%;
@@ -96,12 +114,32 @@
     }
 }
 
+
 .foodsShowPageContent {
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    top: 40px;
-    position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  /* top: 40px; */
+  position: relative;
+    .image-text{
+      position: absolute;
+      right: 5%;
+      bottom: 5%;
+      padding: 6px 10px;
+      background: $green;
+      color: white;
+      border-radius: 55px;
+    }
+    @media (min-width: 1000px){
+      width: 95%;
+    }
+}
+.usersShowPageContent {
+  height: 140vh;
+  width: 100%;
+  margin: 0 auto;
+  /* top: 40px; */
+  position: relative;
     .image-text{
       position: absolute;
       right: 5%;
@@ -156,4 +194,128 @@
 .modal-content{
   text-align: center;
   color: #8CC63F;
+}
+
+.problem1 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+.problem1::after {
+    background: url(https://fortunedotcom.files.wordpress.com/2017/03/who-pollution-report-hiv-ebola-responsible-deaths.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.problem2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+.problemMain {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+
+.problem2::after {
+    background-image: url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/06/16/23/web-food-waste-getty.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.problem3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+}
+
+.problem3::after {
+    background-image: url(http://foodiswasted.com/wp-content/uploads/2015/07/chris-king-photography_gleaning-network-portraits-01-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.columns {
+  margin-left: -0rem;
+  margin-right: -0rem;
+  margin-top: -0rem;
+  height: 100%;
+  flex: auto;
+}
+
+.problemContainers {
+    height: 300px;
+    position: relative;
+    width: 300px;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+
+.center-table {
+    display: table;
+    height: 300px;
+    /* background: white; */
+    width: 300px;
+    /* margin: 20px; */
+}
+
+.center-table p {
+    display: table-cell;
+    margin: 0;
+    color: #4a4a4a;
+    height: 300px;
+    padding: 20px;
+    vertical-align: middle;
+
+}
+
+.band {
+    background: linear-gradient(to bottom right, $light-green, $green);
+    // background-color: #9DDD48;
+    width: 100%;
+    height: 100px;
+    /* bottom: 130px; */
+    padding-top: 20px;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+.columns:not(:last-child) {
+    margin-bottom: 0;
+    z-index: 1000;
 }
