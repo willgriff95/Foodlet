@@ -80,3 +80,18 @@ $light-green: #9DDD48;
   position: relative;
   float: right;
 }
+.columnNew {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    // padding: 0rem;
+}
+.columnNew2 {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding-top: 80px;
+    // padding: 0rem;
+}

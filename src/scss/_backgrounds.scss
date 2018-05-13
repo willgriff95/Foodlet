@@ -1,14 +1,14 @@
 // backgrounds
 
 .backgroundImageHomePage {
-    background-image: url(https://cdn.hellofresh.com/us/cms/lentil/delicious_how-it-works/bottom_banner/HIW_banner2_992x500.jpg);
+    background-image: url('/assets/foodlet-UI-background.png');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .backgroundImageRegisterPage {
-    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    // background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 115vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,7 +27,7 @@
 }
 
 .backgroundImageLoginPage{
-    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
+    // background-image: url(https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/nourish-baby-food-ft-blog0617.jpg?itok=MBWK7-G-);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,7 +36,7 @@
 .homePageContent {
     height: 100%;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
     margin: 0 auto;
     height: 75vh;
@@ -51,10 +51,10 @@
     height: 80%;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 40px;
+    top: 20px;
     position: relative;
     @media (max-width: 630px){
-      top: 40px;
+      top: 10px;
       padding: 5%;
       height: 100%;
       width: 100%;
@@ -69,7 +69,7 @@
     height: 60%;
     border-radius: 20px;
     box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
-    top: 10px;
+    top: 20px;
     position: relative;
     @media (max-width: 630px){
       top: 10px;
