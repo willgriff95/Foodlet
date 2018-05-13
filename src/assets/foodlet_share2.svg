@@ -41,31 +41,31 @@
 	.st35{fill:#FDFDFD;}
 	.st36{fill:#333333;}
 	.st37{fill:none;stroke:#4D4D4D;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st38{fill:none;stroke:#1A1A1A;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
-	.st39{fill:#1A1A1A;}
-	.st40{opacity:0.44;fill:#FFFFFF;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st38{fill:none;stroke:#9DDD48;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st39{opacity:0.44;fill:#FFFFFF;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st40{fill:#4A4A4A;}
 	.st41{fill:none;}
 	.st42{font-family:'CirceRounded-Bold';}
 	.st43{font-size:23.0609px;}
-	.st44{font-family:'CirceRounded-Light';}
-	.st45{font-size:16.0423px;}
-	.st46{fill:none;stroke:#1A1A1A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st44{font-family:'CirceRounded-Regular';}
+	.st45{font-size:14px;}
+	.st46{fill:none;stroke:#4A4A4A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st47{stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 	.st48{fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st49{fill:#1A1A1A;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st49{fill:#4A4A4A;stroke:#4A4A4A;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
 <g id="Layer_1">
 	<g>
 		<g>
-			<path class="st38" d="M-45.1,121.6c25.6-22.7,53.9-22.4,80.2-5.3"/>
+			<path class="st38" d="M-45.1,141.6c25.6-22.7,53.9-22.4,80.2-5.3"/>
 			<g>
-				<polygon class="st39" points="25.2,123.9 48.5,126.6 39.2,105.1 				"/>
+				<polygon class="st1" points="25.2,143.9 48.5,146.6 39.2,125.1 				"/>
 			</g>
 		</g>
 	</g>
 	<g>
 		<g>
-			<path class="st38" d="M255.9,121.6c25.6-22.7,53.9-22.4,80.2-5.3"/>
+			<path class="st38" d="M255.9,141.6c25.6-22.7,53.9-22.4,80.2-5.3"/>
 		</g>
 	</g>
 </g>
@@ -74,19 +74,17 @@
 <g id="Layer_3">
 </g>
 <g id="Layer_4">
-	<rect x="34.2" y="207.1" class="st41" width="231.6" height="32"/>
-	<text transform="matrix(1 0 0 1 74.4999 223.2431)" class="st39 st42 st43">MAKE A POST</text>
-	<rect x="55.2" y="247.4" class="st41" width="187.5" height="121.6"/>
-	<text transform="matrix(1 0 0 1 56.4981 258.6353)"><tspan x="0" y="0" class="st39 st44 st45">Simply make a post, adding </tspan><tspan x="5.1" y="19.3" class="st39 st44 st45">an image, description and </tspan><tspan x="43.6" y="38.5" class="st39 st44 st45">your location .</tspan></text>
-	<g>
-		<path class="st39" d="M183,124.2c-22.3-32.3-26.4-35.6-26.4-47.5c0-16.3,13.2-29.5,29.5-29.5s29.5,13.2,29.5,29.5
-			c0,11.9-4.1,15.2-26.4,47.5C187.6,126.3,184.5,126.3,183,124.2L183,124.2z M186,89c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3
-			c-6.8,0-12.3,5.5-12.3,12.3S179.2,89,186,89z"/>
-		<line class="st46" x1="146.9" y1="148.8" x2="147.3" y2="107.2"/>
-		<line class="st46" x1="114.8" y1="164.3" x2="121.7" y2="120.9"/>
-		<polyline class="st46" points="195.3,125 207.2,150.6 178.8,164.3 146.8,148.8 114.8,164.3 86.5,150.6 107.5,107.6 121.7,120.9 
-			147.3,107.2 171.1,121.8 178.7,164.3 		"/>
-		<line class="st46" x1="171.1" y1="121.8" x2="173.8" y2="120"/>
-	</g>
+	<rect x="34.2" y="227.1" class="st41" width="231.6" height="32"/>
+	<text transform="matrix(1 0 0 1 74.4999 243.2431)" class="st40 st42 st43">MAKE A POST</text>
+	<rect x="55.2" y="267.4" class="st41" width="187.5" height="121.6"/>
+	<text transform="matrix(1 0 0 1 59.46 277.2056)"><tspan x="0" y="0" class="st40 st44 st45">Simply make a post, adding an </tspan><tspan x="6.8" y="16.8" class="st40 st44 st45">image, description and your </tspan><tspan x="61.8" y="33.6" class="st40 st44 st45">location .</tspan></text>
+	<path class="st1" d="M183,144.2c-22.3-32.3-26.4-35.6-26.4-47.5c0-16.3,13.2-29.5,29.5-29.5s29.5,13.2,29.5,29.5
+		c0,11.9-4.1,15.2-26.4,47.5C187.6,146.3,184.5,146.3,183,144.2L183,144.2z M186,109c6.8,0,12.3-5.5,12.3-12.3s-5.5-12.3-12.3-12.3
+		c-6.8,0-12.3,5.5-12.3,12.3S179.2,109,186,109z"/>
+	<line class="st46" x1="146.9" y1="168.8" x2="147.3" y2="127.2"/>
+	<line class="st46" x1="114.8" y1="184.3" x2="121.7" y2="140.9"/>
+	<polyline class="st46" points="195.3,145 207.2,170.6 178.8,184.3 146.8,168.8 114.8,184.3 86.5,170.6 107.5,127.6 121.7,140.9 
+		147.3,127.2 171.1,141.8 178.7,184.3 	"/>
+	<line class="st46" x1="171.1" y1="141.8" x2="173.8" y2="140"/>
 </g>
 </svg>
