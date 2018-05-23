@@ -162,7 +162,12 @@ function gMap(){
       let foodMarkers = [];
       let currentLocation = {};
 
-      const directionsDisplay = new google.maps.DirectionsRenderer();
+      const directionsDisplay = new google.maps.DirectionsRenderer({
+        polylineOptions: {
+          strokeColor: '#9ddd48'
+        },
+        suppressMarkers: true
+      });
       directionsDisplay.setMap(map);
       const directionsService = new google.maps.DirectionsService();
 
