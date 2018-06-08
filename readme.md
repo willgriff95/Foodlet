@@ -49,8 +49,8 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 
 
 ### Issues faced:
+* Implementing the request and accept function
 * Adding multiple map markers
-* Adding a route mapping function
 * Styling infowindows in Google Maps
 * Adding Filestack
 
@@ -58,3 +58,4 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 ### Future plans:
 * Adding nodemailer so that when users request or accept an item, they receive an email notification.
 * Add tags to each item and a search feature so users can search by tags and distance.
+* Using the Twitter authentication system to allow users to push to a foodlet Twitter feed.
