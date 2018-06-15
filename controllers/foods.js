@@ -66,8 +66,6 @@ function foodsRequestCreate(req, res, next){
 }
 
 function foodsRequestAccept(req, res, next) {
-  // console.log('req.body: ', req.body);
-
   Food
     .findById(req.params.id)
     .exec()

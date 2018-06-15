@@ -2,8 +2,6 @@ MainCtrl.$inject = ['$rootScope','$timeout', '$transitions', '$auth', '$state'];
 
 function MainCtrl($rootScope, $timeout, $transitions, $auth, $state){
 
-  // this.ModalIsOpen = false;
-
   this.isAuthenticated = $auth.isAuthenticated;
 
   this.currentUser = JSON.parse(localStorage.getItem('currentUser'));

@@ -11,7 +11,6 @@
 
 <div class="content foodsIndexcontent">
   <div class="foodsShowPageContent">
-    <!-- <p>Here {{currentUser | json}}</p> -->
     <div class="columns is-multiline ng-hide" ng-show="list">
       <div ng-repeat="food in foodsIndex.all track by $index" class="paddingtop column is-half-tablet is-one-third-desktop">
 
@@ -23,8 +22,6 @@
               <p class="time" ><small>{{ food.createdAtRelative }}</small></p>
               <p class="title is-4">{{ food.title }}</p>
               <p class="subtitle is-6 description-card">{{ food.description }}</p>
-              <!-- <p class="subtitle is-6">Distance: {{ foodsShow.distance }}</p> -->
-              <!-- <p class="subtitle is-6">{{ food.user.username }}</p> -->
               <div class="image-text">
                 <i class="fas fa-search"></i>
               </div>
