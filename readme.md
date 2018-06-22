@@ -29,6 +29,7 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 2. Once we had picked the food waste sharing idea, we made a list of all the features and quickly sketched some wireframes. We then made some high-fidelity wireframes in Adobe XD and a map of the page routes in Balsamiq, as well as a Trello board of all the features, adding labels and group members responsible.
 
 (add adobe, balsamiq, trello screenshots)
+![Trello](project3-trello.png)
 
 3. We decided that the MVP would be a basic site with full RESTFUL resources for the food model. The first stage of our coding was to create the files we expected to need and installing all our dependencies.
 
@@ -36,21 +37,20 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 
 5. Having achieved the MVP much more quickly than we expected, we started to develop the other features. First of these was Google Maps, which we added to our index map page. However, we thought some users might prefer a list view, so we added a toggle for the two different views.
 
-(maps screenhot)
+![Map](project3-map.png)
 
 6. The next features to be added were Filestack, which allows users to upload images from their device, and a request function. We limited all functions so that users can request an item only once, can edit and delete only their own items, and only item owners can accept requests.
 
-(screenshot of filestack upload)
+![Desktop screenshot](project3-filestack.png)
 
 7. The final stage was to add the remaining styling and making the site mobile responsive with the use of media queries.
 
-(mobile screenshots)
-
+![Desktop screenshot](project3-screenshot.png)
 
 
 ### Issues faced:
+* Implementing the request and accept function
 * Adding multiple map markers
-* Adding a route mapping function
 * Styling infowindows in Google Maps
 * Adding Filestack
 
@@ -58,3 +58,4 @@ We have created a food waste sharing app, using Google Maps. On login, users are
 ### Future plans:
 * Adding nodemailer so that when users request or accept an item, they receive an email notification.
 * Add tags to each item and a search feature so users can search by tags and distance.
+* Using the Twitter authentication system to allow users to push to a foodlet Twitter feed.

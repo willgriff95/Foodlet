@@ -4,7 +4,6 @@ function FoodsEditCtrl(Food, $state){
   this.food = {};
 
   function updateLocation(location){
-    // console.log('updating location...');
     this.food.location = location;
   }
 
